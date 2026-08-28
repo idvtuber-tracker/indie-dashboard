@@ -1,0 +1,6 @@
+google-api-python-client==2.131.0
+psycopg2-binary==2.9.9
+requests==2.32.3
+tzdata==2025.3
+markdown==3.7
+python-frontmatter==1.1.0

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark light">
+<script>!function(){var t=localStorage.getItem("idvt-theme")||(window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",t)}();</script>
+<title>Privacy Policy — IDVTuber Tracker</title>
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Shared site theme — see theme.css. Edit that one file to re-theme this
+     page along with the rest of the site; nothing below should need to
+     change when the theme does. -->
+<link rel="stylesheet" href="theme.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-29RTBLR6HQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-29RTBLR6HQ');
+</script>
+<style>
+  /* ── page-specific structure only — colors/fonts/nav all come from
+     theme.css. Nothing here should hardcode a color; reference the shared
+     variables so this page stays in sync automatically. ── */
+
+  .back {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--muted); text-decoration: none; margin-bottom: 3.5rem;
+    transition: color 0.2s;
+    animation: fadeUp 0.4s ease both;
+  }
+  .back:hover { color: var(--accent); }
+  .back::before { content: '←'; font-size: 0.9rem; }
+
+  header { margin-bottom: 4rem; animation: fadeUp 0.5s 0.05s ease both; }
+  .meta-row {
+    display: flex; flex-wrap: wrap; gap: 1.5rem;
+    font-size: 0.7rem; color: var(--muted); margin-top: 1.25rem;
+  }
+  .meta-row span { display: flex; align-items: center; gap: 0.4rem; }
+  .meta-row span::before { content: '·'; color: var(--blue); }
+
+  /* ── toc ── */
+  .toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--blue);
+    border-radius: 4px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 3rem;
+    animation: fadeUp 0.5s 0.1s ease both;
+  }
+  .toc-title {
+    font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--blue); margin-bottom: 1rem;
+  }
+  .toc ol { padding-left: 1.25rem; }
+  .toc li { margin: 0.3rem 0; }
+  .toc a {
+    color: var(--muted); text-decoration: none; font-size: 0.8rem;
+    transition: color 0.2s;
+  }
+  .toc a:hover { color: var(--blue); }
+
+  /* ── key agreement banner ── */
+  .agreement-banner {
+    background: rgba(79,158,255,0.06);
+    border: 1px solid var(--blue);
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 3rem;
+    font-size: 0.85rem;
+    color: var(--text);
+    animation: fadeUp 0.5s 0.08s ease both;
+  }
+  .agreement-banner strong { color: var(--blue); }
+
+  .section {
+    margin-bottom: 3rem;
+    animation: fadeUp 0.5s ease both;
+  }
+  .section:nth-child(1)  { animation-delay: 0.12s; }
+  .section:nth-child(2)  { animation-delay: 0.16s; }
+  .section:nth-child(3)  { animation-delay: 0.20s; }
+  .section:nth-child(4)  { animation-delay: 0.24s; }
+  .section:nth-child(5)  { animation-delay: 0.28s; }
+  .section:nth-child(6)  { animation-delay: 0.32s; }
+  .section:nth-child(7)  { animation-delay: 0.36s; }
+  .section:nth-child(8)  { animation-delay: 0.40s; }
+  .section:nth-child(9)  { animation-delay: 0.44s; }
+  .section:nth-child(10) { animation-delay: 0.48s; }
+
+  .section-header {
+    display: flex; align-items: baseline; gap: 1rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.6rem; margin-bottom: 1.25rem;
+  }
+  .section-num {
+    font-size: 0.65rem; color: var(--blue);
+    letter-spacing: 0.15em; flex-shrink: 0;
+  }
+  h2 {
+    font-family: var(--font-display);
+    font-size: 1.3rem; font-weight: 700;
+    color: var(--white);
+  }
+
+  p { margin-bottom: 1rem; color: var(--text); font-size: 0.88rem; }
+  p:last-child { margin-bottom: 0; }
+
+  ul, ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.88rem;
+    color: var(--text);
+  }
+  li { margin-bottom: 0.4rem; }
+
+  .callout {
+    display: flex; gap: 1rem; align-items: flex-start;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--blue);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    margin: 1.25rem 0;
+    font-size: 0.82rem;
+  }
+  .callout-icon { color: var(--blue); flex-shrink: 0; font-size: 1rem; margin-top: 0.1rem; }
+  .callout p { margin: 0; }
+
+  .callout.warn { border-left-color: var(--accent); }
+  .callout.warn .callout-icon { color: var(--accent); }
+
+  .callout.danger { border-left-color: var(--red); }
+  .callout.danger .callout-icon { color: var(--red); }
+
+  a { color: var(--blue); text-decoration: none; transition: opacity 0.2s; }
+  a:hover { opacity: 0.75; text-decoration: underline; }
+
+  .highlight-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-top: 2px solid var(--blue);
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem;
+    margin: 1rem 0;
+    font-size: 0.85rem;
+  }
+  .highlight-box p { margin-bottom: 0.5rem; }
+  .highlight-box p:last-child { margin-bottom: 0; }
+
+  .contact-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-top: 2px solid var(--blue);
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    font-size: 0.82rem;
+  }
+  .contact-row {
+    display: flex; gap: 0.75rem; align-items: center;
+    margin-bottom: 0.5rem; color: var(--text);
+  }
+  .contact-row:last-child { margin-bottom: 0; }
+  .label { color: var(--muted); min-width: 70px; }
+
+  footer {
+    margin-top: 5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    display: flex; flex-wrap: wrap; justify-content: space-between;
+    gap: 1rem; font-size: 0.7rem; color: var(--muted);
+  }
+  footer a { color: var(--muted); }
+  footer a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a class="site-nav-logo" href="index.html">
+    <img class="site-nav-logo-icon" src="favicon.ico" alt="">
+    <span class="site-nav-logo-word"><span class="lw1">IDVTuber</span><span class="lw2">//</span><span class="lw3">Tracker</span></span>
+  </a>
+  <span class="nav-spacer"></span>
+  <div class="theme-toggle">
+    <button class="toggle-pill" id="theme-toggle" aria-label="Toggle theme" title="Toggle light/dark theme">
+      <span class="toggle-icon-light">☀</span>
+      <span class="toggle-thumb" id="toggle-thumb">&#10022;</span>
+      <span class="toggle-icon-dark">☽</span>
+    </button>
+  </div>
+</nav>
+<div class="page">
+
+
+  <a class="back" href="index.html">All streams</a>
+
+  <header>
+    <p class="eyebrow">IDVTuber Tracker — Legal</p>
+    <h1>Privacy <em>Policy</em></h1>
+    <div class="meta-row">
+      <span>Effective: February 27, 2026</span>
+      <span>Last updated: August 26, 2026</span>
+      <span>YouTube API Services ToS compliant</span>
+    </div>
+  </header>
+
+  <div class="agreement-banner">
+    <strong>Summary:</strong> IDVTuber Tracker collects publicly available YouTube
+    livestream statistics. We do not collect personal data from visitors. All YouTube
+    API data is automatically deleted after <strong>30 days</strong> in compliance
+    with the YouTube API Services Terms of Service.
+  </div>
+
+  <!-- TOC -->
+  <nav class="toc">
+    <p class="toc-title">Contents</p>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#data-collected">Data We Collect</a></li>
+      <li><a href="#api-data-handling">How We Access, Use &amp; Share API Data</a></li>
+      <li><a href="#data-not-collected">Data We Do Not Collect</a></li>
+      <li><a href="#storage">Storage &amp; Retention</a></li>
+      <li><a href="#deletion">Deletion</a></li>
+      <li><a href="#youtube-api">YouTube API Services</a></li>
+      <li><a href="#third-party">Third-Party Services</a></li>
+      <li><a href="#changes">Changes to This Policy</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <!-- 1. OVERVIEW -->
+  <div class="section" id="overview">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2>Overview</h2>
+    </div>
+    <p>
+      IDVTuber Tracker ("we", "our", "the Dashboard") is a non-commercial fan project
+      that monitors publicly available YouTube livestream analytics for Indonesian
+      VTuber organisations. This Privacy Policy explains what data we collect, how it
+      is stored, and how it is deleted.
+    </p>
+    <p>
+      By using this Dashboard you agree to the practices described in this policy.
+    </p>
+  </div>
+
+  <!-- 2. DATA WE COLLECT -->
+  <div class="section" id="data-collected">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2>Data We Collect</h2>
+    </div>
+    <p>
+      We collect only publicly available, non-personalised YouTube livestream
+      statistics retrieved via the YouTube Data API v3. Specifically:
+    </p>
+    <ul>
+      <li>Video ID and video title</li>
+      <li>Channel ID and channel name</li>
+      <li>Concurrent viewer count</li>
+      <li>Like count and comment count</li>
+      <li>Stream status (live / upcoming / ended)</li>
+      <li>Scheduled start time and actual start time</li>
+      <li>Timestamp of when the data point was collected</li>
+    </ul>
+    <div class="callout">
+      <span class="callout-icon">ℹ</span>
+      <p>All collected data is publicly visible on YouTube. We do not access
+      any private or authenticated user data.</p>
+    </div>
+  </div>
+
+  <!-- 2a. API DATA ACCESS, USE & SHARING -->
+  <div class="section" id="api-data-handling">
+    <div class="section-header">
+      <span class="section-num">02a</span>
+      <h2>How We Access, Use &amp; Share API Data</h2>
+    </div>
+    <p>
+      This section explains, in accordance with the YouTube API Services Terms of
+      Service, exactly what data our application accesses via the YouTube Data API,
+      how that data is used and shared, and how it can be removed.
+    </p>
+
+    <div class="callout">
+      <span class="callout-icon">ℹ</span>
+      <p><strong>No OAuth authorization is ever requested.</strong> IDVTuber Tracker
+      does not use OAuth 2.0 and does not ask any user — including channel owners —
+      to sign in or grant account access. All data is retrieved using an API key
+      against publicly available endpoints only (<code>activities.list</code>,
+      <code>videos.list</code>, <code>channels.list</code>). No authorized or
+      private user data is ever accessed.</p>
+    </div>
+
+    <p><strong>What API data we access:</strong> Only data that YouTube already
+    makes publicly visible on the platform — video/channel IDs and titles,
+    channel names, public subscriber counts, concurrent viewer counts, like and
+    comment counts, stream status, and scheduled/actual start times. See
+    <a href="#data-collected">Section 2</a> for the full list.</p>
+
+    <p><strong>How this data is used:</strong> Collected data is used solely to
+    generate the aggregated, publicly viewable statistics shown on this
+    Dashboard (viewer trend charts, peak/average viewer counts, stream
+    histories). No API data is used for advertising, profiling, or any purpose
+    outside of the Dashboard's own analytics display.</p>
+
+    <p><strong>How this data is shared:</strong> API data is not sold, rented,
+    or shared with any third party for their own independent use. It is stored
+    in our own database infrastructure (see <a href="#storage">Section 4</a>)
+    and displayed publicly on this Dashboard. Infrastructure providers that
+    process this data on our behalf — Supabase (database hosting) and GitHub
+    Pages (static site hosting) — do so only to operate the Dashboard and are
+    listed in <a href="#third-party">Section 7</a>.</p>
+
+    <p><strong>Deletion and revocation:</strong> Because no OAuth authorization
+    is ever requested, there is no per-user access grant for a channel owner or
+    visitor to revoke through their Google Account. Any collected data
+    (including archived historical statistics) can still be removed from our
+    systems on request — see <a href="#deletion">Section 5</a> for how to
+    submit a deletion request. Users who wish to review or revoke access for
+    any third-party applications connected to their own Google Account
+    generally (not specific to this Dashboard, since none is granted here) may
+    do so at
+    <a href="https://myaccount.google.com/connections?filters=3,4&hl=en" target="_blank" rel="noopener">
+      https://myaccount.google.com/connections
+    </a>.</p>
+  </div>
+
+  <!-- 3. DATA WE DO NOT COLLECT -->
+  <div class="section" id="data-not-collected">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2>Data We Do Not Collect</h2>
+    </div>
+    <p>We do not collect any of the following:</p>
+    <ul>
+      <li>Personal information about Dashboard visitors (no name, email, IP address, or cookies)</li>
+      <li>YouTube account information or authenticated user data</li>
+      <li>Private or unlisted video data</li>
+      <li>Comments content or individual commenter identities</li>
+      <li>Financial or subscription data</li>
+    </ul>
+    <div class="callout">
+      <span class="callout-icon">ℹ</span>
+      <p>This Dashboard has no user accounts and no login system. We use Google
+      Analytics to understand aggregate visitor traffic (page views, referring
+      sites, approximate country/city, device and browser type). Google
+      Analytics sets cookies for this purpose; we do not use this data to
+      identify individual visitors.</p>
+    </div>
+  </div>
+
+  <!-- 4. STORAGE -->
+  <div class="section" id="storage">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2>Storage &amp; Retention</h2>
+    </div>
+    <p>
+      Collected API data is stored in a PostgreSQL database hosted on Supabase.
+      Data is retained for a rolling <strong>30-day window</strong>. A scheduled
+      database job automatically deletes rows older than 30 days on a daily basis.
+    </p>
+    <div class="highlight-box">
+      <p><strong>Retention period:</strong> 30 days</p>
+      <p><strong>Database host:</strong> Supabase (PostgreSQL)</p>
+      <p><strong>Deletion schedule:</strong> Daily at 03:00 UTC via pg_cron</p>
+    </div>
+    <p>
+      The static Dashboard pages (HTML files) are hosted on GitHub Pages.
+      These pages display aggregated statistics only and do not contain any
+      personal data.
+    </p>
+  </div>
+
+  <!-- 5. DELETION -->
+  <div class="section" id="deletion">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <h2>Deletion</h2>
+    </div>
+    <p>
+      Individual data records older than 30 days are deleted automatically via a
+      pg_cron scheduled job running daily at 03:00 UTC.
+    </p>
+    <p>
+      Users may also request deletion of any stored data by contacting us at
+      <a href="mailto:idvtuber.tracker@gmail.com">idvtuber.tracker@gmail.com</a>.
+      Upon receiving a verified deletion request, all associated data will be
+      permanently removed within <strong>7 business days</strong>.
+    </p>
+    <div class="callout warn">
+      <span class="callout-icon">⚠</span>
+      <p>Because we collect only public YouTube statistics and no personal data,
+      deletion requests are typically for the removal of a specific channel's
+      data from our database. Please include the channel name or YouTube channel
+      URL in your request.</p>
+    </div>
+  </div>
+
+  <!-- 6. YOUTUBE API -->
+  <div class="section" id="youtube-api">
+    <div class="section-header">
+      <span class="section-num">06</span>
+      <h2>YouTube API Services</h2>
+    </div>
+    <p>
+      IDVTuber Tracker uses the YouTube Data API v3 to retrieve publicly available
+      livestream statistics. By using this Dashboard, you also agree to be bound by
+      the YouTube Terms of Service and Google Privacy Policy:
+    </p>
+    <div class="highlight-box">
+      <p>
+        <strong>YouTube Terms of Service:</strong><br>
+        <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">
+          https://www.youtube.com/t/terms
+        </a>
+      </p>
+      <p>
+        <strong>Google Privacy Policy:</strong><br>
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
+          https://policies.google.com/privacy
+        </a>
+      </p>
+      <p>
+        <strong>YouTube API Services Terms of Service:</strong><br>
+        <a href="https://developers.google.com/youtube/terms/api-services-terms-of-service" target="_blank" rel="noopener">
+          developers.google.com/youtube/terms/api-services-terms-of-service
+        </a>
+      </p>
+    </div>
+    <p>
+      All data collected via the YouTube API is handled in accordance with the
+      YouTube API Services Terms of Service, including the 30-day data retention
+      requirement under Policy III.E.4.
+    </p>
+  </div>
+
+  <!-- 7. THIRD PARTY -->
+  <div class="section" id="third-party">
+    <div class="section-header">
+      <span class="section-num">07</span>
+      <h2>Third-Party Services</h2>
+    </div>
+    <p>This Dashboard makes use of the following third-party services:</p>
+    <ul>
+      <li>
+        <strong>YouTube Data API v3</strong> (Google LLC) — data source.
+        Governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.
+      </li>
+      <li>
+        <strong>Supabase</strong> — database hosting.
+        Governed by <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase's Privacy Policy</a>.
+      </li>
+      <li>
+        <strong>GitHub Pages</strong> (GitHub, Inc.) — static site hosting.
+        Governed by <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub's Privacy Statement</a>.
+      </li>
+      <li>
+        <strong>Google Fonts</strong> (Google LLC) — typography.
+        Governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.
+      </li>
+      <li>
+        <strong>Google Analytics</strong> (Google LLC) — aggregate traffic analytics.
+        Governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.
+      </li>
+         
+    </ul>
+    <p>
+      We are not responsible for the privacy practices of these third-party services.
+      We encourage you to review their respective privacy policies.
+    </p>
+  </div>
+
+  <!-- 8. CHANGES -->
+  <div class="section" id="changes">
+    <div class="section-header">
+      <span class="section-num">08</span>
+      <h2>Changes to This Policy</h2>
+    </div>
+    <p>
+      We reserve the right to update or modify this Privacy Policy at any time.
+      When we make changes, we will update the "Last updated" date at the top of
+      this page. Continued use of the Dashboard after any changes constitutes your
+      acceptance of the revised policy.
+    </p>
+    <div class="callout">
+      <span class="callout-icon">✓</span>
+      <p>Previous versions of this policy are archived in our
+      <a href="https://github.com/idvtuber-tracker/tracker" target="_blank" rel="noopener">
+        GitHub repository</a>.</p>
+    </div>
+  </div>
+
+  <!-- 9. CONTACT -->
+  <div class="section" id="contact">
+    <div class="section-header">
+      <span class="section-num">09</span>
+      <h2>Contact</h2>
+    </div>
+    <p>
+      If you have any questions about this Privacy Policy, wish to request data
+      deletion, or wish to report a concern, please contact us:
+    </p>
+    <div class="contact-box">
+      <div class="contact-row">
+        <span class="label">Email</span>
+        <a href="mailto:idvtuber.tracker@gmail.com">idvtuber.tracker@gmail.com</a>
+      </div>
+      <div class="contact-row">
+        <span class="label">GitHub</span>
+        <a href="https://github.com/idvtuber-tracker/tracker" target="_blank" rel="noopener">
+          github.com/idvtuber-tracker/tracker
+        </a>
+      </div>
+      <div class="contact-row">
+        <span class="label">Dashboard</span>
+        <a href="https://idvtuber-tracker.github.io/dashboard/" target="_blank" rel="noopener">
+          idvtuber-tracker.github.io/dashboard
+        </a>
+      </div>
+    </div>
+    <p style="margin-top:1rem;">
+      We aim to respond to all enquiries within <strong>5 business days</strong>.
+    </p>
+  </div>
+
+  <footer>
+    <span>© 2026 IDVTuber Tracker — Non-commercial fan project</span>
+    <span>
+      <a href="index.html">Dashboard</a> &nbsp;·&nbsp;
+      <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="terms.html">Terms of Use</a>
+    </span>
+  </footer>
+
+</div>
+<script src="theme-toggle.js"></script>
+</body>
+</html>

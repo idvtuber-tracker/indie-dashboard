@@ -1,0 +1,146 @@
+/* ============================================================================
+   theme.css — IDVTuber Tracker shared site theme
+   ============================================================================
+   Single source of truth for colors, fonts, the site nav, and shared
+   typography. The generated dashboard pages (index/org/channel/stream)
+   already carry an equivalent copy of this inline via _BASE_CSS in
+   dashboard_core_private.py, for portability reasons (each generated page is
+   self-contained). Standalone pages that are NOT emitted by the generator —
+   privacy.html, terms.html, and any future one-off page — link to this file
+   instead of duplicating the theme inline.
+
+   TO SWAP THE THEME LATER: edit this file (and, to keep the generated
+   dashboard in sync, the matching values inside _BASE_CSS). Nothing in
+   privacy.html / terms.html should need to change — they only reference
+   these variables and shared classes, they don't hardcode colors.
+   ========================================================================= */
+
+:root {
+  --bg:          #0F1523;
+  --surface:     #151C2E;
+  --surface2:    #1B2438;
+  --border:      #28324A;
+  --muted:       #8992A8;
+  --text:        #E8ECF4;
+  --white:       #ffffff;
+  --red:         #ff4f6d;
+  --blue:        #4F9EFF;
+  --gold:        #F5C842;
+  --green:       #47ffb2;
+
+  /* Non-org pages (privacy/terms/etc.) have no per-org accent, so
+     --accent-text just falls back to --blue — the same role --blue plays
+     in the site brand wordmark and nav hover states. */
+  --accent-text: var(--blue);
+  /* Back-compat alias: older page-specific CSS on this site refers to a
+     generic "--accent" for hover/warn highlights. Keep it mapped to --gold
+     (the same tone used for the live-indicator/warn accents elsewhere) so
+     that CSS doesn't need to change when this file's palette changes. */
+  --accent:      var(--gold);
+
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-mono:    'IBM Plex Mono', monospace;
+}
+
+/* ── light theme ── */
+[data-theme="light"] {
+  --bg:          #F3F4F7;
+  --surface:     #ffffff;
+  --surface2:    #F0F1F5;
+  --border:      #DCE0E8;
+  --muted:       #6B7280;
+  --text:        #171B24;
+  --white:       #171B24;
+  --red:         #c0002a;
+  --blue:        #006FF8;
+  --gold:        #957108;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg:          #F3F4F7;
+    --surface:     #ffffff;
+    --surface2:    #F0F1F5;
+    --border:      #DCE0E8;
+    --muted:       #6B7280;
+    --text:        #171B24;
+    --white:       #171B24;
+    --red:         #c0002a;
+    --blue:        #006FF8;
+    --gold:        #957108;
+  }
+}
+
+/* ── base reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: var(--font-body);
+  font-size: 14px; line-height: 1.7; min-height: 100vh;
+  overflow-x: hidden;
+}
+body::before {
+  content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  opacity: 0.5;
+}
+.page { position: relative; z-index: 1; max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem 6rem; }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ── headings — shared scale used on every page ── */
+header { animation: fadeUp 0.5s ease both; }
+.eyebrow {
+  font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--accent-text); margin-bottom: 0.6rem;
+}
+h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700; line-height: 1.05; color: var(--white); margin-bottom: 0.5rem;
+}
+h1 em { font-style: italic; color: var(--accent-text); }
+.page-meta {
+  font-size: 0.72rem; color: var(--muted); margin-top: 0.75rem;
+  letter-spacing: 0.02em; line-height: 1.6;
+}
+
+/* ── site nav — identical to every generated dashboard page ── */
+.site-nav {
+  position: sticky; top: 0; z-index: 200;
+  background: var(--surface); border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: 0.65rem 2rem;
+}
+.site-nav-logo { display: flex; align-items: center; gap: 0.55rem; text-decoration: none; }
+.site-nav-logo-icon { width: 26px; height: 26px; border-radius: 7px; box-shadow: 0 0 0 1px var(--border); flex-shrink: 0; }
+.site-nav-logo:hover .site-nav-logo-icon { box-shadow: 0 0 0 1px var(--blue); }
+.site-nav-logo-word { font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; letter-spacing: 0.01em; line-height: 1; }
+.site-nav-logo-word .lw1 { color: var(--white); }
+.site-nav-logo-word .lw2 { color: var(--gold); padding: 0 1px; }
+.site-nav-logo-word .lw3 { color: var(--blue); }
+.nav-spacer { flex: 1; }
+
+/* ── theme toggle ── */
+.theme-toggle { flex-shrink: 0; display: flex; align-items: center; }
+.toggle-pill {
+  position: relative; display: flex; align-items: center;
+  width: 56px; height: 28px;
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 14px; cursor: pointer;
+  transition: background 0.25s, border-color 0.25s;
+}
+.toggle-pill:hover { border-color: var(--blue); }
+.toggle-thumb {
+  position: absolute; left: 4px;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--blue);
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; line-height: 1; pointer-events: none;
+}
+.toggle-thumb.is-light { transform: translateX(28px); }
+.toggle-icon-dark, .toggle-icon-light {
+  flex: 1; text-align: center; font-size: 12px; color: var(--muted); pointer-events: none;
+}

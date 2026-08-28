@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark light">
+<script>!function(){var t=localStorage.getItem("idvt-theme")||(window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",t)}();</script>
+<title>Terms of Use — IDVTuber Tracker</title>
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Shared site theme — see theme.css. Edit that one file to re-theme this
+     page along with the rest of the site; nothing below should need to
+     change when the theme does. -->
+<link rel="stylesheet" href="theme.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-29RTBLR6HQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-29RTBLR6HQ');
+</script>
+<style>
+  /* ── page-specific structure only — colors/fonts/nav all come from
+     theme.css. Nothing here should hardcode a color; reference the shared
+     variables so this page stays in sync automatically. ── */
+
+  .back {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--muted); text-decoration: none; margin-bottom: 3.5rem;
+    transition: color 0.2s;
+    animation: fadeUp 0.4s ease both;
+  }
+  .back:hover { color: var(--accent); }
+  .back::before { content: '←'; font-size: 0.9rem; }
+
+  header { margin-bottom: 4rem; animation: fadeUp 0.5s 0.05s ease both; }
+  .meta-row {
+    display: flex; flex-wrap: wrap; gap: 1.5rem;
+    font-size: 0.7rem; color: var(--muted); margin-top: 1.25rem;
+  }
+  .meta-row span { display: flex; align-items: center; gap: 0.4rem; }
+  .meta-row span::before { content: '·'; color: var(--blue); }
+
+  /* ── toc ── */
+  .toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--blue);
+    border-radius: 4px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 3rem;
+    animation: fadeUp 0.5s 0.1s ease both;
+  }
+  .toc-title {
+    font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--blue); margin-bottom: 1rem;
+  }
+  .toc ol { padding-left: 1.25rem; }
+  .toc li { margin: 0.3rem 0; }
+  .toc a {
+    color: var(--muted); text-decoration: none; font-size: 0.8rem;
+    transition: color 0.2s;
+  }
+  .toc a:hover { color: var(--blue); }
+
+  /* ── key agreement banner ── */
+  .agreement-banner {
+    background: rgba(79,158,255,0.06);
+    border: 1px solid var(--blue);
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 3rem;
+    font-size: 0.85rem;
+    color: var(--text);
+    animation: fadeUp 0.5s 0.08s ease both;
+  }
+  .agreement-banner strong { color: var(--blue); }
+
+  .section {
+    margin-bottom: 3rem;
+    animation: fadeUp 0.5s ease both;
+  }
+  .section:nth-child(1)  { animation-delay: 0.12s; }
+  .section:nth-child(2)  { animation-delay: 0.16s; }
+  .section:nth-child(3)  { animation-delay: 0.20s; }
+  .section:nth-child(4)  { animation-delay: 0.24s; }
+  .section:nth-child(5)  { animation-delay: 0.28s; }
+  .section:nth-child(6)  { animation-delay: 0.32s; }
+  .section:nth-child(7)  { animation-delay: 0.36s; }
+  .section:nth-child(8)  { animation-delay: 0.40s; }
+  .section:nth-child(9)  { animation-delay: 0.44s; }
+  .section:nth-child(10) { animation-delay: 0.48s; }
+
+  .section-header {
+    display: flex; align-items: baseline; gap: 1rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.6rem; margin-bottom: 1.25rem;
+  }
+  .section-num {
+    font-size: 0.65rem; color: var(--blue);
+    letter-spacing: 0.15em; flex-shrink: 0;
+  }
+  h2 {
+    font-family: var(--font-display);
+    font-size: 1.3rem; font-weight: 700;
+    color: var(--white);
+  }
+
+  p { margin-bottom: 1rem; color: var(--text); font-size: 0.88rem; }
+  p:last-child { margin-bottom: 0; }
+
+  ul, ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.88rem;
+    color: var(--text);
+  }
+  li { margin-bottom: 0.4rem; }
+
+  .callout {
+    display: flex; gap: 1rem; align-items: flex-start;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--blue);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    margin: 1.25rem 0;
+    font-size: 0.82rem;
+  }
+  .callout-icon { color: var(--blue); flex-shrink: 0; font-size: 1rem; margin-top: 0.1rem; }
+  .callout p { margin: 0; }
+
+  .callout.warn { border-left-color: var(--accent); }
+  .callout.warn .callout-icon { color: var(--accent); }
+
+  .callout.danger { border-left-color: var(--red); }
+  .callout.danger .callout-icon { color: var(--red); }
+
+  a { color: var(--blue); text-decoration: none; transition: opacity 0.2s; }
+  a:hover { opacity: 0.75; text-decoration: underline; }
+
+  .highlight-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-top: 2px solid var(--blue);
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem;
+    margin: 1rem 0;
+    font-size: 0.85rem;
+  }
+  .highlight-box p { margin-bottom: 0.5rem; }
+  .highlight-box p:last-child { margin-bottom: 0; }
+
+  .contact-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-top: 2px solid var(--blue);
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    font-size: 0.82rem;
+  }
+  .contact-row {
+    display: flex; gap: 0.75rem; align-items: center;
+    margin-bottom: 0.5rem; color: var(--text);
+  }
+  .contact-row:last-child { margin-bottom: 0; }
+  .label { color: var(--muted); min-width: 70px; }
+
+  footer {
+    margin-top: 5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    display: flex; flex-wrap: wrap; justify-content: space-between;
+    gap: 1rem; font-size: 0.7rem; color: var(--muted);
+  }
+  footer a { color: var(--muted); }
+  footer a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a class="site-nav-logo" href="index.html">
+    <img class="site-nav-logo-icon" src="favicon.ico" alt="">
+    <span class="site-nav-logo-word"><span class="lw1">IDVTuber</span><span class="lw2">//</span><span class="lw3">Tracker</span></span>
+  </a>
+  <span class="nav-spacer"></span>
+  <div class="theme-toggle">
+    <button class="toggle-pill" id="theme-toggle" aria-label="Toggle theme" title="Toggle light/dark theme">
+      <span class="toggle-icon-light">☀</span>
+      <span class="toggle-thumb" id="toggle-thumb">&#10022;</span>
+      <span class="toggle-icon-dark">☽</span>
+    </button>
+  </div>
+</nav>
+<div class="page">
+
+
+  <a class="back" href="index.html">All streams</a>
+
+  <header>
+    <p class="eyebrow">IDVTuber Tracker — Legal</p>
+    <h1>Terms of <em>Use</em></h1>
+    <div class="meta-row">
+      <span>Effective: February 27, 2026</span>
+      <span>Last updated: February 27, 2026</span>
+      <span>Version 1.0</span>
+    </div>
+  </header>
+
+  <!-- KEY AGREEMENT -->
+  <div class="agreement-banner">
+    <strong>Important:</strong> By accessing or using the IDVTuber Tracker dashboard,
+    you agree to be bound by these Terms of Use and the
+    <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">
+      YouTube Terms of Service
+    </a>.
+    If you do not agree, please do not use this dashboard.
+  </div>
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc">
+    <p class="toc-title">Contents</p>
+    <ol>
+      <li><a href="#acceptance">Acceptance of Terms</a></li>
+      <li><a href="#youtube-tos">YouTube Terms of Service</a></li>
+      <li><a href="#description">Description of Service</a></li>
+      <li><a href="#permitted-use">Permitted Use</a></li>
+      <li><a href="#prohibited-use">Prohibited Use</a></li>
+      <li><a href="#intellectual-property">Intellectual Property</a></li>
+      <li><a href="#data-accuracy">Data Accuracy &amp; Disclaimer</a></li>
+      <li><a href="#limitation">Limitation of Liability</a></li>
+      <li><a href="#changes">Changes to These Terms</a></li>
+      <li><a href="#contact">Contact Information</a></li>
+    </ol>
+  </div>
+
+  <!-- 1. ACCEPTANCE -->
+  <div class="section" id="acceptance">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2>Acceptance of Terms</h2>
+    </div>
+    <p>
+      These Terms of Use ("Terms") govern your access to and use of the IDVTuber Tracker
+      dashboard ("Dashboard", "Service") located at
+      <a href="https://idvtuber-tracker.github.io/dashboard/" target="_blank" rel="noopener">
+        https://idvtuber-tracker.github.io/dashboard/
+      </a>
+      and operated by the IDVTuber Tracker project ("we", "us", "our").
+    </p>
+    <p>
+      By accessing or using this Dashboard in any way, you confirm that you have read,
+      understood, and agree to be bound by these Terms and all applicable laws and
+      regulations. If you are using the Dashboard on behalf of an organisation, you
+      represent that you have the authority to bind that organisation to these Terms.
+    </p>
+  </div>
+
+  <!-- 2. YOUTUBE TOS -->
+  <div class="section" id="youtube-tos">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2>YouTube Terms of Service</h2>
+    </div>
+    <p>
+      IDVTuber Tracker uses the YouTube Data API v3 to collect and display publicly
+      available data from YouTube. By using this Dashboard, you agree to be bound by
+      the YouTube Terms of Service in addition to these Terms.
+    </p>
+    <div class="callout warn">
+      <span class="callout-icon">→</span>
+      <p>
+        YouTube Terms of Service:
+        <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">
+          https://www.youtube.com/t/terms
+        </a><br>
+        Google Privacy Policy:
+        <a href="http://www.google.com/policies/privacy" target="_blank" rel="noopener">
+          http://www.google.com/policies/privacy
+        </a><br>
+        YouTube API Services Terms of Service:
+        <a href="https://developers.google.com/youtube/terms/api-services-terms-of-service" target="_blank" rel="noopener">
+          developers.google.com/youtube/terms/api-services-terms-of-service
+        </a>
+      </p>
+    </div>
+    <p>
+      Our use of YouTube API Services is subject to and governed by the YouTube API
+      Services Terms of Service and Developer Policies. We operate this project in
+      full compliance with these policies.
+    </p>
+  </div>
+
+  <!-- 3. DESCRIPTION -->
+  <div class="section" id="description">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2>Description of Service</h2>
+    </div>
+    <p>
+      IDVTuber Tracker is a non-commercial, fan community analytics dashboard that
+      collects and displays publicly available livestream metrics from Indonesian
+      Virtual YouTuber (VTuber) channels. The Dashboard shows:
+    </p>
+    <ul>
+      <li>Real-time and historical concurrent viewer counts during livestreams</li>
+      <li>Like counts and comment counts collected during active streams</li>
+      <li>Interactive viewer trend charts over time</li>
+      <li>A searchable archive of all tracked streams and their analytics</li>
+    </ul>
+    <p>
+      All data displayed on this Dashboard is publicly available information sourced
+      from the YouTube Data API v3. This project has no affiliation with, endorsement
+      by, or relationship with any talent agency, content creator, or YouTube LLC.
+    </p>
+  </div>
+
+  <!-- 4. PERMITTED USE -->
+  <div class="section" id="permitted-use">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2>Permitted Use</h2>
+    </div>
+    <p>You are permitted to:</p>
+    <ul>
+      <li>View and browse the Dashboard for personal, non-commercial purposes</li>
+      <li>Share links to the Dashboard or specific stream pages</li>
+      <li>Reference data displayed on the Dashboard for personal research or
+      fan community discussion, provided appropriate attribution is given</li>
+      <li>Take screenshots of the Dashboard for personal or fan community use</li>
+    </ul>
+    <div class="callout">
+      <span class="callout-icon">✓</span>
+      <p>This Dashboard is free to use and always will be. No account, login,
+      or payment is required to access any part of the Dashboard.</p>
+    </div>
+  </div>
+
+  <!-- 5. PROHIBITED USE -->
+  <div class="section" id="prohibited-use">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <h2>Prohibited Use</h2>
+    </div>
+    <p>You may not:</p>
+    <ul>
+      <li>Use the Dashboard or its data for any commercial purpose, including
+      resale, monetization, advertising, or paid services</li>
+      <li>Scrape, crawl, or systematically extract data from the Dashboard
+      through automated means</li>
+      <li>Misrepresent the source or accuracy of data obtained from this Dashboard</li>
+      <li>Use Dashboard data in any way that violates the YouTube Terms of Service
+      or YouTube API Services Terms of Service</li>
+      <li>Attempt to gain unauthorized access to any part of the Dashboard
+      infrastructure, database, or source code beyond what is publicly available</li>
+      <li>Use the Dashboard to harass, defame, or harm any content creator,
+      talent agency, or individual</li>
+    </ul>
+    <div class="callout danger">
+      <span class="callout-icon">!</span>
+      <p>
+        Any commercial use of data displayed on this Dashboard without explicit
+        written permission is strictly prohibited and may violate the YouTube
+        API Services Terms of Service.
+      </p>
+    </div>
+  </div>
+
+  <!-- 6. INTELLECTUAL PROPERTY -->
+  <div class="section" id="intellectual-property">
+    <div class="section-header">
+      <span class="section-num">06</span>
+      <h2>Intellectual Property</h2>
+    </div>
+    <p>
+      The source code for IDVTuber Tracker is open source and available at
+      <a href="https://github.com/idvtuber-tracker/tracker" target="_blank" rel="noopener">
+        github.com/idvtuber-tracker/tracker</a>.
+    </p>
+    <p>
+      All YouTube content, channel names, stream titles, thumbnails, and associated
+      branding displayed on this Dashboard are the intellectual property of their
+      respective owners — the content creators and/or their talent agencies.
+      IDVTuber Tracker makes no claim of ownership over any YouTube content or
+      creator branding displayed on this Dashboard.
+    </p>
+    <p>
+      The analytics data displayed (viewer counts, like counts, comment counts)
+      is publicly available information sourced from YouTube's public API and is
+      not owned by IDVTuber Tracker.
+    </p>
+  </div>
+
+  <!-- 7. DATA ACCURACY -->
+  <div class="section" id="data-accuracy">
+    <div class="section-header">
+      <span class="section-num">07</span>
+      <h2>Data Accuracy &amp; Disclaimer</h2>
+    </div>
+    <p>
+      The data displayed on this Dashboard is collected automatically via the
+      YouTube Data API v3 at 60-second intervals during active livestreams.
+      While we strive to maintain accurate and up-to-date information, we make
+      no warranties or representations regarding the accuracy, completeness,
+      or timeliness of any data displayed.
+    </p>
+    <div class="highlight-box">
+      <p>Data gaps may occur due to: API quota limitations, network interruptions,
+      server downtime, or YouTube API service disruptions. Historical data prior
+      to the project launch date is not available.</p>
+      <p>All data is provided "as is" without warranty of any kind, express
+      or implied.</p>
+    </div>
+    <p>
+      IDVTuber Tracker is not affiliated with, endorsed by, or in any way
+      officially connected with YouTube LLC, Google LLC, or any talent agency
+      or content creator whose channels are tracked by this project.
+    </p>
+  </div>
+
+  <!-- 8. LIMITATION OF LIABILITY -->
+  <div class="section" id="limitation">
+    <div class="section-header">
+      <span class="section-num">08</span>
+      <h2>Limitation of Liability</h2>
+    </div>
+    <p>
+      To the fullest extent permitted by applicable law, IDVTuber Tracker and
+      its operators shall not be liable for any indirect, incidental, special,
+      consequential, or punitive damages arising from your use of or inability
+      to use the Dashboard, including but not limited to:
+    </p>
+    <ul>
+      <li>Loss of data or profits</li>
+      <li>Business interruption</li>
+      <li>Any errors or inaccuracies in the data displayed</li>
+      <li>Any unauthorized access to or alteration of your data</li>
+      <li>Any other matter relating to the Dashboard</li>
+    </ul>
+    <p>
+      This Dashboard is provided free of charge as a fan community resource.
+      Use of this Dashboard is entirely at your own risk.
+    </p>
+  </div>
+
+  <!-- 9. CHANGES -->
+  <div class="section" id="changes">
+    <div class="section-header">
+      <span class="section-num">09</span>
+      <h2>Changes to These Terms</h2>
+    </div>
+    <p>
+      We reserve the right to update or modify these Terms at any time. When we
+      make changes, we will update the "Last updated" date at the top of this page.
+      Continued use of the Dashboard after any changes constitutes your acceptance
+      of the revised Terms.
+    </p>
+    <p>
+      We also reserve the right to modify, suspend, or discontinue the Dashboard
+      at any time without notice. We shall not be liable to you or any third party
+      for any modification, suspension, or discontinuation of the service.
+    </p>
+    <div class="callout">
+      <span class="callout-icon">✓</span>
+      <p>We recommend checking this page periodically for any updates.
+      All previous versions of these Terms are archived in our
+      <a href="https://github.com/idvtuber-tracker/tracker" target="_blank" rel="noopener">
+        GitHub repository
+      </a>.</p>
+    </div>
+  </div>
+
+  <!-- 10. CONTACT -->
+  <div class="section" id="contact">
+    <div class="section-header">
+      <span class="section-num">10</span>
+      <h2>Contact Information</h2>
+    </div>
+    <p>
+      If you have any questions about these Terms of Use, wish to report a violation,
+      or wish to request removal of your channel from this tracker, please contact us:
+    </p>
+    <div class="contact-box">
+      <div class="contact-row">
+        <span class="label">Email</span>
+        <a href="mailto:idvtuber.tracker@gmail.com"><span class="__cf_email__" data-cfemail="f39a97858786919681dd87819290989681b3949e929a9fdd909c9e">idvtuber.tracker@gmail.com</span></a>
+      </div>
+      <div class="contact-row">
+        <span class="label">GitHub</span>
+        <a href="https://github.com/idvtuber-tracker/tracker" target="_blank" rel="noopener">
+          github.com/idvtuber-tracker/tracker
+        </a>
+      </div>
+      <div class="contact-row">
+        <span class="label">Dashboard</span>
+        <a href="https://idvtuber-tracker.github.io/dashboard/" target="_blank" rel="noopener">
+          idvtuber-tracker.github.io/dashboard
+        </a>
+      </div>
+    </div>
+    <p style="margin-top:1rem;">
+      We aim to respond to all enquiries within <strong>5 business days</strong>.
+    </p>
+  </div>
+
+  <footer>
+    <span>© 2026 IDVTuber Tracker — Non-commercial fan project</span>
+    <span>
+      <a href="index.html">Dashboard</a> &nbsp;·&nbsp;
+      <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="terms.html">Terms of Use</a>
+    </span>
+  </footer>
+
+</div>
+<script src="theme-toggle.js"></script>
+</body>
+</html>
