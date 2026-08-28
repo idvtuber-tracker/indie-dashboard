@@ -1,0 +1,95 @@
+name: Force Regenerate Channel/Org Pages (one-off)
+
+# TEMPORARY MAINTENANCE WORKFLOW.
+# Delete this file (and force_regen_pages.py, optionally) once you've
+# confirmed the dashboard looks correct. This is not meant to be a
+# permanent part of the deploy pipeline.
+#
+# Manual-trigger only. Rebuilds every channel and org page from the
+# corrected live+archive merge (see force_regen_pages.py for why this is
+# needed), then deploys straight to Pages. Does NOT touch manifest.json or
+# stream pages, so it's safe to run alongside the normal live/backfill
+# workflows.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages:    write
+  id-token: write
+
+concurrency:
+  group: dashboard-deploy
+  cancel-in-progress: false
+
+jobs:
+  force-regen:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url:  ${{ steps.deployment.outputs.page_url }}
+
+    env:
+      AIVEN_DATABASE_URL:   ${{ secrets.AIVEN_DATABASE_URL }}
+      YOUTUBE_API_KEY:      ${{ secrets.YOUTUBE_API_KEY }}
+      YOUTUBE_API_KEYS:     ${{ secrets.YOUTUBE_API_KEYS }}
+      DASHBOARD_OUTPUT_DIR: dashboard
+      PYTHONUTF8:           "1"
+      PYTHONIOENCODING:     "utf-8"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}
+
+      - name: Checkout history repo
+        env:
+          HISTORY_REPO_PAT: ${{ secrets.HISTORY_REPO_PAT }}
+        run: |
+          REPO_URL="https://x-access-token:${HISTORY_REPO_PAT}@github.com/${{ github.repository_owner }}/idvt-history.git"
+          git clone --depth=1 "$REPO_URL" idvt-history
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Force-regenerate channel and org pages
+        env:
+          HISTORY_DB_PATH: ${{ github.workspace }}/idvt-history/history.db
+        run: python force_regen_pages.py
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dashboard
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Commit regenerated pages back to dashboard repo
+        # Without this, the fix deploys to Pages once and then gets silently
+        # reverted by the very next live/backfill run, which checks out the
+        # git-committed baseline (stale) and only overwrites currently-dirty
+        # pages on top of it. Committing the full dashboard/ directory here
+        # makes this run's output the new baseline for everything downstream.
+        run: |
+          git config user.name  "IDVTuber Dashboard"
+          git config user.email "dashboard@idvtuber-tracker"
+          git add cache/ dashboard/
+          if git diff --cached --quiet; then
+            echo "Nothing changed — nothing to commit."
+          else
+            git commit -m "force-regen: rebuild all channel/org pages [skip ci]"
+            git pull --rebase origin "${GITHUB_REF_NAME}" || true
+            git push
+            echo "Regenerated pages committed and pushed."
+          fi

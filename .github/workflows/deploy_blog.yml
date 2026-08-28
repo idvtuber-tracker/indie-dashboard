@@ -1,0 +1,103 @@
+name: Deploy Blog
+
+# Lives in the DASHBOARD repo (idvtuber-tracker/dashboard), alongside
+# deploy_dashboard_live.yml / deploy_dashboard_backfill.yml.
+#
+# Manual trigger only (workflow_dispatch) — no longer fires automatically
+# on a push to blog/posts/ or blog/images/. Trigger it from the Actions tab
+# after committing a post or image, whenever you're ready to publish.
+#
+# generate_blog.py does a full rebuild every run (cheap — a handful of
+# markdown files, no DB, no YouTube API) so there's no manifest to reconcile
+# and no risk of the partial-build gotchas that affect stream pages.
+#
+# Shares the "dashboard-deploy" concurrency group with the other two
+# dashboard workflows for the same reason they share it with each other:
+# all three commit into dashboard/ and deploy the same Pages site, so they
+# must run one at a time or risk clobbering each other's committed baseline.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages:    write
+  id-token: write
+
+concurrency:
+  group: dashboard-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy-blog:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url:  ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      # Checks out the dashboard repo, which already contains the last
+      # committed dashboard/ baseline from the live/backfill loops — we
+      # only add/update dashboard/blog/ on top of it, never touch the rest.
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        # dashboard_core.py now guards its psycopg2 import (try/except
+        # ImportError, same pattern it already used for google-api-python-
+        # client) specifically so this workflow doesn't need the full
+        # requirements.txt — generate_blog.py only uses dashboard_core.py's
+        # HTML-generation helpers and never opens a DB connection, so there's
+        # no reason to install psycopg2-binary's compiled wheel here.
+        run: pip install markdown==3.7 python-frontmatter==1.1.0
+
+      - name: Generate blog pages
+        run: python generate_blog.py
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dashboard
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+
+      - name: Retry deploy if it failed
+        id: deployment_retry
+        if: steps.deployment.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+
+      - name: Fail if both deploy attempts failed
+        if: steps.deployment.outcome == 'failure' && steps.deployment_retry.outcome == 'failure'
+        run: |
+          echo "Both Pages deployment attempts failed. Check https://githubstatus.com for Pages incidents."
+          exit 1
+
+      - name: Commit generated blog pages back to repo
+        # Makes this run's output the new baseline, exactly like the cache
+        # commit step in the other two workflows — otherwise the next live
+        # or backfill run checks out a stale dashboard/blog/ and the site
+        # flickers back to the previous build until this workflow fires again.
+        run: |
+          git config user.name  "IDVTuber Dashboard"
+          git config user.email "dashboard@idvtuber-tracker"
+          git add dashboard/blog/
+          if git diff --cached --quiet; then
+            echo "Blog output unchanged — nothing to commit."
+          else
+            git commit -m "blog: rebuild [skip ci]"
+            git pull --rebase origin "${GITHUB_REF_NAME}" || true
+            git push
+            echo "Blog pages committed and pushed."
+          fi

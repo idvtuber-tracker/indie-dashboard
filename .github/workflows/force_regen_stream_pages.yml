@@ -1,0 +1,119 @@
+name: Force Regenerate Stream Pages (one-off)
+
+# TEMPORARY MAINTENANCE WORKFLOW — companion to force_regen_pages.yml.
+# Delete this file (and force_regen_stream_pages.py, optionally) once you've
+# confirmed every stream page picked up the shared <head> change (e.g. the
+# GA4 snippet) and you don't expect to need a repeat run.
+#
+# Manual-trigger only. Rewrites every stream (VOD) page unconditionally via
+# the same generate_stream_pages() helper the live/backfill loops use, then
+# deploys straight to Pages. Does NOT touch manifest.json, and does NOT
+# touch channel or org pages — run force_regen_pages.yml separately (before
+# or after, order doesn't matter) for full sitewide coverage.
+#
+# This can take a while and touch a large number of files if the historical
+# archive is large — that's expected for a one-off full repaint, not a sign
+# of something wrong.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages:    write
+  id-token: write
+
+concurrency:
+  group: dashboard-deploy
+  cancel-in-progress: false
+
+jobs:
+  force-regen-streams:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url:  ${{ steps.deployment.outputs.page_url }}
+
+    env:
+      AIVEN_DATABASE_URL:   ${{ secrets.AIVEN_DATABASE_URL }}
+      DASHBOARD_OUTPUT_DIR: dashboard
+      PYTHONUTF8:           "1"
+      PYTHONIOENCODING:     "utf-8"
+      # Note: no YOUTUBE_API_KEY(S) here — this script never calls the
+      # YouTube API (see force_regen_stream_pages.py docstring), so there's
+      # nothing to quota-check or rotate.
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}
+
+      - name: Checkout history repo
+        env:
+          HISTORY_REPO_PAT: ${{ secrets.HISTORY_REPO_PAT }}
+        run: |
+          REPO_URL="https://x-access-token:${HISTORY_REPO_PAT}@github.com/${{ github.repository_owner }}/idvt-history.git"
+          git clone --depth=1 "$REPO_URL" idvt-history
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Force-regenerate stream pages
+        env:
+          HISTORY_DB_PATH: ${{ github.workspace }}/idvt-history/history.db
+        run: python force_regen_stream_pages.py
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dashboard
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        # A large one-off run touching thousands of files is expensive to
+        # redo, so — unlike force_regen_pages.yml — this retries once on a
+        # transient Pages CDN failure rather than requiring a full re-run.
+        continue-on-error: true
+
+      - name: Retry deploy if it failed
+        id: deployment_retry
+        if: steps.deployment.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+
+      - name: Fail if both deploy attempts failed
+        if: steps.deployment.outcome == 'failure' && steps.deployment_retry.outcome == 'failure'
+        run: |
+          echo "Both Pages deployment attempts failed. Check https://githubstatus.com for Pages incidents."
+          exit 1
+
+      - name: Commit regenerated stream pages back to dashboard repo
+        # Without this, the fix deploys to Pages once and then gets silently
+        # reverted by the very next live/backfill run, which checks out the
+        # git-committed baseline (stale) and only overwrites currently-dirty
+        # pages on top of it. Committing dashboard/ here makes this run's
+        # output the new baseline for everything downstream.
+        #
+        # cache/ is intentionally NOT staged here (unlike force_regen_pages.yml) —
+        # this script never touches the logo/subscriber cache, so there is
+        # nothing new to commit there.
+        run: |
+          git config user.name  "IDVTuber Dashboard"
+          git config user.email "dashboard@idvtuber-tracker"
+          git add dashboard/
+          if git diff --cached --quiet; then
+            echo "Nothing changed — nothing to commit."
+          else
+            git commit -m "force-regen: rebuild all stream pages [skip ci]"
+            git pull --rebase origin "${GITHUB_REF_NAME}" || true
+            git push
+            echo "Regenerated stream pages committed and pushed."
+          fi

@@ -1,0 +1,111 @@
+name: Fix Stale LIVE Pages (one-off)
+
+# ONE-OFF MAINTENANCE WORKFLOW.
+# Delete this file (and fix_stale_live_pages.py) once the dashboard
+# correctly shows VOD for all finished streams.
+#
+# What this does:
+#   1. Scans every stream page in dashboard/ for stale LIVE badge content.
+#   2. Clears those manifest entries so generate_backfill.py regenerates them.
+#   3. Immediately runs generate_backfill.py to produce the correct VOD pages.
+#   4. Deploys to Pages and commits the fixed manifest + pages back to the repo.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages:    write
+  id-token: write
+
+concurrency:
+  group: dashboard-deploy
+  cancel-in-progress: false
+
+jobs:
+  fix-stale-pages:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url:  ${{ steps.deployment.outputs.page_url }}
+
+    env:
+      AIVEN_DATABASE_URL:   ${{ secrets.AIVEN_DATABASE_URL }}
+      YOUTUBE_API_KEY:      ${{ secrets.YOUTUBE_API_KEY }}
+      YOUTUBE_API_KEYS:     ${{ secrets.YOUTUBE_API_KEYS }}
+      DASHBOARD_OUTPUT_DIR: dashboard
+      PYTHONUTF8:           "1"
+      PYTHONIOENCODING:     "utf-8"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}
+
+      - name: Checkout history repo
+        env:
+          HISTORY_REPO_PAT: ${{ secrets.HISTORY_REPO_PAT }}
+        run: |
+          REPO_URL="https://x-access-token:${HISTORY_REPO_PAT}@github.com/${{ github.repository_owner }}/idvt-history.git"
+          if git clone --depth=1 "$REPO_URL" idvt-history 2>/dev/null; then
+            echo "history repo cloned successfully."
+          else
+            echo "history repo is empty or unreachable — aborting."
+            exit 1
+          fi
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Clear stale LIVE manifest entries
+        env:
+          HISTORY_DB_PATH: ${{ github.workspace }}/idvt-history/history.db
+        run: python fix_stale_live_pages.py
+
+      - name: Regenerate cleared pages via backfill
+        env:
+          HISTORY_DB_PATH: ${{ github.workspace }}/idvt-history/history.db
+        run: python generate_backfill.py
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dashboard
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+
+      - name: Retry deploy if it failed
+        id: deployment_retry
+        if: steps.deployment.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+
+      - name: Fail if both deploy attempts failed
+        if: steps.deployment.outcome == 'failure' && steps.deployment_retry.outcome == 'failure'
+        run: |
+          echo "Both Pages deployment attempts failed."
+          exit 1
+
+      - name: Commit fixed pages back to dashboard repo
+        run: |
+          git config user.name  "IDVTuber Dashboard"
+          git config user.email "dashboard@idvtuber-tracker"
+          git add cache/ dashboard/
+          if git diff --cached --quiet; then
+            echo "Nothing changed — nothing to commit."
+          else
+            git commit -m "fix: regenerate stale LIVE pages as VOD [skip ci]"
+            git pull --rebase origin "${GITHUB_REF_NAME}" || true
+            git push
+            echo "Fixed pages committed and pushed."
+          fi
