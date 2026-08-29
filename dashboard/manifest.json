@@ -24,8 +24,8 @@
     "org_slug": "indies",
     "ch_slug": "onshannon",
     "ch_name": "ONShannon",
-    "status": "live",
-    "generated_at": "2026-08-29 23:02 WIB"
+    "status": "vod",
+    "generated_at": "2026-08-29 23:17 WIB"
   },
   "Fie04e9WL0M": {
     "org_slug": "indies",
@@ -40,5 +40,12 @@
     "ch_name": "mei dyanira",
     "status": "vod",
     "generated_at": "2026-08-29 22:16 WIB"
+  },
+  "wPPyY8Z8NVw": {
+    "org_slug": "indies",
+    "ch_slug": "adelaide-ch",
+    "ch_name": "Adelaide Ch.",
+    "status": "live",
+    "generated_at": "2026-08-29 23:17 WIB"
   }
 }
