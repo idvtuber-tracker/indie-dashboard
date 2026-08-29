@@ -25,13 +25,20 @@
     "ch_slug": "onshannon",
     "ch_name": "ONShannon",
     "status": "live",
-    "generated_at": "2026-08-29 20:20 WIB"
+    "generated_at": "2026-08-29 20:35 WIB"
   },
   "Fie04e9WL0M": {
     "org_slug": "indies",
     "ch_slug": "mei-dyanira",
     "ch_name": "mei dyanira",
+    "status": "vod",
+    "generated_at": "2026-08-29 20:35 WIB"
+  },
+  "RBZTw9euEpk": {
+    "org_slug": "indies",
+    "ch_slug": "mei-dyanira",
+    "ch_name": "mei dyanira",
     "status": "live",
-    "generated_at": "2026-08-29 20:20 WIB"
+    "generated_at": "2026-08-29 20:35 WIB"
   }
 }
