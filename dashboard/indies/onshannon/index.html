@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="dark light">
 <script>!function(){var t=localStorage.getItem("idvt-theme")||(window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",t)}();</script>
-<title>Stream Analytics — IDVTuber Tracker</title>
-<link rel="icon" href="favicon.ico">
-<script>window.SITE_DEPTH = 0;</script>
+<title>ONShannon — IDVTuber Tracker</title>
+<link rel="icon" href="../../favicon.ico">
+<script>window.SITE_DEPTH = 2;</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-29RTBLR6HQ"></script>
 <script>
@@ -17,27 +17,27 @@
   gtag('config', 'G-29RTBLR6HQ');
 </script>
 
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="dashboard.css">
+<link rel="stylesheet" href="../../theme.css">
+<link rel="stylesheet" href="../../dashboard.css">
 <style>
-  :root { --org-color: #e8ff47; }
-  [data-theme="light"] { --org-color: #6e7e00; }
+  :root { --org-color: #EB9447; }
+  [data-theme="light"] { --org-color: #974D0C; }
   @media (prefers-color-scheme: light) {
-    :root:not([data-theme="dark"]) { --org-color: #6e7e00; }
+    :root:not([data-theme="dark"]) { --org-color: #974D0C; }
   }
 </style>
 </head>
 <body>
 <nav class="site-nav">
-  <a class="site-nav-logo" href="index.html">
-    <img class="site-nav-logo-icon" src="favicon.ico" alt="">
+  <a class="site-nav-logo" href="../../index.html">
+    <img class="site-nav-logo-icon" src="../../favicon.ico" alt="">
     <span class="site-nav-logo-word"><span class="lw1">IDVTuber</span><span class="lw2">//</span><span class="lw3">Tracker</span></span>
   </a>
   <span class="nav-spacer"></span>
   <div class="nav-right-cluster">
-    <a class="nav-pill nav-live-pill has-live" id="navLivePill" href="live.html">
+    <a class="nav-pill nav-live-pill" id="navLivePill" href="../../live.html">
       <span class="pulse-strip" id="navPulseStrip"></span>
-      <span class="nav-live-dot"></span> LIVE <strong id="navLiveCount">2</strong>
+      <span class="nav-live-dot"></span> LIVE <strong id="navLiveCount">0</strong>
     </a>
     <div class="search-trigger" id="searchTrigger">
       <span class="search-trigger-icon">&#128269;</span> Search orgs, channels, streams… <kbd>/</kbd>
@@ -46,63 +46,178 @@
   </div>
 </nav>
 <div class="page">
-  <div class="site-hero">
-    <div class="site-hero-accent"></div>
-    <div class="site-hero-body">
-      <div class="site-hero-info">
-        <p class="eyebrow">IDVTuber Tracker &#8212; Live Analytics</p>
-        <h1>1 orgs. 12 channels. One signal feed.</h1>
-        <p class="page-meta">Indonesian VTuber groups numbers tracked, displayed, and recorded in one place &#8212; subs, streams, and peak viewership, refreshed automatically.</p>
-        <p class="site-hero-updated">&#128337; Updated 2026-08-29 20:05 WIB</p>
-      </div>
-      <div class="site-hero-side">
-        <div class="range-chips" id="homeRange" data-peak-7d="153" data-peak-30d="153" data-peak-all="153">
-          <span class="range-chip" data-range="7d">7D</span>
-          <span class="range-chip active" data-range="30d">30D</span>
-          <span class="range-chip" data-range="all">ALL</span>
+<nav class="breadcrumb"><a href="../../index.html">Home</a> <span class="sep">&#8250;</span> <a href="../index.html">Independent</a> <span class="sep">&#8250;</span> <span class="current">ONShannon</span></nav>
+  <div class="channel-hero">
+    <div class="hero-shimmer"></div>
+    <div class="hero-body">
+      <img class="hero-avatar-large" src="https://yt3.ggpht.com/qMWlWoV-4NtoDUNHOtFl2lkQ-X8nOUsB3E9RH5xFZXJ6mfKV6EpOhBq3zlnB_VTT_iqBqj-iMg=s240-c-k-c0x00ffffff-no-rj" alt="ONShannon avatar" loading="lazy" onerror="this.outerHTML='<div class=&quot;hero-avatar-large-placeholder&quot;>O</div>'">
+      <div class="hero-info">
+        <div class="hero-org-badge">
+          <div class="hero-org-dot"></div>
+          Independent
         </div>
-        <div class="site-hero-stats">
-          <div class="ohs"><div class="ohs-val">1</div><div class="ohs-lbl">Organisations</div></div>
-          <div class="ohs"><div class="ohs-val">12</div><div class="ohs-lbl">Channels</div></div>
-          <div class="ohs"><div class="ohs-val">4</div><div class="ohs-lbl">Streams</div></div>
-          <div class="ohs"><div class="ohs-val" id="idxLiveCount">2</div><div class="ohs-lbl">Live now</div></div>
-          <div class="ohs"><div class="ohs-val js-site-peak">153</div><div class="ohs-lbl">Peak CCV</div></div>
+        <div class="hero-name">ONShannon</div>
+        <div class="hero-meta-row">
+          <div class="hero-meta-item"><span>Subscribers</span><strong>161,000</strong></div>
+          <div class="hero-meta-item"><span>Total views</span><strong>63</strong></div>
+          <div class="hero-meta-item"><span>Tracking</span><strong>Aug 2026</strong></div>
+        </div>
+      </div>
+      <div class="hero-actions">
+        <a class="external-link" href="https://youtube.com/channel/UCJlcEuTs4LNMPn0xL3czRrA" target="_blank" rel="noopener">View Channel &#8599;</a>
+      </div>
+    </div>
+  </div>
+  <div class="range-chips" id="channelRange" data-streams-7d="1" data-streams-30d="1" data-streams-all="1" data-peak-7d="62" data-peak-30d="62" data-peak-all="62" style="margin-bottom:0.75rem;">
+    <span class="range-chip" data-range="7d">7D</span>
+    <span class="range-chip active" data-range="30d">30D</span>
+    <span class="range-chip" data-range="all">ALL</span>
+  </div>
+  <div class="kpi-strip">
+    <div class="kpi-cell"><div class="kpi-label">Streams tracked</div><div class="kpi-value js-streams">1</div><div class="kpi-sub">Aug 2026</div></div>
+    <div class="kpi-cell"><div class="kpi-label">Peak CCV</div><div class="kpi-value js-peak">62</div><div class="kpi-sub">Selected range</div></div>
+    <div class="kpi-cell"><div class="kpi-label">Avg peak CCV</div><div class="kpi-value">62</div><div class="kpi-sub">Per stream, all-time</div></div>
+    <div class="kpi-cell"><div class="kpi-label">Total views</div><div class="kpi-value">63</div><div class="kpi-sub">All-time</div></div>
+  </div>
+  <div class="recent-streams-section">
+    <div class="recent-streams-hdr">Recent streams</div>
+    <div class="recent-grid">
+    <a class="rc" href="bnjhm3zevgu.html">
+      <div class="rc-thumb">
+        <img src="https://i.ytimg.com/vi/bnJhm3ZEVgU/mqdefault_live.jpg" alt="" loading="lazy" onerror="this.parentNode.innerHTML='<div class=&quot;rc-placeholder&quot;&gt;&#9654;</div>'">
+        <span class="rc-live">Live</span>
+      </div>
+      <div class="rc-body">
+        <div class="rc-title">MENDAKI GUNUNG w/ @sammybollivienn @ayundarisu @ElaineCelestia  | PEAK</div>
+        <div class="rc-date">29 Aug 2026</div>
+        <div class="rc-stats">
+          <span>&#128065; <span class="rc-peak">62</span></span>
+          <span>&#9825; 67</span>
+          <span>&#9654; 63</span>
+        </div>
+      </div>
+    </a>
+    </div>
+  </div>
+  <div class="ch-main-grid">
+    <div class="stream-list-panel">
+      <div class="panel-hdr">All streams — by month</div>
+  <div class="month-group is-open">
+    <button class="month-toggle" aria-expanded="true">
+      <span class="month-toggle-left">August 2026</span>
+      <span class="month-toggle-right"><span class="month-cnt-badge">1</span><span class="month-chevron">▾</span></span>
+    </button>
+    <div class="month-body">
+  <a class="stream-row-item" href="bnjhm3zevgu.html">
+    <div class="stream-thumb-cell">
+      <img src="https://i.ytimg.com/vi/bnJhm3ZEVgU/mqdefault_live.jpg" alt="" loading="lazy" onerror="this.parentNode.innerHTML='<div class=&quot;th-placeholder&quot;&gt;&#9654;</div>'">
+      <div class="live-badge">Live</div>
+    </div>
+    <div class="stream-row-body">
+      <div class="stream-row-title">MENDAKI GUNUNG w/ @sammybollivienn @ayundarisu @ElaineCelestia  | PEAK</div>
+      <div class="stream-row-meta">
+        <span>29 Aug 2026</span>
+        <span class="row-sep">·</span>
+        <span>20:01 WIB</span>
+        <span class="row-sep">·</span>
+        <span>3m</span>
+      </div>
+      <div class="stream-row-stats">
+        <span class="rs">&#128065; <span class="rs-peak">62</span> peak</span>
+        <span class="rs">&#9825; 67</span>
+        <span class="rs">&#9654; 63</span>
+      </div>
+    </div>
+  </a>
+    </div>
+  </div>
+    </div>
+    <div class="sidebar-col">
+      <div class="side-panel">
+        <div class="panel-hdr">Monthly summary</div>
+        <table class="monthly-tbl">
+          <thead><tr>
+            <th>Month</th><th>Streams</th><th>Peak CCV</th>
+          </tr></thead>
+          <tbody>
+      <tr class="month-best-row">
+        <td><a class="month-a" href="#">August 2026</a></td>
+        <td><span class="month-cnt">1</span></td>
+        <td class="month-peak">62</td>
+      </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="side-panel">
+        <div class="panel-hdr">Subscribers</div>
+        <div class="subs-body">
+          <div class="subs-count">161,000</div>
+          <div class="subs-label">YouTube subscribers</div>
+        </div>
+      </div>
+      <div class="side-panel">
+        <div class="panel-hdr">Channel records</div>
+        <div class="rec-row">
+          <div><div class="rec-lbl">Peak CCV</div><div class="rec-val">62</div><div class="rec-ctx">MENDAKI GUNUNG w/ @sammybollivienn @ayundaris…</div></div>
+          <div class="rec-right"><div class="rec-lbl">Date</div><div class="rec-date">29 Aug 2026</div></div>
+        </div>
+        <div class="rec-row">
+          <div><div class="rec-lbl">Most liked</div><div class="rec-val">67</div><div class="rec-ctx">MENDAKI GUNUNG w/ @sammybollivienn @ayundaris…</div></div>
+          <div class="rec-right"><div class="rec-lbl">Date</div><div class="rec-date">29 Aug 2026</div></div>
+        </div>
+        <div class="rec-row">
+          <div><div class="rec-lbl">Most viewed</div><div class="rec-val">63</div><div class="rec-ctx">MENDAKI GUNUNG w/ @sammybollivienn @ayundaris…</div></div>
+          <div class="rec-right"><div class="rec-lbl">Date</div><div class="rec-date">29 Aug 2026</div></div>
         </div>
       </div>
     </div>
   </div>
-  <div class="sort-strip">
-    <span class="sort-lbl">Sort:</span>
-    <span class="filter-chip active">All</span>
-    <span class="filter-chip">A&#8211;Z</span>
-    <span class="filter-chip">Peak Viewers</span>
-  </div>
-  <div class="orgs-grid">
-    <a class="org-card" href="indies/index.html" style="--org-color-dark:#EB9447;--org-color-light:#974D0C" data-name="Independent" data-streams-7d="4" data-streams-30d="4" data-streams-all="4" data-peak-7d="153" data-peak-30d="153" data-peak-all="153">
-      <div class="org-accent-bar"></div>
-      <div class="org-card-body">
-        <div class="org-card-top">
-          <div class="org-card-title">Independent</div>
-          <span class="live-badge-sm"><span class="live-dot-sm"></span>LIVE 2</span>
-        </div>
-        <div class="org-card-desc">Indonesian VTubers unaffiliated with any groups or agencies.</div>
-        <div class="org-card-stats">
-          <span class="ocs">&#128100; <strong>12</strong></span>
-          <span class="ocs">&#9654; <strong class="js-streams">4</strong></span>
-          <span class="ocs">&#128065; <strong class="js-peak">153</strong> peak</span>
-        </div>
-      </div>
-    </a>
-  </div>
+<script>
+(function(){
+  document.querySelectorAll(".month-toggle").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var grp = btn.closest(".month-group");
+      var open = grp.classList.toggle("is-open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  });
+})();
+</script>
+<script>
+(function(){
+  var wrap = document.getElementById("channelRange");
+  if (!wrap) return;
+  var streamsEl = document.querySelector(".kpi-strip .js-streams");
+  var peakEl    = document.querySelector(".kpi-strip .js-peak");
+  function fmtNum(n) {
+    n = parseInt(n, 10) || 0;
+    if (n >= 1000000) return (n / 1000000).toFixed(1) + "M";
+    if (n >= 1000) return (n / 1000).toFixed(1) + "K";
+    return String(n);
+  }
+  wrap.querySelectorAll(".range-chip").forEach(function(chip){
+    chip.addEventListener("click", function(){
+      wrap.querySelectorAll(".range-chip").forEach(function(c){ c.classList.remove("active"); });
+      chip.classList.add("active");
+      var range = chip.getAttribute("data-range") || "30d";
+      if (streamsEl) streamsEl.textContent = wrap.getAttribute("data-streams-" + range) || "0";
+      if (peakEl) {
+        var p = wrap.getAttribute("data-peak-" + range) || "0";
+        peakEl.textContent = p === "0" ? "—" : fmtNum(p);
+      }
+    });
+  });
+})();
+</script>
 
   <footer>
     <span>&#169; 2026 IDVTuber Tracker &#8212; Non-commercial fan project</span>
     <nav class="footer-links">
-      <a href="index.html">Home</a>
+      <a href="../../index.html">Home</a>
       <span class="footer-sep">·</span>
-      <a href="privacy.html">Privacy Policy</a>
+      <a href="../../privacy.html">Privacy Policy</a>
       <span class="footer-sep">·</span>
-      <a href="terms.html">Terms of Use</a>
+      <a href="../../terms.html">Terms of Use</a>
     </nav>
   </footer>
 </div>
@@ -309,88 +424,6 @@
     else if (e.key === 'ArrowDown') { e.preventDefault(); selIndex = Math.min(selIndex + 1, current.length - 1); updateSel(); }
     else if (e.key === 'ArrowUp') { e.preventDefault(); selIndex = Math.max(selIndex - 1, 0); updateSel(); }
     else if (e.key === 'Enter') { e.preventDefault(); navigateTo(selIndex); }
-  });
-})();
-</script>
-
-<script>
-(function () {
-  var grid       = document.querySelector('.orgs-grid');
-  var chips      = document.querySelectorAll('.filter-chip');
-  var rangeWrap  = document.getElementById('homeRange');
-  var rangeChips = rangeWrap ? rangeWrap.querySelectorAll('.range-chip') : [];
-  var sitePeakEl = document.querySelector('.js-site-peak');
-  var mode  = 'all';    // 'all' | 'az' | 'peak'
-  var range = '30d';    // '7d' | '30d' | 'all'
-
-  function applySort() {
-    if (!grid) return;
-    var cards = Array.from(grid.querySelectorAll('.org-card'));
-    if (mode === 'az') {
-      cards.sort(function (a, b) {
-        return (a.getAttribute('data-name') || '').localeCompare(b.getAttribute('data-name') || '');
-      });
-      cards.forEach(function (c) { grid.appendChild(c); });
-    } else if (mode === 'peak') {
-      cards.sort(function (a, b) {
-        var pa = parseFloat(a.getAttribute('data-peak-' + range) || '0') || 0;
-        var pb = parseFloat(b.getAttribute('data-peak-' + range) || '0') || 0;
-        return pb - pa;   // descending — highest peak viewers first
-      });
-      cards.forEach(function (c) { grid.appendChild(c); });
-    }
-    // 'all' = default document order (no re-sort needed on page load)
-  }
-
-  function fmtNum(n) {
-    n = parseInt(n, 10) || 0;
-    if (n >= 1000000) return (n / 1000000).toFixed(1) + 'M';
-    if (n >= 1000) return (n / 1000).toFixed(1) + 'K';
-    return String(n);
-  }
-
-  function applyRange() {
-    if (grid) {
-      Array.from(grid.querySelectorAll('.org-card')).forEach(function (card) {
-        var streamsEl = card.querySelector('.js-streams');
-        var peakEl    = card.querySelector('.js-peak');
-        if (streamsEl) streamsEl.textContent = card.getAttribute('data-streams-' + range) || '0';
-        if (peakEl) {
-          var p = card.getAttribute('data-peak-' + range) || '0';
-          peakEl.textContent = p === '0' ? '—' : fmtNum(p);
-        }
-      });
-    }
-    if (sitePeakEl && rangeWrap) {
-      var sp = rangeWrap.getAttribute('data-peak-' + range) || '0';
-      sitePeakEl.textContent = sp === '0' ? '—' : fmtNum(sp);
-    }
-    applySort();
-  }
-
-  chips.forEach(function (chip) {
-    chip.addEventListener('click', function () {
-      chips.forEach(function (c) { c.classList.remove('active'); });
-      chip.classList.add('active');
-      var label = chip.textContent.trim();
-      if (label === 'A–Z') {
-        mode = 'az';
-      } else if (label === 'Peak Viewers') {
-        mode = 'peak';
-      } else {
-        mode = 'all';
-      }
-      applySort();
-    });
-  });
-
-  rangeChips.forEach(function (chip) {
-    chip.addEventListener('click', function () {
-      rangeChips.forEach(function (c) { c.classList.remove('active'); });
-      chip.classList.add('active');
-      range = chip.getAttribute('data-range') || '30d';
-      applyRange();
-    });
   });
 })();
 </script>
