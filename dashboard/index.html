@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="dark light">
 <script>!function(){var t=localStorage.getItem("idvt-theme")||(window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",t)}();</script>
-<title>Stream Analytics — IDVTuber Tracker</title>
+<title>Independent VTubers — IDVTuber Tracker</title>
 <link rel="icon" href="favicon.ico">
 <script>window.SITE_DEPTH = 0;</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -50,47 +50,226 @@
     <div class="site-hero-accent"></div>
     <div class="site-hero-body">
       <div class="site-hero-info">
-        <p class="eyebrow">IDVTuber Tracker &#8212; Live Analytics</p>
-        <h1>1 orgs. 12 channels. One signal feed.</h1>
-        <p class="page-meta">Indonesian VTuber groups numbers tracked, displayed, and recorded in one place &#8212; subs, streams, and peak viewership, refreshed automatically.</p>
-        <p class="site-hero-updated">&#128337; Updated 2026-08-30 05:09 WIB</p>
+        <p class="eyebrow">IDVTuber Tracker &#8212; Independent VTubers</p>
+        <h1>12 channels. 7 streams. One signal feed.</h1>
+        <p class="page-meta">Independent Indonesian VTubers, tracked and recorded in one place &#8212; subs, streams, and peak viewership, refreshed automatically. No agency, no group roster, just the numbers.</p>
+        <p class="site-hero-updated">&#128337; Updated 2026-08-30 11:14 WIB</p>
       </div>
       <div class="site-hero-side">
-        <div class="range-chips" id="homeRange" data-peak-7d="205" data-peak-30d="205" data-peak-all="205">
+        <div class="range-chips" id="orgRange" data-peak-7d="205" data-peak-30d="205" data-peak-all="205" data-streams-7d="7" data-streams-30d="7" data-streams-all="7">
           <span class="range-chip" data-range="7d">7D</span>
           <span class="range-chip active" data-range="30d">30D</span>
           <span class="range-chip" data-range="all">ALL</span>
         </div>
-        <div class="site-hero-stats">
-          <div class="ohs"><div class="ohs-val">1</div><div class="ohs-lbl">Organisations</div></div>
+        <div class="site-hero-stats org-hero-stats">
           <div class="ohs"><div class="ohs-val">12</div><div class="ohs-lbl">Channels</div></div>
-          <div class="ohs"><div class="ohs-val">7</div><div class="ohs-lbl">Streams</div></div>
+          <div class="ohs"><div class="ohs-val js-streams">7</div><div class="ohs-lbl">Streams</div></div>
           <div class="ohs"><div class="ohs-val" id="idxLiveCount">0</div><div class="ohs-lbl">Live now</div></div>
-          <div class="ohs"><div class="ohs-val js-site-peak">205</div><div class="ohs-lbl">Peak CCV</div></div>
+          <div class="ohs"><div class="ohs-val js-peak">205</div><div class="ohs-lbl">Peak CCV</div></div>
+          <div class="ohs"><div class="ohs-val">0</div><div class="ohs-lbl">Combined subs</div></div>
         </div>
       </div>
     </div>
   </div>
   <div class="sort-strip">
-    <span class="sort-lbl">Sort:</span>
-    <span class="filter-chip active">All</span>
-    <span class="filter-chip">A&#8211;Z</span>
-    <span class="filter-chip">Peak Viewers</span>
+    <span class="sort-lbl">Sort by:</span>
+    <span class="sort-chip active">Subscribers</span>
+    <span class="sort-chip">Peak CCV</span>
+    <span class="sort-chip">Peak Likes</span>
+    <span class="sort-chip">Streams</span>
+    <span class="sort-chip">A&#8211;Z</span>
   </div>
-  <div class="orgs-grid">
-    <a class="org-card" href="indies/index.html" style="--org-color-dark:#EB9447;--org-color-light:#974D0C" data-name="Independent" data-streams-7d="7" data-streams-30d="7" data-streams-all="7" data-peak-7d="205" data-peak-30d="205" data-peak-all="205">
-      <div class="org-accent-bar"></div>
-      <div class="org-card-body">
-        <div class="org-card-top">
-          <div class="org-card-title">Independent</div>
-          
-        </div>
-        <div class="org-card-desc">Indonesian VTubers unaffiliated with any groups or agencies.</div>
-        <div class="org-card-stats">
-          <span class="ocs">&#128100; <strong>12</strong></span>
-          <span class="ocs">&#9654; <strong class="js-streams">7</strong></span>
-          <span class="ocs">&#128065; <strong class="js-peak">205</strong> peak</span>
-        </div>
+  <div class="channels-grid">
+    <a class="channel-card" href="indies/shin-derra/index.html" data-name="Shin Derra" data-subs="0" data-likes="0" data-streams-7d="0" data-streams-30d="0" data-streams-all="0" data-peak-7d="0" data-peak-30d="0" data-peak-all="0">
+      <div class="ch-card-top">
+        <div class="channel-avatar-placeholder">SD</div>
+        
+      </div>
+      <div class="ch-card-name-wrap">
+        <div class="ch-card-name">Shin Derra</div>
+        <div class="ch-card-role">Talent</div>
+      </div>
+      <div class="ch-card-stat-grid">
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Subscribers</div><div class="ch-stat-cell-val">0</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Streams</div><div class="ch-stat-cell-val js-streams">0</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Peak CCV</div><div class="ch-stat-cell-val js-peak">—</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Peak Likes</div><div class="ch-stat-cell-val">—</div></div>
+      </div>
+    </a>
+    <a class="channel-card" href="indies/arikyami/index.html" data-name="arikyami" data-subs="0" data-likes="0" data-streams-7d="0" data-streams-30d="0" data-streams-all="0" data-peak-7d="0" data-peak-30d="0" data-peak-all="0">
+      <div class="ch-card-top">
+        <div class="channel-avatar-placeholder">A</div>
+        
+      </div>
+      <div class="ch-card-name-wrap">
+        <div class="ch-card-name">arikyami</div>
+        <div class="ch-card-role">Talent</div>
+      </div>
+      <div class="ch-card-stat-grid">
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Subscribers</div><div class="ch-stat-cell-val">0</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Streams</div><div class="ch-stat-cell-val js-streams">0</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Peak CCV</div><div class="ch-stat-cell-val js-peak">—</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Peak Likes</div><div class="ch-stat-cell-val">—</div></div>
+      </div>
+    </a>
+    <a class="channel-card" href="indies/mei-dyanira/index.html" data-name="mei dyanira" data-subs="0" data-likes="299" data-streams-7d="2" data-streams-30d="2" data-streams-all="2" data-peak-7d="153" data-peak-30d="153" data-peak-all="153">
+      <div class="ch-card-top">
+        <div class="channel-avatar-placeholder">MD</div>
+        
+      </div>
+      <div class="ch-card-name-wrap">
+        <div class="ch-card-name">mei dyanira</div>
+        <div class="ch-card-role">Talent</div>
+      </div>
+      <div class="ch-card-stat-grid">
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Subscribers</div><div class="ch-stat-cell-val">0</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Streams</div><div class="ch-stat-cell-val js-streams">2</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Peak CCV</div><div class="ch-stat-cell-val js-peak">153</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Peak Likes</div><div class="ch-stat-cell-val">299</div></div>
+      </div>
+    </a>
+    <a class="channel-card" href="indies/bianca-hantu/index.html" data-name="Bianca Hantu" data-subs="0" data-likes="0" data-streams-7d="0" data-streams-30d="0" data-streams-all="0" data-peak-7d="0" data-peak-30d="0" data-peak-all="0">
+      <div class="ch-card-top">
+        <div class="channel-avatar-placeholder">BH</div>
+        
+      </div>
+      <div class="ch-card-name-wrap">
+        <div class="ch-card-name">Bianca Hantu</div>
+        <div class="ch-card-role">Talent</div>
+      </div>
+      <div class="ch-card-stat-grid">
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Subscribers</div><div class="ch-stat-cell-val">0</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Streams</div><div class="ch-stat-cell-val js-streams">0</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Peak CCV</div><div class="ch-stat-cell-val js-peak">—</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Peak Likes</div><div class="ch-stat-cell-val">—</div></div>
+      </div>
+    </a>
+    <a class="channel-card" href="indies/arcannej/index.html" data-name="arcanneJ" data-subs="0" data-likes="0" data-streams-7d="0" data-streams-30d="0" data-streams-all="0" data-peak-7d="0" data-peak-30d="0" data-peak-all="0">
+      <div class="ch-card-top">
+        <div class="channel-avatar-placeholder">A</div>
+        
+      </div>
+      <div class="ch-card-name-wrap">
+        <div class="ch-card-name">arcanneJ</div>
+        <div class="ch-card-role">Talent</div>
+      </div>
+      <div class="ch-card-stat-grid">
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Subscribers</div><div class="ch-stat-cell-val">0</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Streams</div><div class="ch-stat-cell-val js-streams">0</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Peak CCV</div><div class="ch-stat-cell-val js-peak">—</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Peak Likes</div><div class="ch-stat-cell-val">—</div></div>
+      </div>
+    </a>
+    <a class="channel-card" href="indies/solace-amerta/index.html" data-name="Solace Amerta" data-subs="0" data-likes="244" data-streams-7d="2" data-streams-30d="2" data-streams-all="2" data-peak-7d="107" data-peak-30d="107" data-peak-all="107">
+      <div class="ch-card-top">
+        <div class="channel-avatar-placeholder">SA</div>
+        
+      </div>
+      <div class="ch-card-name-wrap">
+        <div class="ch-card-name">Solace Amerta</div>
+        <div class="ch-card-role">Talent</div>
+      </div>
+      <div class="ch-card-stat-grid">
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Subscribers</div><div class="ch-stat-cell-val">0</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Streams</div><div class="ch-stat-cell-val js-streams">2</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Peak CCV</div><div class="ch-stat-cell-val js-peak">107</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Peak Likes</div><div class="ch-stat-cell-val">244</div></div>
+      </div>
+    </a>
+    <a class="channel-card" href="indies/deidey/index.html" data-name="Deidey" data-subs="0" data-likes="0" data-streams-7d="0" data-streams-30d="0" data-streams-all="0" data-peak-7d="0" data-peak-30d="0" data-peak-all="0">
+      <div class="ch-card-top">
+        <div class="channel-avatar-placeholder">D</div>
+        
+      </div>
+      <div class="ch-card-name-wrap">
+        <div class="ch-card-name">Deidey</div>
+        <div class="ch-card-role">Talent</div>
+      </div>
+      <div class="ch-card-stat-grid">
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Subscribers</div><div class="ch-stat-cell-val">0</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Streams</div><div class="ch-stat-cell-val js-streams">0</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Peak CCV</div><div class="ch-stat-cell-val js-peak">—</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Peak Likes</div><div class="ch-stat-cell-val">—</div></div>
+      </div>
+    </a>
+    <a class="channel-card" href="indies/onshannon/index.html" data-name="ONShannon" data-subs="0" data-likes="509" data-streams-7d="1" data-streams-30d="1" data-streams-all="1" data-peak-7d="205" data-peak-30d="205" data-peak-all="205">
+      <div class="ch-card-top">
+        <div class="channel-avatar-placeholder">O</div>
+        
+      </div>
+      <div class="ch-card-name-wrap">
+        <div class="ch-card-name">ONShannon</div>
+        <div class="ch-card-role">Talent</div>
+      </div>
+      <div class="ch-card-stat-grid">
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Subscribers</div><div class="ch-stat-cell-val">0</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Streams</div><div class="ch-stat-cell-val js-streams">1</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Peak CCV</div><div class="ch-stat-cell-val js-peak">205</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Peak Likes</div><div class="ch-stat-cell-val">509</div></div>
+      </div>
+    </a>
+    <a class="channel-card" href="indies/noemi-hestia/index.html" data-name="Noemi Hestia" data-subs="0" data-likes="0" data-streams-7d="0" data-streams-30d="0" data-streams-all="0" data-peak-7d="0" data-peak-30d="0" data-peak-all="0">
+      <div class="ch-card-top">
+        <div class="channel-avatar-placeholder">NH</div>
+        
+      </div>
+      <div class="ch-card-name-wrap">
+        <div class="ch-card-name">Noemi Hestia</div>
+        <div class="ch-card-role">Talent</div>
+      </div>
+      <div class="ch-card-stat-grid">
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Subscribers</div><div class="ch-stat-cell-val">0</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Streams</div><div class="ch-stat-cell-val js-streams">0</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Peak CCV</div><div class="ch-stat-cell-val js-peak">—</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Peak Likes</div><div class="ch-stat-cell-val">—</div></div>
+      </div>
+    </a>
+    <a class="channel-card" href="indies/vanta-arissa-ch/index.html" data-name="Vanta Arissa Ch." data-subs="0" data-likes="507" data-streams-7d="1" data-streams-30d="1" data-streams-all="1" data-peak-7d="153" data-peak-30d="153" data-peak-all="153">
+      <div class="ch-card-top">
+        <div class="channel-avatar-placeholder">VA</div>
+        
+      </div>
+      <div class="ch-card-name-wrap">
+        <div class="ch-card-name">Vanta Arissa Ch.</div>
+        <div class="ch-card-role">Talent</div>
+      </div>
+      <div class="ch-card-stat-grid">
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Subscribers</div><div class="ch-stat-cell-val">0</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Streams</div><div class="ch-stat-cell-val js-streams">1</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Peak CCV</div><div class="ch-stat-cell-val js-peak">153</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Peak Likes</div><div class="ch-stat-cell-val">507</div></div>
+      </div>
+    </a>
+    <a class="channel-card" href="indies/adelaide-ch/index.html" data-name="Adelaide Ch." data-subs="0" data-likes="193" data-streams-7d="1" data-streams-30d="1" data-streams-all="1" data-peak-7d="176" data-peak-30d="176" data-peak-all="176">
+      <div class="ch-card-top">
+        <div class="channel-avatar-placeholder">A</div>
+        
+      </div>
+      <div class="ch-card-name-wrap">
+        <div class="ch-card-name">Adelaide Ch.</div>
+        <div class="ch-card-role">Talent</div>
+      </div>
+      <div class="ch-card-stat-grid">
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Subscribers</div><div class="ch-stat-cell-val">0</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Streams</div><div class="ch-stat-cell-val js-streams">1</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Peak CCV</div><div class="ch-stat-cell-val js-peak">176</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Peak Likes</div><div class="ch-stat-cell-val">193</div></div>
+      </div>
+    </a>
+    <a class="channel-card" href="indies/jelly-si-curut-bodas-ch/index.html" data-name="Jelly si Curut Bodas Ch." data-subs="0" data-likes="0" data-streams-7d="0" data-streams-30d="0" data-streams-all="0" data-peak-7d="0" data-peak-30d="0" data-peak-all="0">
+      <div class="ch-card-top">
+        <div class="channel-avatar-placeholder">JS</div>
+        
+      </div>
+      <div class="ch-card-name-wrap">
+        <div class="ch-card-name">Jelly si Curut Bodas Ch.</div>
+        <div class="ch-card-role">Talent</div>
+      </div>
+      <div class="ch-card-stat-grid">
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Subscribers</div><div class="ch-stat-cell-val">0</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Streams</div><div class="ch-stat-cell-val js-streams">0</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Peak CCV</div><div class="ch-stat-cell-val js-peak">—</div></div>
+        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Peak Likes</div><div class="ch-stat-cell-val">—</div></div>
       </div>
     </a>
   </div>
@@ -315,31 +494,17 @@
 
 <script>
 (function () {
-  var grid       = document.querySelector('.orgs-grid');
-  var chips      = document.querySelectorAll('.filter-chip');
-  var rangeWrap  = document.getElementById('homeRange');
+  var grid       = document.querySelector('.channels-grid');
+  var chips      = document.querySelectorAll('.sort-chip');
+  var rangeWrap  = document.getElementById('orgRange');
   var rangeChips = rangeWrap ? rangeWrap.querySelectorAll('.range-chip') : [];
-  var sitePeakEl = document.querySelector('.js-site-peak');
-  var mode  = 'all';    // 'all' | 'az' | 'peak'
+  var heroStreamsEl = document.querySelector('.org-hero-stats .js-streams');
+  var heroPeakEl    = document.querySelector('.org-hero-stats .js-peak');
+  var mode  = 'subs';   // 'subs' | 'peak' | 'likes' | 'streams' | 'az'
   var range = '30d';    // '7d' | '30d' | 'all'
 
-  function applySort() {
-    if (!grid) return;
-    var cards = Array.from(grid.querySelectorAll('.org-card'));
-    if (mode === 'az') {
-      cards.sort(function (a, b) {
-        return (a.getAttribute('data-name') || '').localeCompare(b.getAttribute('data-name') || '');
-      });
-      cards.forEach(function (c) { grid.appendChild(c); });
-    } else if (mode === 'peak') {
-      cards.sort(function (a, b) {
-        var pa = parseFloat(a.getAttribute('data-peak-' + range) || '0') || 0;
-        var pb = parseFloat(b.getAttribute('data-peak-' + range) || '0') || 0;
-        return pb - pa;   // descending — highest peak viewers first
-      });
-      cards.forEach(function (c) { grid.appendChild(c); });
-    }
-    // 'all' = default document order (no re-sort needed on page load)
+  function getVal(card, attr) {
+    return parseFloat(card.getAttribute(attr) || '0') || 0;
   }
 
   function fmtNum(n) {
@@ -349,9 +514,24 @@
     return String(n);
   }
 
+  function sortCards() {
+    if (!grid) return;
+    var cards = Array.from(grid.querySelectorAll('.channel-card'));
+    if (mode === 'az') {
+      cards.sort(function (a, b) {
+        return (a.getAttribute('data-name') || '').localeCompare(b.getAttribute('data-name') || '');
+      });
+    } else {
+      var map = { 'subs': 'data-subs', 'likes': 'data-likes',
+                  'peak': 'data-peak-' + range, 'streams': 'data-streams-' + range };
+      cards.sort(function (a, b) { return getVal(b, map[mode]) - getVal(a, map[mode]); });
+    }
+    cards.forEach(function (c) { grid.appendChild(c); });
+  }
+
   function applyRange() {
     if (grid) {
-      Array.from(grid.querySelectorAll('.org-card')).forEach(function (card) {
+      Array.from(grid.querySelectorAll('.channel-card')).forEach(function (card) {
         var streamsEl = card.querySelector('.js-streams');
         var peakEl    = card.querySelector('.js-peak');
         if (streamsEl) streamsEl.textContent = card.getAttribute('data-streams-' + range) || '0';
@@ -361,26 +541,30 @@
         }
       });
     }
-    if (sitePeakEl && rangeWrap) {
-      var sp = rangeWrap.getAttribute('data-peak-' + range) || '0';
-      sitePeakEl.textContent = sp === '0' ? '—' : fmtNum(sp);
+    if (rangeWrap) {
+      if (heroStreamsEl) heroStreamsEl.textContent = rangeWrap.getAttribute('data-streams-' + range) || '0';
+      if (heroPeakEl) {
+        var hp = rangeWrap.getAttribute('data-peak-' + range) || '0';
+        heroPeakEl.textContent = hp === '0' ? '—' : fmtNum(hp);
+      }
     }
-    applySort();
+    sortCards();
   }
+
+  var keyMap = {
+    'Subscribers': 'subs',
+    'Peak CCV':    'peak',
+    'Peak Likes':  'likes',
+    'Streams':     'streams',
+    'A–Z':   'az',
+  };
 
   chips.forEach(function (chip) {
     chip.addEventListener('click', function () {
       chips.forEach(function (c) { c.classList.remove('active'); });
       chip.classList.add('active');
-      var label = chip.textContent.trim();
-      if (label === 'A–Z') {
-        mode = 'az';
-      } else if (label === 'Peak Viewers') {
-        mode = 'peak';
-      } else {
-        mode = 'all';
-      }
-      applySort();
+      mode = keyMap[chip.textContent.trim()] || 'subs';
+      sortCards();
     });
   });
 
