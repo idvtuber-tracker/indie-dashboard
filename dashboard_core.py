@@ -107,6 +107,16 @@ for _slug, _org in ORG_MAP.items():
     for _entry in _org["channels"]:
         _CH_TO_ORG[_entry[0]] = (_slug, _org)
 
+# When ORG_MAP holds exactly one org (the indie build's normal state — every
+# solo/unaffiliated talent lives under the single "indies" entry), the
+# org-tier page is a pure pass-through: Home -> Org (1 card) -> Channel is
+# the same destination as Home -> Channel with an extra click. In that case
+# the channel grid is folded directly into write_index() and the org page
+# is never generated, so there's no dead-end intermediate page or orphan
+# file. If a second org is ever added, this flips back to the normal
+# 3-level org/channel/stream layout automatically.
+_SINGLE_ORG = len(ORG_MAP) <= 1
+
 
 # ══════════════════════════════════════════════════════════════════════════════
 # MANIFEST
@@ -1354,11 +1364,149 @@ def _breadcrumb(crumbs: list[tuple[str, str]]) -> str:
 
 def write_index(total_streams: int, total_channels: int, generated_at: str,
                 stream_counts: dict | None = None,
-                all_streams_by_channel: dict | None = None) -> None:
+                all_streams_by_channel: dict | None = None,
+                logos: dict[str, str] | None = None,
+                channel_ids_map: dict[str, str] | None = None,
+                subscribers: dict[str, int] | None = None) -> None:
     stream_counts          = stream_counts or {}
     all_streams_by_channel = all_streams_by_channel or {}
+    logos                  = logos or {}
+    channel_ids_map        = channel_ids_map or {}
+    subscribers            = subscribers or {}
 
-    # ── per-org stats: windowed (7d/30d/all) peak+streams, plus live count ────
+    # ── sitewide windowed stats (== org-wide, since there's one org here) ─────
+    all_site_streams = [s for streams in all_streams_by_channel.values() for s in streams]
+    site_windows = _window_stats(all_site_streams)
+    w30 = site_windows["30d"]
+    sitewide_live = sum(1 for s in all_site_streams if (s.get("stream_status") or "vod") == "live")
+    total_subs = 0
+    for org in ORG_MAP.values():
+        for e in org["channels"]:
+            ch_id = channel_ids_map.get(e[0], "")
+            total_subs += subscribers.get(ch_id, 0) or 0
+
+    if _SINGLE_ORG:
+        # ── single-org build (indies): the org tier is a pass-through — an
+        # org page with exactly one card is a dead-end click, so the channel
+        # grid that would normally live at {org_slug}/index.html is folded
+        # straight into the homepage instead. write_org_page() is simply
+        # never called for this org (see regenerate_org_pages()).
+        org_slug, org = next(iter(ORG_MAP.items()))
+        cards = ""
+        for entry in org["channels"]:
+            ch_name   = entry[0]
+            ch_type   = entry[1]
+            ch_slug   = slugify(ch_name)
+            ch_id     = channel_ids_map.get(ch_name, "")
+            logo_url  = logos.get(ch_id, "")
+            sub_count = subscribers.get(ch_id, 0) or 0
+
+            ch_streams = all_streams_by_channel.get(ch_name, [])
+            ch_windows = _window_stats(ch_streams)
+            ch_likes = 0
+            likes = [s.get("peak_likes") or 0 for s in ch_streams if s.get("peak_likes")]
+            if likes:
+                ch_likes = max(likes)
+            ch_is_live = any((s.get("stream_status") or "vod") == "live" for s in ch_streams)
+            ch_live_badge = (
+                '<span class="live-badge-sm"><span class="live-dot-sm"></span>LIVE</span>'
+                if ch_is_live else ''
+            )
+            n_str   = ch_windows["30d"]["streams"]
+            ch_peak = ch_windows["30d"]["peak"]
+
+            words    = ch_name.replace("【", " ").replace("〔", " ").replace("Ch.", "").split()
+            initials = "".join(w[0].upper() for w in words if w)[:2] or "?"
+            if logo_url:
+                _oe = f"this.outerHTML='<div class=&quot;channel-avatar-placeholder&quot;>{initials}</div>'"
+                avatar_html = (
+                    f'<img class="channel-avatar" src="{logo_url}" alt="" '
+                    f'loading="lazy" referrerpolicy="no-referrer" onerror="{_oe}">'
+                )
+            else:
+                avatar_html = f'<div class="channel-avatar-placeholder">{initials}</div>'
+
+            role_lbl = "Org Channel" if ch_type == "org" else "Talent"
+
+            cards += (
+                f'\n    <a class="channel-card" href="{org_slug}/{ch_slug}/index.html"'
+                f' data-name="{esc(ch_name)}" data-subs="{sub_count}" data-likes="{ch_likes}"'
+                f' data-streams-7d="{ch_windows["7d"]["streams"]}" data-streams-30d="{ch_windows["30d"]["streams"]}" data-streams-all="{ch_windows["all"]["streams"]}"'
+                f' data-peak-7d="{ch_windows["7d"]["peak"]}" data-peak-30d="{ch_windows["30d"]["peak"]}" data-peak-all="{ch_windows["all"]["peak"]}">\n'
+                f'      <div class="ch-card-top">\n'
+                f'        {avatar_html}\n'
+                f'        {ch_live_badge}\n'
+                f'      </div>\n'
+                f'      <div class="ch-card-name-wrap">\n'
+                f'        <div class="ch-card-name">{esc(ch_name)}</div>\n'
+                f'        <div class="ch-card-role">{role_lbl}</div>\n'
+                f'      </div>\n'
+                f'      <div class="ch-card-stat-grid">\n'
+                f'        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Subscribers</div><div class="ch-stat-cell-val">{fmt_subs(sub_count)}</div></div>\n'
+                f'        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Streams</div><div class="ch-stat-cell-val js-streams">{n_str}</div></div>\n'
+                f'        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Peak CCV</div><div class="ch-stat-cell-val js-peak">{fmt_compact(ch_peak) if ch_peak else "—"}</div></div>\n'
+                f'        <div class="ch-stat-cell"><div class="ch-stat-cell-lbl">Peak Likes</div><div class="ch-stat-cell-val">{fmt(ch_likes) if ch_likes else "—"}</div></div>\n'
+                f'      </div>\n'
+                f'    </a>'
+            )
+
+        # ── header ──────────────────────────────────────────────────────────
+        # Stat-led hero, same accent-bar/card treatment as .channel-hero one
+        # level down. Leads with channel/stream counts instead of an org
+        # count (there's only ever one org here) — "38 orgs. 233 channels."
+        # becomes "12 channels. 143 streams." for the indie framing. Range
+        # chips + KPI row on the right double as the org-level hero stats,
+        # reusing _ORG_JS's selectors (.org-hero-stats / #orgRange) so no
+        # separate JS variant is needed for this merged page.
+        body = (
+            f'  <div class="site-hero">\n'
+            f'    <div class="site-hero-accent"></div>\n'
+            f'    <div class="site-hero-body">\n'
+            f'      <div class="site-hero-info">\n'
+            f'        <p class="eyebrow">IDVTuber Tracker &#8212; Independent VTubers</p>\n'
+            f'        <h1>{total_channels} channels. {total_streams} streams. One signal feed.</h1>\n'
+            f'        <p class="page-meta">Independent Indonesian VTubers, tracked and recorded in one place &#8212; subs, streams, and peak viewership, refreshed automatically. No agency, no group roster, just the numbers.</p>\n'
+            f'        <p class="site-hero-updated">&#128337; Updated {generated_at}</p>\n'
+            f'      </div>\n'
+            f'      <div class="site-hero-side">\n'
+            f'        <div class="range-chips" id="orgRange"'
+            f' data-peak-7d="{site_windows["7d"]["peak"] or 0}"'
+            f' data-peak-30d="{w30["peak"] or 0}"'
+            f' data-peak-all="{site_windows["all"]["peak"] or 0}"'
+            f' data-streams-7d="{site_windows["7d"]["streams"]}"'
+            f' data-streams-30d="{w30["streams"]}"'
+            f' data-streams-all="{site_windows["all"]["streams"]}">\n'
+            f'          <span class="range-chip" data-range="7d">7D</span>\n'
+            f'          <span class="range-chip active" data-range="30d">30D</span>\n'
+            f'          <span class="range-chip" data-range="all">ALL</span>\n'
+            f'        </div>\n'
+            f'        <div class="site-hero-stats org-hero-stats">\n'
+            f'          <div class="ohs"><div class="ohs-val">{total_channels}</div><div class="ohs-lbl">Channels</div></div>\n'
+            f'          <div class="ohs"><div class="ohs-val js-streams">{w30["streams"]}</div><div class="ohs-lbl">Streams</div></div>\n'
+            f'          <div class="ohs"><div class="ohs-val" id="idxLiveCount">{sitewide_live}</div><div class="ohs-lbl">Live now</div></div>\n'
+            f'          <div class="ohs"><div class="ohs-val js-peak">{fmt_compact(w30["peak"]) if w30["peak"] else "—"}</div><div class="ohs-lbl">Peak CCV</div></div>\n'
+            f'          <div class="ohs"><div class="ohs-val">{fmt_subs(total_subs)}</div><div class="ohs-lbl">Combined subs</div></div>\n'
+            f'        </div>\n'
+            f'      </div>\n'
+            f'    </div>\n'
+            f'  </div>\n'
+            f'  <div class="sort-strip">\n'
+            f'    <span class="sort-lbl">Sort by:</span>\n'
+            f'    <span class="sort-chip active">Subscribers</span>\n'
+            f'    <span class="sort-chip">Peak CCV</span>\n'
+            f'    <span class="sort-chip">Peak Likes</span>\n'
+            f'    <span class="sort-chip">Streams</span>\n'
+            f'    <span class="sort-chip">A&#8211;Z</span>\n'
+            f'  </div>\n'
+            f'  <div class="channels-grid">{cards}\n  </div>\n'
+        )
+
+        html = _html_head("Independent VTubers", 0, live_count=sitewide_live) + body + _html_foot(0, 'org')
+        (OUTPUT_DIR / "index.html").write_text(html, encoding="utf-8")
+        log.info("Written: index.html (single-org, channel grid folded in)")
+        return
+
+    # ── multi-org build: original org-card index page ─────────────────────────
     def _org_stats(org):
         org_streams = []
         for e in org["channels"]:
@@ -1367,18 +1515,12 @@ def write_index(total_streams: int, total_channels: int, generated_at: str,
         live = sum(1 for s in org_streams if (s.get("stream_status") or "vod") == "live")
         return windows, live
 
-    # ── sitewide windowed stats (for the stats-bar peak pill) ─────────────────
-    all_site_streams = [s for streams in all_streams_by_channel.values() for s in streams]
-    site_windows = _window_stats(all_site_streams)
-    sitewide_live = sum(1 for s in all_site_streams if (s.get("stream_status") or "vod") == "live")
-
-    # ── build org cards ───────────────────────────────────────────────────────
     org_cards = ""
     for org_slug, org in ORG_MAP.items():
         n_ch = len(org["channels"])
         windows, n_live = _org_stats(org)
-        w30 = windows["30d"]
-        peak_str  = fmt_compact(w30["peak"]) if w30["peak"] else "—"
+        ow30 = windows["30d"]
+        peak_str  = fmt_compact(ow30["peak"]) if ow30["peak"] else "—"
         live_badge = (
             f'<span class="live-badge-sm"><span class="live-dot-sm"></span>LIVE {n_live}</span>'
             if n_live else ''
@@ -1398,21 +1540,15 @@ def write_index(total_streams: int, total_channels: int, generated_at: str,
             f'        <div class="org-card-desc">{esc(org["desc"])}</div>\n'
             f'        <div class="org-card-stats">\n'
             f'          <span class="ocs">&#128100; <strong>{n_ch}</strong></span>\n'
-            f'          <span class="ocs">&#9654; <strong class="js-streams">{w30["streams"]}</strong></span>\n'
+            f'          <span class="ocs">&#9654; <strong class="js-streams">{ow30["streams"]}</strong></span>\n'
             f'          <span class="ocs">&#128065; <strong class="js-peak">{peak_str}</strong> peak</span>\n'
             f'        </div>\n'
             f'      </div>\n'
             f'    </a>'
         )
 
-    site_peak_30d = fmt_compact(site_windows["30d"]["peak"]) if site_windows["30d"]["peak"] else "—"
+    site_peak_30d = fmt_compact(w30["peak"]) if w30["peak"] else "—"
 
-    # ── header ──────────────────────────────────────────────────────────────
-    # Boxed "site-hero" — the same accent-bar/card treatment as .org-hero and
-    # .channel-hero one level down, so the index page's header reads as part
-    # of the same visual family instead of the bare eyebrow/h1/stats-bar strip
-    # it used to be. Range chips + KPI row sit on the hero's right side, same
-    # layout org-level uses; sort chips stay in their own strip below it.
     body = (
         f'  <div class="site-hero">\n'
         f'    <div class="site-hero-accent"></div>\n'
@@ -2048,11 +2184,14 @@ def write_channel_page(org_slug: str, org: dict, ch_name: str,
     )
 
     # ── assemble page ─────────────────────────────────────────────────────────
-    bc = _breadcrumb([
-        ("Home",       "../../index.html"),
-        (org["label"], "../index.html"),
-        (ch_name,      ""),
-    ])
+    # Org crumb is dropped on single-org builds — there's no {org}/index.html
+    # to link to (write_index() absorbed it), so it would be a dead link.
+    # The org label still shows in the hero-org-badge just above for context.
+    bc = _breadcrumb(
+        [("Home", "../../index.html")]
+        + ([] if _SINGLE_ORG else [(org["label"], "../index.html")])
+        + [(ch_name, "")]
+    )
 
     yt_url = f"https://youtube.com/channel/{ch_id}" if ch_id else "#"
 
@@ -2178,12 +2317,11 @@ def write_stream_page(org_slug: str, org: dict, ch_name: str,
     org_color       = org["color"]
     org_color_light = org["color_light"]
 
-    bc = _breadcrumb([
-        ("Home",       "../../index.html"),
-        (org["label"], "../index.html"),
-        (ch_name,      "index.html"),
-        (short_title,  ""),
-    ])
+    bc = _breadcrumb(
+        [("Home", "../../index.html")]
+        + ([] if _SINGLE_ORG else [(org["label"], "../index.html")])
+        + [(ch_name, "index.html"), (short_title, "")]
+    )
 
     chart_script = (
         '<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>\n'
@@ -2773,7 +2911,16 @@ def regenerate_org_pages(dirty_orgs: set, stream_counts: dict, logos: dict,
                           channel_ids_map: dict, subscribers: dict,
                           all_streams_by_channel: dict,
                           max_workers: int = 32) -> int:
-    """Regenerate only org pages whose dirty_orgs membership says changed."""
+    """Regenerate only org pages whose dirty_orgs membership says changed.
+
+    No-ops entirely on a single-org build: write_index() already folds the
+    one org's channel grid straight into the homepage (see _SINGLE_ORG), so
+    there is no {org_slug}/index.html for anything to write — generating one
+    here would just produce an orphan page nothing links to.
+    """
+    if _SINGLE_ORG:
+        return 0
+
     org_write_args = [
         (org_slug, org, stream_counts, logos, channel_ids_map, subscribers,
          all_streams_by_channel)
