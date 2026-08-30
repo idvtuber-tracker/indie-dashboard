@@ -112,7 +112,8 @@ def generate_backfill() -> None:
 
     generated_at = _now_local().strftime("%Y-%m-%d %H:%M WIB")
     write_index(total_streams, total_channels, generated_at,
-                stream_counts, all_streams_by_channel)
+                stream_counts, all_streams_by_channel,
+                logos, channel_ids_map, subscribers)
     write_search_index(resolved_channels, all_streams_by_channel)
     write_live_page(all_streams_by_channel, logos, channel_ids_map)
 
