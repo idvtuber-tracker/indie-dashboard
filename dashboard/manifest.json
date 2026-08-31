@@ -80,7 +80,14 @@
     "org_slug": "indies",
     "ch_slug": "solace-amerta",
     "ch_name": "Solace Amerta",
+    "status": "vod",
+    "generated_at": "2026-08-31 19:00 WIB"
+  },
+  "rprxol4VRnw": {
+    "org_slug": "indies",
+    "ch_slug": "solace-amerta",
+    "ch_name": "Solace Amerta",
     "status": "live",
-    "generated_at": "2026-08-31 17:10 WIB"
+    "generated_at": "2026-08-31 19:00 WIB"
   }
 }
