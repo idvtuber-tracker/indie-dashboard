@@ -87,7 +87,14 @@
     "org_slug": "indies",
     "ch_slug": "solace-amerta",
     "ch_name": "Solace Amerta",
+    "status": "vod",
+    "generated_at": "2026-08-31 21:54 WIB"
+  },
+  "cUWinwJzWZE": {
+    "org_slug": "indies",
+    "ch_slug": "adelaide-ch",
+    "ch_name": "Adelaide Ch.",
     "status": "live",
-    "generated_at": "2026-08-31 19:00 WIB"
+    "generated_at": "2026-08-31 21:54 WIB"
   }
 }

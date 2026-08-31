@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="dark light">
 <script>!function(){var t=localStorage.getItem("idvt-theme")||(window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",t)}();</script>
-<title>Adelaide Ch. — IDVTuber Tracker</title>
+<title>kalem aja kalem lah hari ini huft — IDVTuber Tracker</title>
 <link rel="icon" href="../../favicon.ico">
 <script>window.SITE_DEPTH = 2;</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -16,7 +16,9 @@
   gtag('js', new Date());
   gtag('config', 'G-29RTBLR6HQ');
 </script>
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-zoom/2.0.1/chartjs-plugin-zoom.min.js"></script>
 <link rel="stylesheet" href="../../theme.css">
 <link rel="stylesheet" href="../../dashboard.css">
 <style>
@@ -46,204 +48,216 @@
   </div>
 </nav>
 <div class="page">
-<nav class="breadcrumb"><a href="../../index.html">Home</a> <span class="sep">&#8250;</span> <span class="current">Adelaide Ch.</span></nav>
-  <div class="channel-hero">
-    <div class="hero-shimmer"></div>
-    <div class="hero-body">
-      <img class="hero-avatar-large" src="https://yt3.ggpht.com/BQPozwkzqfdRM-e1rGVII7RZIQI2aYrNHe9Hb523jH4K3CwvMZzOrpqrfMYuT75CMh8IniSEJg=s240-c-k-c0x00ffffff-no-rj" alt="Adelaide Ch. avatar" loading="lazy" onerror="this.outerHTML='<div class=&quot;hero-avatar-large-placeholder&quot;>A</div>'">
-      <div class="hero-info">
-        <div class="hero-org-badge">
-          <div class="hero-org-dot"></div>
-          Independent
-        </div>
-        <div class="hero-name">Adelaide Ch.</div>
-        <div class="hero-meta-row">
-          <div class="hero-meta-item"><span>Subscribers</span><strong>28,100</strong></div>
-          <div class="hero-meta-item"><span>Total views</span><strong>4,892</strong></div>
-          <div class="hero-meta-item"><span>Tracking</span><strong>Aug 2026</strong></div>
-        </div>
+<nav class="breadcrumb"><a href="../../index.html">Home</a> <span class="sep">&#8250;</span> <a href="index.html">Adelaide Ch.</a> <span class="sep">&#8250;</span> <span class="current">kalem aja kalem lah hari ini huft</span></nav>
+  <header>
+    <p class="eyebrow">Independent &nbsp;&#183;&nbsp; Adelaide Ch.</p>
+    <span class="stream-status status-live" style="display:inline-block;margin-bottom:0.75rem;">&#128308; Live</span>
+    <h1>kalem aja kalem lah hari ini huft</h1>
+    <p class="page-meta">Video ID: cUWinwJzWZE</p>
+  </header>
+
+  <div class="stream-hero">
+    <div class="embed-side">
+      <div class="embed-wrap">
+        <iframe src="https://www.youtube.com/embed/cUWinwJzWZE" allowfullscreen loading="lazy"></iframe>
       </div>
-      <div class="hero-actions">
-        <a class="external-link" href="https://youtube.com/channel/UCwgs92GpoFzAEG4QHLgEuRA" target="_blank" rel="noopener">View Channel &#8599;</a>
+      <div class="stream-thumb-meta">
+        <span>2026-08-31 21:54 WIB</span>
+        <a href="https://www.youtube.com/watch?v=cUWinwJzWZE" target="_blank" rel="noopener">View Stream &#8599;</a>
+      </div>
+    </div>
+    <div class="kpi-side">
+      <div class="kpi-grid">
+        <div class="kpi"><div class="kpi-label">Peak Viewers</div><div class="kpi-value">24</div><div class="kpi-sub">concurrent</div></div>
+        <div class="kpi"><div class="kpi-label">Avg Viewers</div><div class="kpi-value">24</div><div class="kpi-sub">concurrent</div></div>
+        <div class="kpi"><div class="kpi-label">Peak Likes</div><div class="kpi-value">27</div></div>
+        <div class="kpi"><div class="kpi-label">Peak Comments</div><div class="kpi-value">0</div></div>
+        <div class="kpi"><div class="kpi-label">Stream Start</div><div class="kpi-value kpi-sm">2026-08-31 21:54 WIB</div></div>
+        <div class="kpi"><div class="kpi-label">Stream End</div><div class="kpi-value kpi-sm">2026-08-31 21:54 WIB</div></div>
+        <div class="kpi"><div class="kpi-label">Duration</div><div class="kpi-value kpi-sm">0m 00s</div></div>
+        <div class="kpi"><div class="kpi-label">View Count</div><div class="kpi-value kpi-sm">0</div><div class="kpi-sub">total plays</div></div>
       </div>
     </div>
   </div>
-  <div class="range-chips" id="channelRange" data-streams-7d="2" data-streams-30d="2" data-streams-all="2" data-peak-7d="176" data-peak-30d="176" data-peak-all="176" style="margin-bottom:0.75rem;">
-    <span class="range-chip" data-range="7d">7D</span>
-    <span class="range-chip active" data-range="30d">30D</span>
-    <span class="range-chip" data-range="all">ALL</span>
+
+  <div class="chart-box">
+    <div class="chart-toolbar">
+      <div class="chart-title">Concurrent Viewers over Time</div>
+      <div class="chart-actions">
+        <button class="chart-btn" onclick="resetZoom('viewerChart')">Reset Zoom</button>
+        <button class="chart-btn" onclick="downloadCSV('viewerChart')">Download CSV</button>
+      </div>
+    </div>
+    <div class="chart-wrap"><canvas id="viewerChart"></canvas></div>
+    <p class="chart-hint">Scroll to zoom &nbsp;&#183;&nbsp; Shift+drag to select range &nbsp;&#183;&nbsp; Drag to pan &nbsp;&#183;&nbsp; Double-click to reset</p>
   </div>
-  <div class="kpi-strip">
-    <div class="kpi-cell"><div class="kpi-label">Streams tracked</div><div class="kpi-value js-streams">2</div><div class="kpi-sub">Aug 2026</div></div>
-    <div class="kpi-cell"><div class="kpi-label">Peak CCV</div><div class="kpi-value js-peak">176</div><div class="kpi-sub">Selected range</div></div>
-    <div class="kpi-cell"><div class="kpi-label">Avg peak CCV</div><div class="kpi-value">100</div><div class="kpi-sub">Per stream, all-time</div></div>
-    <div class="kpi-cell"><div class="kpi-label">Total views</div><div class="kpi-value">4,892</div><div class="kpi-sub">All-time</div></div>
+
+  <div class="chart-box">
+    <div class="chart-toolbar">
+      <div class="chart-title">Likes &amp; Comments over Time</div>
+      <div class="chart-actions">
+        <button class="chart-btn" onclick="resetZoom('engagementChart')">Reset Zoom</button>
+        <button class="chart-btn" onclick="downloadCSV('engagementChart')">Download CSV</button>
+      </div>
+    </div>
+    <div class="chart-wrap"><canvas id="engagementChart"></canvas></div>
+    <p class="chart-hint">Scroll to zoom &nbsp;&#183;&nbsp; Shift+drag to select range &nbsp;&#183;&nbsp; Drag to pan &nbsp;&#183;&nbsp; Double-click to reset</p>
   </div>
-  <div class="recent-streams-section">
-    <div class="recent-streams-hdr">Recent streams</div>
-    <div class="recent-grid">
-    <a class="rc" href="cuwinwjzwze.html">
-      <div class="rc-thumb">
-        <img src="https://i.ytimg.com/vi/cUWinwJzWZE/mqdefault_live.jpg" alt="" loading="lazy" onerror="this.parentNode.innerHTML='<div class=&quot;rc-placeholder&quot;&gt;&#9654;</div>'">
-        <span class="rc-live">Live</span>
-      </div>
-      <div class="rc-body">
-        <div class="rc-title">kalem aja kalem lah hari ini huft</div>
-        <div class="rc-date">31 Aug 2026</div>
-        <div class="rc-stats">
-          <span>&#128065; <span class="rc-peak">24</span></span>
-          <span>&#9825; 27</span>
-          <span>&#9654; 0</span>
-        </div>
-      </div>
-    </a>
-    <a class="rc" href="wppyy8z8nvw.html">
-      <div class="rc-thumb">
-        <img src="https://i.ytimg.com/vi/wPPyY8Z8NVw/mqdefault_live.jpg" alt="" loading="lazy" onerror="this.parentNode.innerHTML='<div class=&quot;rc-placeholder&quot;&gt;&#9654;</div>'">
-        
-      </div>
-      <div class="rc-body">
-        <div class="rc-title">bahas pr aja kali ya, banyak pr woy</div>
-        <div class="rc-date">29 Aug 2026</div>
-        <div class="rc-stats">
-          <span>&#128065; <span class="rc-peak">176</span></span>
-          <span>&#9825; 193</span>
-          <span>&#9654; 4,892</span>
-        </div>
-      </div>
-    </a>
-    </div>
-  </div>
-  <div class="ch-main-grid">
-    <div class="stream-list-panel">
-      <div class="panel-hdr">All streams — by month</div>
-  <div class="month-group is-open">
-    <button class="month-toggle" aria-expanded="true">
-      <span class="month-toggle-left">August 2026</span>
-      <span class="month-toggle-right"><span class="month-cnt-badge">2</span><span class="month-chevron">▾</span></span>
-    </button>
-    <div class="month-body">
-  <a class="stream-row-item" href="cuwinwjzwze.html">
-    <div class="stream-thumb-cell">
-      <img src="https://i.ytimg.com/vi/cUWinwJzWZE/mqdefault_live.jpg" alt="" loading="lazy" onerror="this.parentNode.innerHTML='<div class=&quot;th-placeholder&quot;&gt;&#9654;</div>'">
-      <div class="live-badge">Live</div>
-    </div>
-    <div class="stream-row-body">
-      <div class="stream-row-title">kalem aja kalem lah hari ini huft</div>
-      <div class="stream-row-meta">
-        <span>31 Aug 2026</span>
-        <span class="row-sep">·</span>
-        <span>21:54 WIB</span>
-        <span class="row-sep">·</span>
-        <span>0m</span>
-      </div>
-      <div class="stream-row-stats">
-        <span class="rs">&#128065; <span class="rs-peak">24</span> peak</span>
-        <span class="rs">&#9825; 27</span>
-        <span class="rs">&#9654; 0</span>
-      </div>
-    </div>
-  </a>
-  <a class="stream-row-item" href="wppyy8z8nvw.html">
-    <div class="stream-thumb-cell">
-      <img src="https://i.ytimg.com/vi/wPPyY8Z8NVw/mqdefault_live.jpg" alt="" loading="lazy" onerror="this.parentNode.innerHTML='<div class=&quot;th-placeholder&quot;&gt;&#9654;</div>'">
-      
-    </div>
-    <div class="stream-row-body">
-      <div class="stream-row-title">bahas pr aja kali ya, banyak pr woy</div>
-      <div class="stream-row-meta">
-        <span>29 Aug 2026</span>
-        <span class="row-sep">·</span>
-        <span>23:16 WIB</span>
-        <span class="row-sep">·</span>
-        <span>5h 46m</span>
-      </div>
-      <div class="stream-row-stats">
-        <span class="rs">&#128065; <span class="rs-peak">176</span> peak</span>
-        <span class="rs">&#9825; 193</span>
-        <span class="rs">&#9654; 4,892</span>
-      </div>
-    </div>
-  </a>
-    </div>
-  </div>
-    </div>
-    <div class="sidebar-col">
-      <div class="side-panel">
-        <div class="panel-hdr">Monthly summary</div>
-        <table class="monthly-tbl">
-          <thead><tr>
-            <th>Month</th><th>Streams</th><th>Peak CCV</th>
-          </tr></thead>
-          <tbody>
-      <tr class="month-best-row">
-        <td><a class="month-a" href="#">August 2026</a></td>
-        <td><span class="month-cnt">2</span></td>
-        <td class="month-peak">176</td>
-      </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="side-panel">
-        <div class="panel-hdr">Subscribers</div>
-        <div class="subs-body">
-          <div class="subs-count">28,100</div>
-          <div class="subs-label">YouTube subscribers</div>
-        </div>
-      </div>
-      <div class="side-panel">
-        <div class="panel-hdr">Channel records</div>
-        <div class="rec-row">
-          <div><div class="rec-lbl">Peak CCV</div><div class="rec-val">176</div><div class="rec-ctx">bahas pr aja kali ya, banyak pr woy</div></div>
-          <div class="rec-right"><div class="rec-lbl">Date</div><div class="rec-date">29 Aug 2026</div></div>
-        </div>
-        <div class="rec-row">
-          <div><div class="rec-lbl">Most liked</div><div class="rec-val">193</div><div class="rec-ctx">bahas pr aja kali ya, banyak pr woy</div></div>
-          <div class="rec-right"><div class="rec-lbl">Date</div><div class="rec-date">29 Aug 2026</div></div>
-        </div>
-        <div class="rec-row">
-          <div><div class="rec-lbl">Most viewed</div><div class="rec-val">4,892</div><div class="rec-ctx">bahas pr aja kali ya, banyak pr woy</div></div>
-          <div class="rec-right"><div class="rec-lbl">Date</div><div class="rec-date">29 Aug 2026</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
+
+  <p class="generated">Generated 2026-08-31 21:54 WIB &nbsp;&#183;&nbsp; yt-livestream-tracker</p>
+
 <script>
-(function(){
-  document.querySelectorAll(".month-toggle").forEach(function(btn){
-    btn.addEventListener("click", function(){
-      var grp = btn.closest(".month-group");
-      var open = grp.classList.toggle("is-open");
-      btn.setAttribute("aria-expanded", open ? "true" : "false");
-    });
+// ── Data ────────────────────────────────────────────────────────
+const ts    = ["21:54"];
+const views = [24];
+const likes = [27];
+const comms = [0];
+const VIDEO_ID = "cUWinwJzWZE";
+
+// ── Theme-aware colours (read CSS variables at runtime) ─────────
+// orgColor is intentionally NOT baked in as a fixed Python string —
+// it is read live from --org-color, which _html_head() sets to the
+// dark- or light-mode value depending on the current theme. This is
+// what lets the chart line recolor when the toggle is flipped instead
+// of staying stuck on whichever color happened to be baked in at
+// generation time.
+function getCSSVar(name) {
+  return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+}
+function chartColors() {
+  return {
+    org:  getCSSVar("--org-color") || "#EB9447",
+    grid: getCSSVar("--border") || "rgba(40,50,74,0.35)",
+    tick: getCSSVar("--muted")  || "#8992A8",
+  };
+}
+let orgColor = chartColors().org;
+
+// ── Shared dataset defaults ──────────────────────────────────────
+const LINE = {
+  borderWidth: 2,
+  pointRadius: 0,          // no dots on the line
+  pointHoverRadius: 4,     // dot appears only on hover
+  pointHoverBorderWidth: 2,
+  fill: true,
+  tension: 0.4,            // smooth cubic bezier curve
+};
+
+// ── Base chart options ───────────────────────────────────────────
+function makeOpts(extraPlugins) {
+  const c = chartColors();
+  return {
+    responsive: true,
+    maintainAspectRatio: false,
+    interaction: { mode: "index", intersect: false },
+    plugins: {
+      legend: { labels: { color: c.tick, font: { family: "IBM Plex Mono", size: 11 }, boxWidth: 12 } },
+      zoom: {
+        pan: {
+          enabled: true,
+          mode: "x",
+        },
+        zoom: {
+          wheel:  { enabled: true },
+          pinch:  { enabled: true },
+          drag:   { enabled: true, modifierKey: "shift", backgroundColor: "rgba(255,255,255,0.05)", borderColor: "rgba(255,255,255,0.3)", borderWidth: 1 },
+          mode: "x",
+        },
+      },
+      ...extraPlugins,
+    },
+    scales: {
+      x: {
+        ticks: { color: c.tick, font: { family: "IBM Plex Mono", size: 10 }, maxTicksLimit: 10, maxRotation: 0 },
+        grid:  { color: c.grid },
+      },
+      y: {
+        ticks: { color: c.tick, font: { family: "IBM Plex Mono", size: 10 }, beginAtZero: true },
+        grid:  { color: c.grid },
+      },
+    },
+  };
+}
+
+// ── Chart registry ───────────────────────────────────────────────
+const CHARTS = {};
+
+// ── Viewer chart ─────────────────────────────────────────────────
+CHARTS.viewerChart = new Chart(document.getElementById("viewerChart"), {
+  type: "line",
+  data: {
+    labels: ts,
+    datasets: [{
+      label: "Concurrent Viewers",
+      data: views,
+      borderColor: orgColor,
+      backgroundColor: orgColor + "18",
+      ...LINE,
+    }],
+  },
+  options: makeOpts({}),
+});
+
+// ── Engagement chart ─────────────────────────────────────────────
+CHARTS.engagementChart = new Chart(document.getElementById("engagementChart"), {
+  type: "line",
+  data: {
+    labels: ts,
+    datasets: [
+      { label: "Likes",    data: likes, borderColor: "#ff4f6d", backgroundColor: "rgba(255,79,109,0.06)",  ...LINE },
+      { label: "Comments", data: comms, borderColor: "#4F9EFF", backgroundColor: "rgba(79,158,255,0.06)", ...LINE },
+    ],
+  },
+  options: makeOpts({}),
+});
+
+// ── Reset zoom ───────────────────────────────────────────────────
+function resetZoom(id) {
+  const c = CHARTS[id];
+  if (c) c.resetZoom();
+}
+
+// Attach double-click reset to both canvases
+document.getElementById("viewerChart").addEventListener("dblclick", function() { resetZoom("viewerChart"); });
+document.getElementById("engagementChart").addEventListener("dblclick", function() { resetZoom("engagementChart"); });
+
+// ── Re-tint the viewer chart line on theme toggle ──────────────────
+// _THEME_JS dispatches "idvt-theme-change" right after it flips the
+// data-theme attribute, so --org-color has already resolved to the
+// new dark/light value by the time this fires.
+window.addEventListener("idvt-theme-change", function() {
+  orgColor = chartColors().org;
+  const vc = CHARTS.viewerChart;
+  vc.data.datasets[0].borderColor = orgColor;
+  vc.data.datasets[0].backgroundColor = orgColor + "18";
+  vc.update();
+});
+
+// ── CSV download ─────────────────────────────────────────────────
+function downloadCSV(id) {
+  const chart = CHARTS[id];
+  if (!chart) return;
+  const datasets = chart.data.datasets;
+  const labels   = chart.data.labels;
+  // Header row: Timestamp + one column per dataset
+  const header = ["Timestamp", ...datasets.map(function(d) { return d.label; })];
+  // Data rows
+  const rows = labels.map(function(lbl, i) {
+    return [lbl, ...datasets.map(function(d) { return d.data[i] ?? ""; })]
+      .map(function(v) { return String(v).includes(",") ? '"' + v + '"' : v; })
+      .join(",");
   });
-})();
-</script>
-<script>
-(function(){
-  var wrap = document.getElementById("channelRange");
-  if (!wrap) return;
-  var streamsEl = document.querySelector(".kpi-strip .js-streams");
-  var peakEl    = document.querySelector(".kpi-strip .js-peak");
-  function fmtNum(n) {
-    n = parseInt(n, 10) || 0;
-    if (n >= 1000000) return (n / 1000000).toFixed(1) + "M";
-    if (n >= 1000) return (n / 1000).toFixed(1) + "K";
-    return String(n);
-  }
-  wrap.querySelectorAll(".range-chip").forEach(function(chip){
-    chip.addEventListener("click", function(){
-      wrap.querySelectorAll(".range-chip").forEach(function(c){ c.classList.remove("active"); });
-      chip.classList.add("active");
-      var range = chip.getAttribute("data-range") || "30d";
-      if (streamsEl) streamsEl.textContent = wrap.getAttribute("data-streams-" + range) || "0";
-      if (peakEl) {
-        var p = wrap.getAttribute("data-peak-" + range) || "0";
-        peakEl.textContent = p === "0" ? "—" : fmtNum(p);
-      }
-    });
-  });
-})();
+  const csv  = [header.join(","), ...rows].join("\n");
+  const blob = new Blob([csv], { type: "text/csv" });
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement("a");
+  a.href     = url;
+  a.download = VIDEO_ID + "_" + id + ".csv";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
 </script>
 
   <footer>
