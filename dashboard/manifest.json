@@ -75,5 +75,12 @@
     "ch_name": "Solace Amerta",
     "status": "vod",
     "generated_at": "2026-08-31 16:09 WIB"
+  },
+  "T678A51DjLM": {
+    "org_slug": "indies",
+    "ch_slug": "solace-amerta",
+    "ch_name": "Solace Amerta",
+    "status": "live",
+    "generated_at": "2026-08-31 16:17 WIB"
   }
 }
