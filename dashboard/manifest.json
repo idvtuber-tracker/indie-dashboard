@@ -96,5 +96,12 @@
     "ch_name": "Adelaide Ch.",
     "status": "vod",
     "generated_at": "2026-09-01 05:15 WIB"
+  },
+  "9nW_XEQCFdw": {
+    "org_slug": "indies",
+    "ch_slug": "onshannon",
+    "ch_name": "ONShannon",
+    "status": "live",
+    "generated_at": "2026-09-01 14:44 WIB"
   }
 }
