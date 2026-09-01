@@ -109,20 +109,41 @@
     "ch_slug": "vanta-arissa-ch",
     "ch_name": "Vanta Arissa Ch.",
     "status": "live",
-    "generated_at": "2026-09-01 19:45 WIB"
+    "generated_at": "2026-09-01 19:56 WIB"
   },
   "a8orhhcqIaw": {
     "org_slug": "indies",
     "ch_slug": "deidey",
     "ch_name": "Deidey",
     "status": "live",
-    "generated_at": "2026-09-01 19:45 WIB"
+    "generated_at": "2026-09-01 19:56 WIB"
   },
   "Eglb27gDEWc": {
     "org_slug": "indies",
     "ch_slug": "arikyami",
     "ch_name": "arikyami",
     "status": "live",
-    "generated_at": "2026-09-01 19:45 WIB"
+    "generated_at": "2026-09-01 19:56 WIB"
+  },
+  "pZuHrJhMu7k": {
+    "org_slug": "indies",
+    "ch_slug": "noemi-hestia",
+    "ch_name": "Noemi Hestia",
+    "status": "vod",
+    "generated_at": "2026-09-01 19:56 WIB"
+  },
+  "1nygbdBWaAY": {
+    "org_slug": "indies",
+    "ch_slug": "solace-amerta",
+    "ch_name": "Solace Amerta",
+    "status": "vod",
+    "generated_at": "2026-09-01 19:56 WIB"
+  },
+  "65enwHJDSPw": {
+    "org_slug": "indies",
+    "ch_slug": "jelly-si-curut-bodas-ch",
+    "ch_name": "Jelly si Curut Bodas Ch.",
+    "status": "vod",
+    "generated_at": "2026-09-01 19:56 WIB"
   }
 }
