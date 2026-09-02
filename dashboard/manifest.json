@@ -152,5 +152,12 @@
     "ch_name": "Adelaide Ch.",
     "status": "vod",
     "generated_at": "2026-09-02 05:55 WIB"
+  },
+  "JqQR_GiL1Qc": {
+    "org_slug": "indies",
+    "ch_slug": "solace-amerta",
+    "ch_name": "Solace Amerta",
+    "status": "live",
+    "generated_at": "2026-09-02 07:46 WIB"
   }
 }
