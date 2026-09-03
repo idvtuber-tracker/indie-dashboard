@@ -208,5 +208,12 @@
     "ch_name": "Solace Amerta",
     "status": "vod",
     "generated_at": "2026-09-03 01:03 WIB"
+  },
+  "U52asgMwKYw": {
+    "org_slug": "indies",
+    "ch_slug": "solace-amerta",
+    "ch_name": "Solace Amerta",
+    "status": "live",
+    "generated_at": "2026-09-03 08:27 WIB"
   }
 }
