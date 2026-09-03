@@ -215,5 +215,12 @@
     "ch_name": "Solace Amerta",
     "status": "vod",
     "generated_at": "2026-09-03 14:35 WIB"
+  },
+  "mk63kHBEn5k": {
+    "org_slug": "indies",
+    "ch_slug": "deidey",
+    "ch_name": "Deidey",
+    "status": "live",
+    "generated_at": "2026-09-03 17:04 WIB"
   }
 }
