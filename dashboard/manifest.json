@@ -235,7 +235,7 @@
     "ch_slug": "onshannon",
     "ch_name": "ONShannon",
     "status": "live",
-    "generated_at": "2026-09-03 23:51 WIB"
+    "generated_at": "2026-09-04 00:06 WIB"
   },
   "evbzeT0HfXo": {
     "org_slug": "indies",
@@ -250,5 +250,12 @@
     "ch_name": "Jelly si Curut Bodas Ch.",
     "status": "vod",
     "generated_at": "2026-09-03 22:25 WIB"
+  },
+  "eplvqqhlNZo": {
+    "org_slug": "indies",
+    "ch_slug": "adelaide-ch",
+    "ch_name": "Adelaide Ch.",
+    "status": "live",
+    "generated_at": "2026-09-04 00:06 WIB"
   }
 }
