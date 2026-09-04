@@ -257,5 +257,12 @@
     "ch_name": "Adelaide Ch.",
     "status": "vod",
     "generated_at": "2026-09-04 05:05 WIB"
+  },
+  "sg0-W8CqyfE": {
+    "org_slug": "indies",
+    "ch_slug": "bianca-hantu",
+    "ch_name": "Bianca Hantu",
+    "status": "live",
+    "generated_at": "2026-09-04 13:00 WIB"
   }
 }
