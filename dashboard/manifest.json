@@ -263,27 +263,34 @@
     "ch_slug": "bianca-hantu",
     "ch_name": "Bianca Hantu",
     "status": "live",
-    "generated_at": "2026-09-04 16:35 WIB"
+    "generated_at": "2026-09-04 17:07 WIB"
   },
   "fYisUrF5pvQ": {
     "org_slug": "indies",
     "ch_slug": "vanta-arissa-ch",
     "ch_name": "Vanta Arissa Ch.",
-    "status": "live",
-    "generated_at": "2026-09-04 16:35 WIB"
+    "status": "vod",
+    "generated_at": "2026-09-04 17:07 WIB"
   },
   "qoxhhulGCP0": {
     "org_slug": "indies",
     "ch_slug": "shin-derra",
     "ch_name": "Shin Derra",
     "status": "live",
-    "generated_at": "2026-09-04 16:35 WIB"
+    "generated_at": "2026-09-04 17:07 WIB"
   },
   "Omag9keaJd4": {
     "org_slug": "indies",
     "ch_slug": "onshannon",
     "ch_name": "ONShannon",
     "status": "live",
-    "generated_at": "2026-09-04 16:35 WIB"
+    "generated_at": "2026-09-04 17:07 WIB"
+  },
+  "zeWY6TRqjuQ": {
+    "org_slug": "indies",
+    "ch_slug": "deidey",
+    "ch_name": "Deidey",
+    "status": "live",
+    "generated_at": "2026-09-04 17:07 WIB"
   }
 }
