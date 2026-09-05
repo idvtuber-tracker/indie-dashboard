@@ -325,7 +325,14 @@
     "org_slug": "indies",
     "ch_slug": "noemi-hestia",
     "ch_name": "Noemi Hestia",
+    "status": "vod",
+    "generated_at": "2026-09-05 16:02 WIB"
+  },
+  "HlV8WOP8ojQ": {
+    "org_slug": "indies",
+    "ch_slug": "vanta-arissa-ch",
+    "ch_name": "Vanta Arissa Ch.",
     "status": "live",
-    "generated_at": "2026-09-05 14:18 WIB"
+    "generated_at": "2026-09-05 16:02 WIB"
   }
 }
