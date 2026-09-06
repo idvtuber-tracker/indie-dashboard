@@ -348,5 +348,12 @@
     "ch_name": "Adelaide Ch.",
     "status": "vod",
     "generated_at": "2026-09-06 05:32 WIB"
+  },
+  "hRg6DMpk2iY": {
+    "org_slug": "indies",
+    "ch_slug": "mei-dyanira",
+    "ch_name": "mei dyanira",
+    "status": "live",
+    "generated_at": "2026-09-06 08:31 WIB"
   }
 }
