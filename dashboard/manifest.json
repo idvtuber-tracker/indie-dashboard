@@ -353,7 +353,14 @@
     "org_slug": "indies",
     "ch_slug": "mei-dyanira",
     "ch_name": "mei dyanira",
+    "status": "vod",
+    "generated_at": "2026-09-06 11:11 WIB"
+  },
+  "iuUpKVU_It8": {
+    "org_slug": "indies",
+    "ch_slug": "onshannon",
+    "ch_name": "ONShannon",
     "status": "live",
-    "generated_at": "2026-09-06 10:17 WIB"
+    "generated_at": "2026-09-06 11:11 WIB"
   }
 }
