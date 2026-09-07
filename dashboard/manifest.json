@@ -388,7 +388,14 @@
     "org_slug": "indies",
     "ch_slug": "arcannej",
     "ch_name": "arcanneJ",
+    "status": "vod",
+    "generated_at": "2026-09-07 19:16 WIB"
+  },
+  "Qk9WRgkyhJU": {
+    "org_slug": "indies",
+    "ch_slug": "arcannej",
+    "ch_name": "arcanneJ",
     "status": "live",
-    "generated_at": "2026-09-07 19:00 WIB"
+    "generated_at": "2026-09-07 19:16 WIB"
   }
 }
