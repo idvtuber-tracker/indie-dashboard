@@ -1501,7 +1501,7 @@ def write_index(total_streams: int, total_channels: int, generated_at: str,
             f'  <div class="channels-grid">{cards}\n  </div>\n'
         )
 
-        html = _html_head("Independent VTubers", 0, live_count=sitewide_live) + body + _html_foot(0, 'org')
+        html = _html_head("Independent VTubers", 0, org["color"], org["color_light"], live_count=sitewide_live) + body + _html_foot(0, 'org')
         (OUTPUT_DIR / "index.html").write_text(html, encoding="utf-8")
         log.info("Written: index.html (single-org, channel grid folded in)")
         return
