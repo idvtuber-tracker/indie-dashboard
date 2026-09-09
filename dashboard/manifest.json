@@ -480,27 +480,34 @@
     "ch_slug": "onshannon",
     "ch_name": "ONShannon",
     "status": "live",
-    "generated_at": "2026-09-09 20:26 WIB"
+    "generated_at": "2026-09-09 20:42 WIB"
   },
   "Tt1B5N3Tjao": {
     "org_slug": "indies",
     "ch_slug": "shin-derra",
     "ch_name": "Shin Derra",
     "status": "live",
-    "generated_at": "2026-09-09 20:26 WIB"
+    "generated_at": "2026-09-09 20:42 WIB"
   },
   "mRB2kkmQKxE": {
     "org_slug": "indies",
     "ch_slug": "jelly-si-curut-bodas-ch",
     "ch_name": "Jelly si Curut Bodas Ch.",
     "status": "live",
-    "generated_at": "2026-09-09 20:26 WIB"
+    "generated_at": "2026-09-09 20:42 WIB"
   },
   "INH6nfe8jfE": {
     "org_slug": "indies",
     "ch_slug": "deidey",
     "ch_name": "Deidey",
     "status": "live",
-    "generated_at": "2026-09-09 20:26 WIB"
+    "generated_at": "2026-09-09 20:42 WIB"
+  },
+  "S4G5BgISIQM": {
+    "org_slug": "indies",
+    "ch_slug": "noemi-hestia",
+    "ch_name": "Noemi Hestia",
+    "status": "live",
+    "generated_at": "2026-09-09 20:42 WIB"
   }
 }
