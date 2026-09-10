@@ -535,7 +535,14 @@
     "org_slug": "indies",
     "ch_slug": "arcannej",
     "ch_name": "arcanneJ",
+    "status": "vod",
+    "generated_at": "2026-09-10 13:17 WIB"
+  },
+  "UVZdgFFi0So": {
+    "org_slug": "indies",
+    "ch_slug": "bianca-hantu",
+    "ch_name": "Bianca Hantu",
     "status": "live",
-    "generated_at": "2026-09-10 12:56 WIB"
+    "generated_at": "2026-09-10 13:17 WIB"
   }
 }
