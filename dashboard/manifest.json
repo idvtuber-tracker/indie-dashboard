@@ -542,8 +542,8 @@
     "org_slug": "indies",
     "ch_slug": "bianca-hantu",
     "ch_name": "Bianca Hantu",
-    "status": "live",
-    "generated_at": "2026-09-10 15:03 WIB"
+    "status": "vod",
+    "generated_at": "2026-09-10 16:03 WIB"
   },
   "TzW9_HN0Isg": {
     "org_slug": "indies",
@@ -551,5 +551,12 @@
     "ch_name": "Bianca Hantu",
     "status": "vod",
     "generated_at": "2026-09-10 14:43 WIB"
+  },
+  "xI3p7I_2KkU": {
+    "org_slug": "indies",
+    "ch_slug": "vanta-arissa-ch",
+    "ch_name": "Vanta Arissa Ch.",
+    "status": "live",
+    "generated_at": "2026-09-10 16:03 WIB"
   }
 }
