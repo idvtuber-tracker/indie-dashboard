@@ -598,8 +598,8 @@
     "org_slug": "indies",
     "ch_slug": "shin-derra",
     "ch_name": "Shin Derra",
-    "status": "live",
-    "generated_at": "2026-09-11 00:26 WIB"
+    "status": "vod",
+    "generated_at": "2026-09-11 00:41 WIB"
   },
   "9tgbAQUyeUA": {
     "org_slug": "indies",
@@ -613,6 +613,6 @@
     "ch_slug": "adelaide-ch",
     "ch_name": "Adelaide Ch.",
     "status": "live",
-    "generated_at": "2026-09-11 00:26 WIB"
+    "generated_at": "2026-09-11 00:41 WIB"
   }
 }
