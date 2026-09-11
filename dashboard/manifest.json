@@ -649,5 +649,12 @@
     "ch_name": "Adelaide Ch.",
     "status": "vod",
     "generated_at": "2026-09-12 00:28 WIB"
+  },
+  "hPH43kIeXvU": {
+    "org_slug": "indies",
+    "ch_slug": "adelaide-ch",
+    "ch_name": "Adelaide Ch.",
+    "status": "live",
+    "generated_at": "2026-09-12 02:59 WIB"
   }
 }
