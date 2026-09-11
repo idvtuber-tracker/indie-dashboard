@@ -614,5 +614,12 @@
     "ch_name": "Adelaide Ch.",
     "status": "vod",
     "generated_at": "2026-09-11 02:24 WIB"
+  },
+  "zff97ShSWGk": {
+    "org_slug": "indies",
+    "ch_slug": "arcannej",
+    "ch_name": "arcanneJ",
+    "status": "live",
+    "generated_at": "2026-09-11 07:34 WIB"
   }
 }
