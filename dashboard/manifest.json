@@ -696,8 +696,8 @@
     "org_slug": "indies",
     "ch_slug": "jelly-si-curut-bodas-ch",
     "ch_name": "Jelly si Curut Bodas Ch.",
-    "status": "live",
-    "generated_at": "2026-09-12 21:47 WIB"
+    "status": "vod",
+    "generated_at": "2026-09-12 22:03 WIB"
   },
   "r_TWoD0Uagk": {
     "org_slug": "indies",
@@ -710,14 +710,14 @@
     "org_slug": "indies",
     "ch_slug": "shin-derra",
     "ch_name": "Shin Derra",
-    "status": "live",
-    "generated_at": "2026-09-12 21:47 WIB"
+    "status": "vod",
+    "generated_at": "2026-09-12 22:03 WIB"
   },
   "7_mGpeqNYUE": {
     "org_slug": "indies",
     "ch_slug": "onshannon",
     "ch_name": "ONShannon",
     "status": "live",
-    "generated_at": "2026-09-12 21:47 WIB"
+    "generated_at": "2026-09-12 22:03 WIB"
   }
 }
