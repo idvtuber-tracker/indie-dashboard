@@ -739,34 +739,34 @@
     "ch_slug": "vanta-arissa-ch",
     "ch_name": "Vanta Arissa Ch.",
     "status": "live",
-    "generated_at": "2026-09-13 19:02 WIB"
+    "generated_at": "2026-09-13 19:17 WIB"
   },
   "1OiLwPgmXf4": {
     "org_slug": "indies",
     "ch_slug": "deidey",
     "ch_name": "Deidey",
     "status": "live",
-    "generated_at": "2026-09-13 19:02 WIB"
+    "generated_at": "2026-09-13 19:17 WIB"
   },
   "Cq_Ds42hkOE": {
     "org_slug": "indies",
     "ch_slug": "shin-derra",
     "ch_name": "Shin Derra",
     "status": "live",
-    "generated_at": "2026-09-13 19:02 WIB"
+    "generated_at": "2026-09-13 19:17 WIB"
   },
   "k39PreAwbCk": {
     "org_slug": "indies",
     "ch_slug": "deidey",
     "ch_name": "Deidey",
-    "status": "live",
-    "generated_at": "2026-09-13 19:02 WIB"
+    "status": "vod",
+    "generated_at": "2026-09-13 19:17 WIB"
   },
   "_TA0g9ayRcI": {
     "org_slug": "indies",
     "ch_slug": "solace-amerta",
     "ch_name": "Solace Amerta",
     "status": "live",
-    "generated_at": "2026-09-13 19:02 WIB"
+    "generated_at": "2026-09-13 19:17 WIB"
   }
 }
