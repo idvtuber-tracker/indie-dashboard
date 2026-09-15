@@ -815,21 +815,21 @@
     "org_slug": "indies",
     "ch_slug": "adelaide-ch",
     "ch_name": "Adelaide Ch.",
-    "status": "live",
-    "generated_at": "2026-09-15 15:23 WIB"
+    "status": "vod",
+    "generated_at": "2026-09-15 15:38 WIB"
   },
   "5knGfrOLZ7E": {
     "org_slug": "indies",
     "ch_slug": "bianca-hantu",
     "ch_name": "Bianca Hantu",
     "status": "live",
-    "generated_at": "2026-09-15 15:23 WIB"
+    "generated_at": "2026-09-15 15:38 WIB"
   },
   "Xr2wmHuYVS4": {
     "org_slug": "indies",
     "ch_slug": "vanta-arissa-ch",
     "ch_name": "Vanta Arissa Ch.",
     "status": "live",
-    "generated_at": "2026-09-15 15:23 WIB"
+    "generated_at": "2026-09-15 15:38 WIB"
   }
 }
