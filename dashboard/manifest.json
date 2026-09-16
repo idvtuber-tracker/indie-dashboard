@@ -852,5 +852,12 @@
     "ch_name": "ONShannon",
     "status": "vod",
     "generated_at": "2026-09-15 22:22 WIB"
+  },
+  "8eTtwqEBxOc": {
+    "org_slug": "indies",
+    "ch_slug": "noemi-hestia",
+    "ch_name": "Noemi Hestia",
+    "status": "live",
+    "generated_at": "2026-09-16 09:04 WIB"
   }
 }
