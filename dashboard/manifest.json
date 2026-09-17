@@ -858,7 +858,7 @@
     "ch_slug": "noemi-hestia",
     "ch_name": "Noemi Hestia",
     "status": "live",
-    "generated_at": "2026-09-17 12:54 WIB"
+    "generated_at": "2026-09-17 13:47 WIB"
   },
   "5VEWKpIIaBE": {
     "org_slug": "indies",
@@ -929,5 +929,12 @@
     "ch_name": "Solace Amerta",
     "status": "vod",
     "generated_at": "2026-09-17 12:54 WIB"
+  },
+  "8VNwjWAYSWQ": {
+    "org_slug": "indies",
+    "ch_slug": "adelaide-ch",
+    "ch_name": "Adelaide Ch.",
+    "status": "live",
+    "generated_at": "2026-09-17 13:47 WIB"
   }
 }
