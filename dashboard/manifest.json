@@ -858,7 +858,7 @@
     "ch_slug": "noemi-hestia",
     "ch_name": "Noemi Hestia",
     "status": "live",
-    "generated_at": "2026-09-18 19:01 WIB"
+    "generated_at": "2026-09-18 19:16 WIB"
   },
   "5VEWKpIIaBE": {
     "org_slug": "indies",
@@ -984,20 +984,41 @@
     "ch_slug": "bianca-hantu",
     "ch_name": "Bianca Hantu",
     "status": "live",
-    "generated_at": "2026-09-18 19:01 WIB"
+    "generated_at": "2026-09-18 19:16 WIB"
   },
   "i8nu87jFt2k": {
     "org_slug": "indies",
     "ch_slug": "adelaide-ch",
     "ch_name": "Adelaide Ch.",
     "status": "live",
-    "generated_at": "2026-09-18 19:01 WIB"
+    "generated_at": "2026-09-18 19:16 WIB"
   },
   "R4kxhei00jM": {
     "org_slug": "indies",
     "ch_slug": "deidey",
     "ch_name": "Deidey",
+    "status": "vod",
+    "generated_at": "2026-09-18 19:16 WIB"
+  },
+  "tvfHdQtS12I": {
+    "org_slug": "indies",
+    "ch_slug": "shin-derra",
+    "ch_name": "Shin Derra",
     "status": "live",
-    "generated_at": "2026-09-18 19:01 WIB"
+    "generated_at": "2026-09-18 19:16 WIB"
+  },
+  "4waS9nNte-o": {
+    "org_slug": "indies",
+    "ch_slug": "onshannon",
+    "ch_name": "ONShannon",
+    "status": "live",
+    "generated_at": "2026-09-18 19:16 WIB"
+  },
+  "NO9FbrBeHSY": {
+    "org_slug": "indies",
+    "ch_slug": "arcannej",
+    "ch_name": "arcanneJ",
+    "status": "live",
+    "generated_at": "2026-09-18 19:16 WIB"
   }
 }
