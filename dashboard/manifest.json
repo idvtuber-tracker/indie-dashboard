@@ -858,7 +858,7 @@
     "ch_slug": "noemi-hestia",
     "ch_name": "Noemi Hestia",
     "status": "live",
-    "generated_at": "2026-09-22 18:58 WIB"
+    "generated_at": "2026-09-22 19:13 WIB"
   },
   "5VEWKpIIaBE": {
     "org_slug": "indies",
@@ -1082,7 +1082,7 @@
     "ch_slug": "vanta-arissa-ch",
     "ch_name": "Vanta Arissa Ch.",
     "status": "live",
-    "generated_at": "2026-09-22 18:58 WIB"
+    "generated_at": "2026-09-22 19:13 WIB"
   },
   "tXN8Ss6XbNI": {
     "org_slug": "indies",
@@ -1124,13 +1124,20 @@
     "ch_slug": "deidey",
     "ch_name": "Deidey",
     "status": "live",
-    "generated_at": "2026-09-22 18:58 WIB"
+    "generated_at": "2026-09-22 19:13 WIB"
   },
   "j4IE7jqyKx8": {
     "org_slug": "indies",
     "ch_slug": "bianca-hantu",
     "ch_name": "Bianca Hantu",
     "status": "live",
-    "generated_at": "2026-09-22 18:58 WIB"
+    "generated_at": "2026-09-22 19:13 WIB"
+  },
+  "nJ-4kJ0602k": {
+    "org_slug": "indies",
+    "ch_slug": "arcannej",
+    "ch_name": "arcanneJ",
+    "status": "live",
+    "generated_at": "2026-09-22 19:13 WIB"
   }
 }
