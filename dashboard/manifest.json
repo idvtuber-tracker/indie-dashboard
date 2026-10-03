@@ -858,7 +858,7 @@
     "ch_slug": "noemi-hestia",
     "ch_name": "Noemi Hestia",
     "status": "live",
-    "generated_at": "2026-10-03 21:20 WIB"
+    "generated_at": "2026-10-03 21:36 WIB"
   },
   "5VEWKpIIaBE": {
     "org_slug": "indies",
@@ -1082,7 +1082,7 @@
     "ch_slug": "vanta-arissa-ch",
     "ch_name": "Vanta Arissa Ch.",
     "status": "live",
-    "generated_at": "2026-10-03 21:20 WIB"
+    "generated_at": "2026-10-03 21:36 WIB"
   },
   "tXN8Ss6XbNI": {
     "org_slug": "indies",
@@ -1516,14 +1516,14 @@
     "ch_slug": "deidey",
     "ch_name": "Deidey",
     "status": "live",
-    "generated_at": "2026-10-03 21:20 WIB"
+    "generated_at": "2026-10-03 21:36 WIB"
   },
   "NzbeQKt-2Vg": {
     "org_slug": "indies",
     "ch_slug": "arikyami",
     "ch_name": "arikyami",
-    "status": "live",
-    "generated_at": "2026-10-03 21:20 WIB"
+    "status": "vod",
+    "generated_at": "2026-10-03 21:36 WIB"
   },
   "oZkJzeNJBnM": {
     "org_slug": "indies",
@@ -1537,6 +1537,20 @@
     "ch_slug": "solace-amerta",
     "ch_name": "Solace Amerta",
     "status": "live",
-    "generated_at": "2026-10-03 21:20 WIB"
+    "generated_at": "2026-10-03 21:36 WIB"
+  },
+  "cRoFdQ_RuZs": {
+    "org_slug": "indies",
+    "ch_slug": "onshannon",
+    "ch_name": "ONShannon",
+    "status": "live",
+    "generated_at": "2026-10-03 21:36 WIB"
+  },
+  "7uMsRbEdBek": {
+    "org_slug": "indies",
+    "ch_slug": "arcannej",
+    "ch_name": "arcanneJ",
+    "status": "live",
+    "generated_at": "2026-10-03 21:36 WIB"
   }
 }
