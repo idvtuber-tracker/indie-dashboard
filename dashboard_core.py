@@ -99,7 +99,6 @@ ORG_MAP = {
             ("Jelly si Curut Bodas Ch.",        "talent", "UCkQ7LiqtOgrDb9xs7RdVSag"),
             ("Cappie Bara Ch.",        "talent", "UCi57b9DXcVVkeG9UMR517hg"),
             ("Chiyo Chiyori | VTuber",        "talent", "UCD2-DCfKwBzVKBrPVytmTjg"),
-            ("Jelly si Curut Bodas Ch.",        "talent", "UCkQ7LiqtOgrDb9xs7RdVSag"),
         ],
     },
 }
