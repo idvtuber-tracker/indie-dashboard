@@ -508,7 +508,7 @@ def _save_fallback(logos: dict[str, str], subscribers: dict[str, int]) -> None:
 def get_channel_data(channel_ids: list[str]) -> tuple[dict[str, str], dict[str, int]]:
     """
     Fetch channel thumbnail URLs and subscriber counts from YouTube API.
-    Rotates through all available API keys on 403.
+    Uses the single YOUTUBE_API_KEY (from one Google Cloud project).
     Falls back to last successful fetch on complete failure.
     Results are cached to disk for the remainder of the local day.
 
@@ -550,14 +550,13 @@ def get_channel_data(channel_ids: list[str]) -> tuple[dict[str, str], dict[str, 
     else:
         _partial_cache = None
 
-    raw_keys = os.environ.get("YOUTUBE_API_KEYS") or os.environ.get("YOUTUBE_API_KEY", "")
-    api_keys = [k.strip() for k in raw_keys.split(",") if k.strip()]
-
+    api_key = os.environ.get("YOUTUBE_API_KEY", "").strip()
+  
     if not _YT_AVAILABLE:
         log.warning("Channel data fetch skipped: google-api-python-client not installed.")
         return _load_fallback()
-    if not api_keys:
-        log.warning("Channel data fetch skipped: no API keys in environment.")
+    if not api_key:
+        log.warning("Channel data fetch skipped: YOUTUBE_API_KEY not set.")
         return _load_fallback()
     if not channel_ids:
         log.warning("Channel data fetch skipped: channel_ids list is empty.")
@@ -567,52 +566,46 @@ def get_channel_data(channel_ids: list[str]) -> tuple[dict[str, str], dict[str, 
     subscribers: dict[str, int] = {}
     api_failed   = False
 
+    yt = yt_build("youtube", "v3", developerKey=api_key)
+
     for i in range(0, len(channel_ids), 50):
-        batch      = channel_ids[i:i + 50]
-        batch_done = False
-
-        for api_key in api_keys:
-            try:
-                log.info("channels.list batch %d–%d using key ...%s",
-                         i, i + len(batch), api_key[-6:])
-                yt   = yt_build("youtube", "v3", developerKey=api_key)
-                resp = yt.channels().list(
-                    part="snippet,statistics",
-                    id=",".join(batch),
-                    maxResults=50,
-                ).execute()
-                items_returned = resp.get("items", [])
-                log.info("  → %d item(s) returned (totalResults=%s).",
-                         len(items_returned),
-                         resp.get("pageInfo", {}).get("totalResults", "?"))
-                for item in items_returned:
-                    cid    = item["id"]
-                    thumbs = item.get("snippet", {}).get("thumbnails", {})
-                    url    = (thumbs.get("medium") or thumbs.get("default") or {}).get("url", "")
-                    if url:
-                        logos[cid] = url
-                    else:
-                        log.warning("No thumbnail URL found for channel ID: %s", cid)
-                    sub_count = item.get("statistics", {}).get("subscriberCount")
-                    if sub_count is not None:
-                        subscribers[cid] = int(sub_count)
-                batch_done = True
-                break
-            except _HttpError as e:
-                if e.resp.status == 403:
-                    log.warning("403 on channels.list (key ...%s) — rotating.", api_key[-6:])
-                    continue
-                log.error("channels.list HTTP error (key ...%s): %s", api_key[-6:], e)
+        batch = channel_ids[i:i + 50]
+        try:
+            log.info("channels.list batch %d–%d", i, i + len(batch))
+            resp = yt.channels().list(
+                part="snippet,statistics",
+                id=",".join(batch),
+                maxResults=50,
+            ).execute()
+            items_returned = resp.get("items", [])
+            log.info("  → %d item(s) returned (totalResults=%s).",
+                     len(items_returned),
+                     resp.get("pageInfo", {}).get("totalResults", "?"))
+            for item in items_returned:
+                cid    = item["id"]
+                thumbs = item.get("snippet", {}).get("thumbnails", {})
+                url    = (thumbs.get("medium") or thumbs.get("default") or {}).get("url", "")
+                if url:
+                    logos[cid] = url
+                else:
+                    log.warning("No thumbnail URL found for channel ID: %s", cid)
+                sub_count = item.get("statistics", {}).get("subscriberCount")
+                if sub_count is not None:
+                    subscribers[cid] = int(sub_count)
+        except _HttpError as e:
+            if e.resp.status == 403:
+                # Quota exhausted (or key restricted): further batches would
+                # fail too, so stop and fall back to cached data below.
+                log.error("403 on channels.list (quota exhausted or key restricted) — "
+                          "using cached channel data instead: %s", e)
                 api_failed = True
                 break
-            except Exception as e:
-                log.error("channels.list unexpected error (key ...%s): %s", api_key[-6:], e)
-                api_failed = True
-                break
-
-        if not batch_done:
-            log.error("All %d key(s) failed for batch %d–%d.", len(api_keys), i, i + len(batch))
+            log.error("channels.list HTTP error for batch %d–%d: %s", i, i + len(batch), e)
             api_failed = True
+        except Exception as e:
+            log.error("channels.list unexpected error for batch %d–%d: %s", i, i + len(batch), e)
+            api_failed = True
+  
 
     if api_failed and not logos and not subscribers:
         log.warning("API fetch produced no data — falling back to last known good channel data.")
