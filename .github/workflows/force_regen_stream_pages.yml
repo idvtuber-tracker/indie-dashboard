@@ -40,9 +40,9 @@ jobs:
       DASHBOARD_OUTPUT_DIR: dashboard
       PYTHONUTF8:           "1"
       PYTHONIOENCODING:     "utf-8"
-      # Note: no YOUTUBE_API_KEY(S) here — this script never calls the
+      # Note: no YOUTUBE_API_KEY here — this script never calls the
       # YouTube API (see force_regen_stream_pages.py docstring), so there's
-      # nothing to quota-check or rotate.
+      # nothing to quota-check.
 
     steps:
       - name: Checkout repository
