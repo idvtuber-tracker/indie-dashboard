@@ -2202,7 +2202,7 @@
     "ch_slug": "vanta-arissa-ch",
     "ch_name": "Vanta Arissa Ch.",
     "status": "live",
-    "generated_at": "2026-10-22 08:10 WIB"
+    "generated_at": "2026-10-22 11:49 WIB"
   },
   "J8qYRTZtRdk": {
     "org_slug": "indies",
@@ -2244,7 +2244,7 @@
     "ch_slug": "cappie-bara-ch",
     "ch_name": "Cappie Bara Ch.",
     "status": "live",
-    "generated_at": "2026-10-22 08:10 WIB"
+    "generated_at": "2026-10-22 11:49 WIB"
   },
   "HhU2M2d7wSM": {
     "org_slug": "indies",
@@ -2266,5 +2266,12 @@
     "ch_name": "Adelaide Ch.",
     "status": "vod",
     "generated_at": "2026-10-22 05:56 WIB"
+  },
+  "zSPZbb79JO8": {
+    "org_slug": "indies",
+    "ch_slug": "jelly-si-curut-bodas-ch",
+    "ch_name": "Jelly si Curut Bodas Ch.",
+    "status": "live",
+    "generated_at": "2026-10-22 11:49 WIB"
   }
 }
