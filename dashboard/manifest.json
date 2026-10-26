@@ -2202,7 +2202,7 @@
     "ch_slug": "vanta-arissa-ch",
     "ch_name": "Vanta Arissa Ch.",
     "status": "live",
-    "generated_at": "2026-10-27 01:47 WIB"
+    "generated_at": "2026-10-27 01:58 WIB"
   },
   "J8qYRTZtRdk": {
     "org_slug": "indies",
@@ -2244,7 +2244,7 @@
     "ch_slug": "cappie-bara-ch",
     "ch_name": "Cappie Bara Ch.",
     "status": "live",
-    "generated_at": "2026-10-27 01:47 WIB"
+    "generated_at": "2026-10-27 01:58 WIB"
   },
   "HhU2M2d7wSM": {
     "org_slug": "indies",
@@ -2307,7 +2307,7 @@
     "ch_slug": "bianca-hantu",
     "ch_name": "Bianca Hantu",
     "status": "live",
-    "generated_at": "2026-10-27 01:47 WIB"
+    "generated_at": "2026-10-27 01:58 WIB"
   },
   "QZuyZEPKS9o": {
     "org_slug": "indies",
@@ -2405,7 +2405,7 @@
     "ch_slug": "mei-dyanira",
     "ch_name": "mei dyanira",
     "status": "live",
-    "generated_at": "2026-10-27 01:47 WIB"
+    "generated_at": "2026-10-27 01:58 WIB"
   },
   "4gFA1H02Krw": {
     "org_slug": "indies",
@@ -2468,7 +2468,7 @@
     "ch_slug": "justmiu-ch",
     "ch_name": "JustMiU ch.",
     "status": "live",
-    "generated_at": "2026-10-27 01:47 WIB"
+    "generated_at": "2026-10-27 01:58 WIB"
   },
   "C--PpZ-Kb2A": {
     "org_slug": "indies",
@@ -2483,5 +2483,19 @@
     "ch_name": "Kurohiko",
     "status": "vod",
     "generated_at": "2026-10-27 01:47 WIB"
+  },
+  "cAclDZ1_4-A": {
+    "org_slug": "indies",
+    "ch_slug": "onic-kokoro-ch",
+    "ch_name": "ONIC KOKORO Ch. こころ",
+    "status": "vod",
+    "generated_at": "2026-10-27 01:58 WIB"
+  },
+  "gYxrf_bQZL0": {
+    "org_slug": "indies",
+    "ch_slug": "kurohiko",
+    "ch_name": "Kurohiko",
+    "status": "vod",
+    "generated_at": "2026-10-27 01:58 WIB"
   }
 }
