@@ -116,6 +116,12 @@ ORG_MAP = {
             ("Ellyra Yoora ch.",      		"talent", "UCgH0ORd7xj2-uKMyU8nhB3A"),
             ("Selena AmariS",       			"talent", "UCZW99jqwVIAy4iTJbEtQqrA"),
             ("Eliza Hemlock Ch.",       		"talent", "UC5xTkSyzEarVrlx72hiErCQ"),          
+            ("Harrios Halton Ch.",        "talent", "UCuHEGBttlUlMB3pa81noWOg"),
+            ("Senka",       			"talent", "UC3KzCTl6y2jnw6d9c90TEhg"),
+            ("Dombaemon Ch.",       		"talent", "UCgmeuhAM7sWKXgekXBm2Ogw"),
+            ("Eiko Yukashi",      		"talent", "UCC64hcRNeOu3fYrCi862OCQ"),
+            ("Reina Keina",       			"talent", "UCmx5kKA-xr1q-p5WqdMQVUA"),
+            ("Hoshizaru Yolanda",       		"talent", "UCvHx5HvX6gh5aGJ8hl2aBWQ"),          
         ],
     },
 }
