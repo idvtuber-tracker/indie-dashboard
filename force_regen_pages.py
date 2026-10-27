@@ -33,7 +33,6 @@ concurrently with the live/backfill loops (read-only against the DB and
 history.db, no manifest writes) but for a clean first run it's simplest to
 just wait for the current live-loop run to finish before triggering this.
 """
-
 from dashboard_core import (
     AIVEN_DATABASE_URL, log, _now_local,
     get_conn, get_history_conn,
@@ -86,8 +85,16 @@ def force_regen() -> None:
     )
 
     generated_at = _now_local().strftime("%Y-%m-%d %H:%M WIB")
-    write_index(total_streams, total_channels, generated_at,
-                stream_counts, all_streams_by_channel)
+    write_index(
+        total_streams,
+        total_channels,
+        generated_at,
+        stream_counts,
+        all_streams_by_channel,
+        logos,
+        channel_ids_map,
+        subscribers,
+    )
 
     conn.close()
     hist.close()
