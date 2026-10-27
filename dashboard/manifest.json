@@ -2523,8 +2523,8 @@
     "org_slug": "indies",
     "ch_slug": "bianca-hantu",
     "ch_name": "Bianca Hantu",
-    "status": "live",
-    "generated_at": "2026-10-27 20:06 WIB"
+    "status": "vod",
+    "generated_at": "2026-10-27 20:21 WIB"
   },
   "tpFeHreYxGA": {
     "org_slug": "indies",
@@ -2551,8 +2551,8 @@
     "org_slug": "indies",
     "ch_slug": "urekanfaiz",
     "ch_name": "UrekanFaiz 〘 𝗢𝘁𝗵𝗼𝗸𝗢𝘁𝗵𝗼𝗸 〙",
-    "status": "live",
-    "generated_at": "2026-10-27 20:06 WIB"
+    "status": "vod",
+    "generated_at": "2026-10-27 20:21 WIB"
   },
   "TdX2fp5nbiI": {
     "org_slug": "indies",
@@ -2573,27 +2573,41 @@
     "ch_slug": "dombaemon-ch",
     "ch_name": "Dombaemon Ch.",
     "status": "live",
-    "generated_at": "2026-10-27 20:06 WIB"
+    "generated_at": "2026-10-27 20:21 WIB"
   },
   "aBRjOm6Dr7Q": {
     "org_slug": "indies",
     "ch_slug": "yukita-yokku-mabaru",
     "ch_name": "Yukita Yokku Mabaru",
     "status": "live",
-    "generated_at": "2026-10-27 20:06 WIB"
+    "generated_at": "2026-10-27 20:21 WIB"
   },
   "PkRE1heJkJ8": {
     "org_slug": "indies",
     "ch_slug": "arikyami",
     "ch_name": "arikyami",
     "status": "live",
-    "generated_at": "2026-10-27 20:06 WIB"
+    "generated_at": "2026-10-27 20:21 WIB"
   },
   "er1iMVnkW3U": {
     "org_slug": "indies",
     "ch_slug": "cappie-bara-ch",
     "ch_name": "Cappie Bara Ch.",
     "status": "live",
-    "generated_at": "2026-10-27 20:06 WIB"
+    "generated_at": "2026-10-27 20:21 WIB"
+  },
+  "N3DbgrIvki8": {
+    "org_slug": "indies",
+    "ch_slug": "kurohiko",
+    "ch_name": "Kurohiko",
+    "status": "live",
+    "generated_at": "2026-10-27 20:21 WIB"
+  },
+  "KLGMNw1lWyY": {
+    "org_slug": "indies",
+    "ch_slug": "myrcella-enamourada-ch",
+    "ch_name": "Myrcella Enamourada Ch.",
+    "status": "live",
+    "generated_at": "2026-10-27 20:21 WIB"
   }
 }
