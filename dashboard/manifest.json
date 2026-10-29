@@ -2573,7 +2573,7 @@
     "ch_slug": "dombaemon-ch",
     "ch_name": "Dombaemon Ch.",
     "status": "live",
-    "generated_at": "2026-10-29 19:48 WIB"
+    "generated_at": "2026-10-29 20:04 WIB"
   },
   "aBRjOm6Dr7Q": {
     "org_slug": "indies",
@@ -2818,7 +2818,7 @@
     "ch_slug": "julie-chan-ch-wesper-id",
     "ch_name": "Julie Chan Ch. Wesper-ID",
     "status": "live",
-    "generated_at": "2026-10-29 19:48 WIB"
+    "generated_at": "2026-10-29 20:04 WIB"
   },
   "bTLXW5wxf48": {
     "org_slug": "indies",
@@ -2860,13 +2860,20 @@
     "ch_slug": "onic-kokoro-ch",
     "ch_name": "ONIC KOKORO Ch. こころ",
     "status": "live",
-    "generated_at": "2026-10-29 19:48 WIB"
+    "generated_at": "2026-10-29 20:04 WIB"
   },
   "ZlW_i2gDJpk": {
     "org_slug": "indies",
     "ch_slug": "yukita-yokku-mabaru",
     "ch_name": "Yukita Yokku Mabaru",
     "status": "live",
-    "generated_at": "2026-10-29 19:48 WIB"
+    "generated_at": "2026-10-29 20:04 WIB"
+  },
+  "PkHnoj7JN3k": {
+    "org_slug": "indies",
+    "ch_slug": "harrios-halton-ch",
+    "ch_name": "Harrios Halton Ch.",
+    "status": "live",
+    "generated_at": "2026-10-29 20:04 WIB"
   }
 }
