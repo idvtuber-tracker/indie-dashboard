@@ -2573,7 +2573,7 @@
     "ch_slug": "dombaemon-ch",
     "ch_name": "Dombaemon Ch.",
     "status": "live",
-    "generated_at": "2026-10-29 21:08 WIB"
+    "generated_at": "2026-10-29 21:24 WIB"
   },
   "aBRjOm6Dr7Q": {
     "org_slug": "indies",
@@ -2818,7 +2818,7 @@
     "ch_slug": "julie-chan-ch-wesper-id",
     "ch_name": "Julie Chan Ch. Wesper-ID",
     "status": "live",
-    "generated_at": "2026-10-29 21:08 WIB"
+    "generated_at": "2026-10-29 21:24 WIB"
   },
   "bTLXW5wxf48": {
     "org_slug": "indies",
@@ -2860,55 +2860,62 @@
     "ch_slug": "onic-kokoro-ch",
     "ch_name": "ONIC KOKORO Ch. こころ",
     "status": "live",
-    "generated_at": "2026-10-29 21:08 WIB"
+    "generated_at": "2026-10-29 21:24 WIB"
   },
   "ZlW_i2gDJpk": {
     "org_slug": "indies",
     "ch_slug": "yukita-yokku-mabaru",
     "ch_name": "Yukita Yokku Mabaru",
     "status": "live",
-    "generated_at": "2026-10-29 21:08 WIB"
+    "generated_at": "2026-10-29 21:24 WIB"
   },
   "PkHnoj7JN3k": {
     "org_slug": "indies",
     "ch_slug": "harrios-halton-ch",
     "ch_name": "Harrios Halton Ch.",
     "status": "live",
-    "generated_at": "2026-10-29 21:08 WIB"
+    "generated_at": "2026-10-29 21:24 WIB"
   },
   "imSx50fQZXI": {
     "org_slug": "indies",
     "ch_slug": "starla-adiratna",
     "ch_name": "Starla Adiratna",
     "status": "live",
-    "generated_at": "2026-10-29 21:08 WIB"
+    "generated_at": "2026-10-29 21:24 WIB"
   },
   "JL1Gr7XrQ2c": {
     "org_slug": "indies",
     "ch_slug": "kurohiko",
     "ch_name": "Kurohiko",
     "status": "live",
-    "generated_at": "2026-10-29 21:08 WIB"
+    "generated_at": "2026-10-29 21:24 WIB"
   },
   "jej5Ij8PzxE": {
     "org_slug": "indies",
     "ch_slug": "bianca-hantu",
     "ch_name": "Bianca Hantu",
     "status": "live",
-    "generated_at": "2026-10-29 21:08 WIB"
+    "generated_at": "2026-10-29 21:24 WIB"
   },
   "Afpftj1CTOk": {
     "org_slug": "indies",
     "ch_slug": "cappie-bara-ch",
     "ch_name": "Cappie Bara Ch.",
     "status": "live",
-    "generated_at": "2026-10-29 21:08 WIB"
+    "generated_at": "2026-10-29 21:24 WIB"
   },
   "uo3VSBgy-DI": {
     "org_slug": "indies",
     "ch_slug": "key-oriesa-ch",
     "ch_name": "Key Oriesa Ch.",
     "status": "live",
-    "generated_at": "2026-10-29 21:08 WIB"
+    "generated_at": "2026-10-29 21:24 WIB"
+  },
+  "_Biipb_2ES4": {
+    "org_slug": "indies",
+    "ch_slug": "kumis-aster-nihil-action",
+    "ch_name": "Kumis Aster 〘 Nihil Action 〙",
+    "status": "live",
+    "generated_at": "2026-10-29 21:24 WIB"
   }
 }
