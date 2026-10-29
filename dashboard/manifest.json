@@ -2573,7 +2573,7 @@
     "ch_slug": "dombaemon-ch",
     "ch_name": "Dombaemon Ch.",
     "status": "live",
-    "generated_at": "2026-10-30 00:00 WIB"
+    "generated_at": "2026-10-30 00:13 WIB"
   },
   "aBRjOm6Dr7Q": {
     "org_slug": "indies",
@@ -2818,7 +2818,7 @@
     "ch_slug": "julie-chan-ch-wesper-id",
     "ch_name": "Julie Chan Ch. Wesper-ID",
     "status": "live",
-    "generated_at": "2026-10-30 00:00 WIB"
+    "generated_at": "2026-10-30 00:13 WIB"
   },
   "bTLXW5wxf48": {
     "org_slug": "indies",
@@ -2860,7 +2860,7 @@
     "ch_slug": "onic-kokoro-ch",
     "ch_name": "ONIC KOKORO Ch. こころ",
     "status": "live",
-    "generated_at": "2026-10-30 00:00 WIB"
+    "generated_at": "2026-10-30 00:13 WIB"
   },
   "ZlW_i2gDJpk": {
     "org_slug": "indies",
@@ -2881,7 +2881,7 @@
     "ch_slug": "starla-adiratna",
     "ch_name": "Starla Adiratna",
     "status": "live",
-    "generated_at": "2026-10-30 00:00 WIB"
+    "generated_at": "2026-10-30 00:13 WIB"
   },
   "JL1Gr7XrQ2c": {
     "org_slug": "indies",
@@ -2923,13 +2923,20 @@
     "ch_slug": "julie-chan-ch-wesper-id",
     "ch_name": "Julie Chan Ch. Wesper-ID",
     "status": "live",
-    "generated_at": "2026-10-30 00:00 WIB"
+    "generated_at": "2026-10-30 00:13 WIB"
   },
   "WnigzevQKpU": {
     "org_slug": "indies",
     "ch_slug": "dombaemon-ch",
     "ch_name": "Dombaemon Ch.",
     "status": "live",
-    "generated_at": "2026-10-30 00:00 WIB"
+    "generated_at": "2026-10-30 00:13 WIB"
+  },
+  "yxO6FrIIc-E": {
+    "org_slug": "indies",
+    "ch_slug": "lavatia-laflarld",
+    "ch_name": "Lavatia Laflarld",
+    "status": "vod",
+    "generated_at": "2026-10-30 00:13 WIB"
   }
 }
