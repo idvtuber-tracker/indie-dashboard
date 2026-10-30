@@ -2573,7 +2573,7 @@
     "ch_slug": "dombaemon-ch",
     "ch_name": "Dombaemon Ch.",
     "status": "live",
-    "generated_at": "2026-10-30 14:39 WIB"
+    "generated_at": "2026-10-30 14:54 WIB"
   },
   "aBRjOm6Dr7Q": {
     "org_slug": "indies",
@@ -2818,7 +2818,7 @@
     "ch_slug": "julie-chan-ch-wesper-id",
     "ch_name": "Julie Chan Ch. Wesper-ID",
     "status": "live",
-    "generated_at": "2026-10-30 14:39 WIB"
+    "generated_at": "2026-10-30 14:54 WIB"
   },
   "bTLXW5wxf48": {
     "org_slug": "indies",
@@ -2881,7 +2881,7 @@
     "ch_slug": "starla-adiratna",
     "ch_name": "Starla Adiratna",
     "status": "live",
-    "generated_at": "2026-10-30 14:39 WIB"
+    "generated_at": "2026-10-30 14:54 WIB"
   },
   "JL1Gr7XrQ2c": {
     "org_slug": "indies",
@@ -2950,14 +2950,21 @@
     "org_slug": "indies",
     "ch_slug": "kumis-aster-nihil-action",
     "ch_name": "Kumis Aster 〘 Nihil Action 〙",
-    "status": "live",
-    "generated_at": "2026-10-30 14:39 WIB"
+    "status": "vod",
+    "generated_at": "2026-10-30 14:54 WIB"
   },
   "xxI6KhpC6NY": {
     "org_slug": "indies",
     "ch_slug": "julie-chan-ch-wesper-id",
     "ch_name": "Julie Chan Ch. Wesper-ID",
     "status": "live",
-    "generated_at": "2026-10-30 14:39 WIB"
+    "generated_at": "2026-10-30 14:54 WIB"
+  },
+  "7xphJtqGT9s": {
+    "org_slug": "indies",
+    "ch_slug": "kurohiko",
+    "ch_name": "Kurohiko",
+    "status": "live",
+    "generated_at": "2026-10-30 14:54 WIB"
   }
 }
