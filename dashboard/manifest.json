@@ -2573,7 +2573,7 @@
     "ch_slug": "dombaemon-ch",
     "ch_name": "Dombaemon Ch.",
     "status": "live",
-    "generated_at": "2026-10-31 23:36 WIB"
+    "generated_at": "2026-11-01 00:06 WIB"
   },
   "aBRjOm6Dr7Q": {
     "org_slug": "indies",
@@ -2818,7 +2818,7 @@
     "ch_slug": "julie-chan-ch-wesper-id",
     "ch_name": "Julie Chan Ch. Wesper-ID",
     "status": "live",
-    "generated_at": "2026-10-31 23:36 WIB"
+    "generated_at": "2026-11-01 00:06 WIB"
   },
   "bTLXW5wxf48": {
     "org_slug": "indies",
@@ -2881,7 +2881,7 @@
     "ch_slug": "starla-adiratna",
     "ch_name": "Starla Adiratna",
     "status": "live",
-    "generated_at": "2026-10-31 23:36 WIB"
+    "generated_at": "2026-11-01 00:06 WIB"
   },
   "JL1Gr7XrQ2c": {
     "org_slug": "indies",
@@ -3112,7 +3112,7 @@
     "ch_slug": "onic-kokoro-ch",
     "ch_name": "ONIC KOKORO Ch. こころ",
     "status": "live",
-    "generated_at": "2026-10-31 23:36 WIB"
+    "generated_at": "2026-11-01 00:06 WIB"
   },
   "sJwB4cmFS-k": {
     "org_slug": "indies",
@@ -3146,8 +3146,8 @@
     "org_slug": "indies",
     "ch_slug": "arpina-helios-nihil-action",
     "ch_name": "Arpina Helios〘 Nihil Action 〙",
-    "status": "live",
-    "generated_at": "2026-10-31 23:36 WIB"
+    "status": "vod",
+    "generated_at": "2026-11-01 00:06 WIB"
   },
   "pP9BjYDi0wc": {
     "org_slug": "indies",
@@ -3167,8 +3167,8 @@
     "org_slug": "indies",
     "ch_slug": "justmiu-ch",
     "ch_name": "JustMiU ch.",
-    "status": "live",
-    "generated_at": "2026-10-31 23:36 WIB"
+    "status": "vod",
+    "generated_at": "2026-11-01 00:06 WIB"
   },
   "J9kD4U1AF8s": {
     "org_slug": "indies",
@@ -3182,6 +3182,6 @@
     "ch_slug": "julie-chan-ch-wesper-id",
     "ch_name": "Julie Chan Ch. Wesper-ID",
     "status": "live",
-    "generated_at": "2026-10-31 23:36 WIB"
+    "generated_at": "2026-11-01 00:06 WIB"
   }
 }
