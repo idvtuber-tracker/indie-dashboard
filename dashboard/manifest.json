@@ -4841,7 +4841,7 @@
     "ch_slug": "key-oriesa-ch",
     "ch_name": "Key Oriesa Ch.",
     "status": "live",
-    "generated_at": "2026-11-10 23:49 WIB"
+    "generated_at": "2026-11-11 00:05 WIB"
   },
   "YbLgl8TL1jw": {
     "org_slug": "indies",
@@ -4854,15 +4854,15 @@
     "org_slug": "indies",
     "ch_slug": "phinia-ch",
     "ch_name": "Phinia ch.",
-    "status": "live",
-    "generated_at": "2026-11-10 23:49 WIB"
+    "status": "vod",
+    "generated_at": "2026-11-11 00:05 WIB"
   },
   "Uzh4Ms9GOBA": {
     "org_slug": "indies",
     "ch_slug": "julie-chan-ch-wesper-id",
     "ch_name": "Julie Chan Ch. Wesper-ID",
-    "status": "live",
-    "generated_at": "2026-11-10 23:49 WIB"
+    "status": "vod",
+    "generated_at": "2026-11-11 00:05 WIB"
   },
   "SdsTUNNncb8": {
     "org_slug": "indies",
@@ -4876,14 +4876,14 @@
     "ch_slug": "adelaide-ch",
     "ch_name": "Adelaide Ch.",
     "status": "live",
-    "generated_at": "2026-11-10 23:49 WIB"
+    "generated_at": "2026-11-11 00:05 WIB"
   },
   "OtCVp0PxUw4": {
     "org_slug": "indies",
     "ch_slug": "reina-keina",
     "ch_name": "Reina Keina",
     "status": "live",
-    "generated_at": "2026-11-10 23:49 WIB"
+    "generated_at": "2026-11-11 00:05 WIB"
   },
   "rZd6SXDhwVA": {
     "org_slug": "indies",
@@ -4891,5 +4891,12 @@
     "ch_name": "lonawyn",
     "status": "vod",
     "generated_at": "2026-11-10 23:34 WIB"
+  },
+  "91YCu67I0Jw": {
+    "org_slug": "indies",
+    "ch_slug": "julie-chan-ch-wesper-id",
+    "ch_name": "Julie Chan Ch. Wesper-ID",
+    "status": "live",
+    "generated_at": "2026-11-11 00:05 WIB"
   }
 }
