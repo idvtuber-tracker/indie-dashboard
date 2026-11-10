@@ -4875,8 +4875,8 @@
     "org_slug": "indies",
     "ch_slug": "adelaide-ch",
     "ch_name": "Adelaide Ch.",
-    "status": "live",
-    "generated_at": "2026-11-11 02:28 WIB"
+    "status": "vod",
+    "generated_at": "2026-11-11 05:01 WIB"
   },
   "OtCVp0PxUw4": {
     "org_slug": "indies",
@@ -4896,7 +4896,14 @@
     "org_slug": "indies",
     "ch_slug": "julie-chan-ch-wesper-id",
     "ch_name": "Julie Chan Ch. Wesper-ID",
+    "status": "vod",
+    "generated_at": "2026-11-11 05:01 WIB"
+  },
+  "NzWm3S8XAHY": {
+    "org_slug": "indies",
+    "ch_slug": "chelly-mcbunny",
+    "ch_name": "Chelly McBunny",
     "status": "live",
-    "generated_at": "2026-11-11 02:28 WIB"
+    "generated_at": "2026-11-11 05:01 WIB"
   }
 }
