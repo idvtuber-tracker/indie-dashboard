@@ -4750,7 +4750,7 @@
     "ch_slug": "senka",
     "ch_name": "Senka",
     "status": "live",
-    "generated_at": "2026-11-10 18:33 WIB"
+    "generated_at": "2026-11-10 18:59 WIB"
   },
   "JIAI79wb_4k": {
     "org_slug": "indies",
@@ -4764,7 +4764,7 @@
     "ch_slug": "bianca-hantu",
     "ch_name": "Bianca Hantu",
     "status": "live",
-    "generated_at": "2026-11-10 18:33 WIB"
+    "generated_at": "2026-11-10 18:59 WIB"
   },
   "R_9yiTa_DcI": {
     "org_slug": "indies",
@@ -4778,6 +4778,13 @@
     "ch_slug": "deidey",
     "ch_name": "Deidey",
     "status": "live",
-    "generated_at": "2026-11-10 18:33 WIB"
+    "generated_at": "2026-11-10 18:59 WIB"
+  },
+  "NeF0MHrTjZg": {
+    "org_slug": "indies",
+    "ch_slug": "yukita-yokku-mabaru",
+    "ch_name": "Yukita Yokku Mabaru",
+    "status": "live",
+    "generated_at": "2026-11-10 18:59 WIB"
   }
 }
