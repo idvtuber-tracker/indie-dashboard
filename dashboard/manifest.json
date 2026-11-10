@@ -4840,8 +4840,8 @@
     "org_slug": "indies",
     "ch_slug": "key-oriesa-ch",
     "ch_name": "Key Oriesa Ch.",
-    "status": "live",
-    "generated_at": "2026-11-11 01:22 WIB"
+    "status": "vod",
+    "generated_at": "2026-11-11 01:37 WIB"
   },
   "YbLgl8TL1jw": {
     "org_slug": "indies",
@@ -4876,7 +4876,7 @@
     "ch_slug": "adelaide-ch",
     "ch_name": "Adelaide Ch.",
     "status": "live",
-    "generated_at": "2026-11-11 01:22 WIB"
+    "generated_at": "2026-11-11 01:37 WIB"
   },
   "OtCVp0PxUw4": {
     "org_slug": "indies",
@@ -4897,6 +4897,6 @@
     "ch_slug": "julie-chan-ch-wesper-id",
     "ch_name": "Julie Chan Ch. Wesper-ID",
     "status": "live",
-    "generated_at": "2026-11-11 01:22 WIB"
+    "generated_at": "2026-11-11 01:37 WIB"
   }
 }
