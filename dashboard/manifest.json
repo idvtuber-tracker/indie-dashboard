@@ -4764,7 +4764,7 @@
     "ch_slug": "bianca-hantu",
     "ch_name": "Bianca Hantu",
     "status": "live",
-    "generated_at": "2026-11-10 19:22 WIB"
+    "generated_at": "2026-11-10 19:38 WIB"
   },
   "R_9yiTa_DcI": {
     "org_slug": "indies",
@@ -4778,13 +4778,27 @@
     "ch_slug": "deidey",
     "ch_name": "Deidey",
     "status": "live",
-    "generated_at": "2026-11-10 19:22 WIB"
+    "generated_at": "2026-11-10 19:38 WIB"
   },
   "NeF0MHrTjZg": {
     "org_slug": "indies",
     "ch_slug": "yukita-yokku-mabaru",
     "ch_name": "Yukita Yokku Mabaru",
     "status": "live",
-    "generated_at": "2026-11-10 19:22 WIB"
+    "generated_at": "2026-11-10 19:38 WIB"
+  },
+  "RLb71bL5bHE": {
+    "org_slug": "indies",
+    "ch_slug": "myrcella-enamourada-ch",
+    "ch_name": "Myrcella Enamourada Ch.",
+    "status": "live",
+    "generated_at": "2026-11-10 19:38 WIB"
+  },
+  "_pVBzn61FaU": {
+    "org_slug": "indies",
+    "ch_slug": "eliza-hemlock-ch",
+    "ch_name": "Eliza Hemlock Ch.",
+    "status": "live",
+    "generated_at": "2026-11-10 19:38 WIB"
   }
 }
