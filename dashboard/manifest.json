@@ -4721,28 +4721,35 @@
     "org_slug": "indies",
     "ch_slug": "kurohiko",
     "ch_name": "Kurohiko",
-    "status": "live",
-    "generated_at": "2026-11-10 13:36 WIB"
+    "status": "vod",
+    "generated_at": "2026-11-10 13:52 WIB"
   },
   "gDXObTDlpd0": {
     "org_slug": "indies",
     "ch_slug": "amelia-nicoletta",
     "ch_name": "Amelia Nicoletta",
     "status": "live",
-    "generated_at": "2026-11-10 13:36 WIB"
+    "generated_at": "2026-11-10 13:52 WIB"
   },
   "4QbqnvbHlLE": {
     "org_slug": "indies",
     "ch_slug": "lonawyn",
     "ch_name": "lonawyn",
     "status": "live",
-    "generated_at": "2026-11-10 13:36 WIB"
+    "generated_at": "2026-11-10 13:52 WIB"
   },
   "H56hKr4h_Ls": {
     "org_slug": "indies",
     "ch_slug": "jelly-si-curut-bodas-ch",
     "ch_name": "Jelly si Curut Bodas Ch.",
     "status": "live",
-    "generated_at": "2026-11-10 13:36 WIB"
+    "generated_at": "2026-11-10 13:52 WIB"
+  },
+  "mSte5jIwC4Y": {
+    "org_slug": "indies",
+    "ch_slug": "senka",
+    "ch_name": "Senka",
+    "status": "live",
+    "generated_at": "2026-11-10 13:52 WIB"
   }
 }
