@@ -4911,14 +4911,14 @@
     "ch_slug": "kurohiko",
     "ch_name": "Kurohiko",
     "status": "live",
-    "generated_at": "2026-11-11 12:17 WIB"
+    "generated_at": "2026-11-11 12:33 WIB"
   },
   "8X1YZuLFwoY": {
     "org_slug": "indies",
     "ch_slug": "lonawyn",
     "ch_name": "lonawyn",
     "status": "live",
-    "generated_at": "2026-11-11 12:17 WIB"
+    "generated_at": "2026-11-11 12:33 WIB"
   },
   "AR7wbokxSxA": {
     "org_slug": "indies",
@@ -4932,6 +4932,13 @@
     "ch_slug": "kumis-aster-nihil-action",
     "ch_name": "Kumis Aster 〘 Nihil Action 〙",
     "status": "live",
-    "generated_at": "2026-11-11 12:17 WIB"
+    "generated_at": "2026-11-11 12:33 WIB"
+  },
+  "MLBR6qpKOVY": {
+    "org_slug": "indies",
+    "ch_slug": "vanta-arissa-ch",
+    "ch_name": "Vanta Arissa Ch.",
+    "status": "live",
+    "generated_at": "2026-11-11 12:33 WIB"
   }
 }
