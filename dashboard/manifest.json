@@ -5064,8 +5064,8 @@
     "org_slug": "indies",
     "ch_slug": "key-oriesa-ch",
     "ch_name": "Key Oriesa Ch.",
-    "status": "live",
-    "generated_at": "2026-11-12 02:03 WIB"
+    "status": "vod",
+    "generated_at": "2026-11-12 02:19 WIB"
   },
   "wVicAeaUo4Y": {
     "org_slug": "indies",
@@ -5093,7 +5093,7 @@
     "ch_slug": "phinia-ch",
     "ch_name": "Phinia ch.",
     "status": "live",
-    "generated_at": "2026-11-12 02:03 WIB"
+    "generated_at": "2026-11-12 02:19 WIB"
   },
   "ockMPgZWCaw": {
     "org_slug": "indies",
@@ -5106,14 +5106,14 @@
     "org_slug": "indies",
     "ch_slug": "julie-chan-ch-wesper-id",
     "ch_name": "Julie Chan Ch. Wesper-ID",
-    "status": "live",
-    "generated_at": "2026-11-12 02:03 WIB"
+    "status": "vod",
+    "generated_at": "2026-11-12 02:19 WIB"
   },
   "oVzZmwjJ_pk": {
     "org_slug": "indies",
     "ch_slug": "chelly-mcbunny",
     "ch_name": "Chelly McBunny",
     "status": "live",
-    "generated_at": "2026-11-12 02:03 WIB"
+    "generated_at": "2026-11-12 02:19 WIB"
   }
 }
