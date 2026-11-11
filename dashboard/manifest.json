@@ -4911,14 +4911,14 @@
     "ch_slug": "kurohiko",
     "ch_name": "Kurohiko",
     "status": "live",
-    "generated_at": "2026-11-11 12:02 WIB"
+    "generated_at": "2026-11-11 12:17 WIB"
   },
   "8X1YZuLFwoY": {
     "org_slug": "indies",
     "ch_slug": "lonawyn",
     "ch_name": "lonawyn",
     "status": "live",
-    "generated_at": "2026-11-11 12:02 WIB"
+    "generated_at": "2026-11-11 12:17 WIB"
   },
   "AR7wbokxSxA": {
     "org_slug": "indies",
@@ -4926,5 +4926,12 @@
     "ch_name": "Eliza Hemlock Ch.",
     "status": "vod",
     "generated_at": "2026-11-11 11:46 WIB"
+  },
+  "yxnAK4_W204": {
+    "org_slug": "indies",
+    "ch_slug": "kumis-aster-nihil-action",
+    "ch_name": "Kumis Aster 〘 Nihil Action 〙",
+    "status": "live",
+    "generated_at": "2026-11-11 12:17 WIB"
   }
 }
