@@ -5093,7 +5093,7 @@
     "ch_slug": "phinia-ch",
     "ch_name": "Phinia ch.",
     "status": "live",
-    "generated_at": "2026-11-12 17:05 WIB"
+    "generated_at": "2026-11-12 17:21 WIB"
   },
   "ockMPgZWCaw": {
     "org_slug": "indies",
@@ -5120,8 +5120,8 @@
     "org_slug": "indies",
     "ch_slug": "rieru-shindou-ch-davidbeatt",
     "ch_name": "Rieru Shindou Ch.〖 Davidbeatt 】",
-    "status": "live",
-    "generated_at": "2026-11-12 17:05 WIB"
+    "status": "vod",
+    "generated_at": "2026-11-12 17:21 WIB"
   },
   "KsVhWkFKQ5Y": {
     "org_slug": "indies",
@@ -5163,20 +5163,27 @@
     "ch_slug": "phinia-ch",
     "ch_name": "Phinia ch.",
     "status": "live",
-    "generated_at": "2026-11-12 17:05 WIB"
+    "generated_at": "2026-11-12 17:21 WIB"
   },
   "rBB0GiwdwCk": {
     "org_slug": "indies",
     "ch_slug": "senka",
     "ch_name": "Senka",
     "status": "live",
-    "generated_at": "2026-11-12 17:05 WIB"
+    "generated_at": "2026-11-12 17:21 WIB"
   },
   "ULZgb70fwKM": {
     "org_slug": "indies",
     "ch_slug": "julie-chan-ch-wesper-id",
     "ch_name": "Julie Chan Ch. Wesper-ID",
     "status": "live",
-    "generated_at": "2026-11-12 17:05 WIB"
+    "generated_at": "2026-11-12 17:21 WIB"
+  },
+  "7OvE7cvXa6s": {
+    "org_slug": "indies",
+    "ch_slug": "kumis-aster-nihil-action",
+    "ch_name": "Kumis Aster 〘 Nihil Action 〙",
+    "status": "live",
+    "generated_at": "2026-11-12 17:21 WIB"
   }
 }
