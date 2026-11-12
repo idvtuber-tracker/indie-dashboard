@@ -5093,7 +5093,7 @@
     "ch_slug": "phinia-ch",
     "ch_name": "Phinia ch.",
     "status": "live",
-    "generated_at": "2026-11-12 12:21 WIB"
+    "generated_at": "2026-11-12 12:37 WIB"
   },
   "ockMPgZWCaw": {
     "org_slug": "indies",
@@ -5121,34 +5121,41 @@
     "ch_slug": "rieru-shindou-ch-davidbeatt",
     "ch_name": "Rieru Shindou Ch.〖 Davidbeatt 】",
     "status": "live",
-    "generated_at": "2026-11-12 12:21 WIB"
+    "generated_at": "2026-11-12 12:37 WIB"
   },
   "KsVhWkFKQ5Y": {
     "org_slug": "indies",
     "ch_slug": "dombaemon-ch",
     "ch_name": "Dombaemon Ch.",
     "status": "live",
-    "generated_at": "2026-11-12 12:21 WIB"
+    "generated_at": "2026-11-12 12:37 WIB"
   },
   "af0dWIQoycA": {
     "org_slug": "indies",
     "ch_slug": "tsuzuri-neventine",
     "ch_name": "Tsuzuri Neventine",
-    "status": "live",
-    "generated_at": "2026-11-12 12:21 WIB"
+    "status": "vod",
+    "generated_at": "2026-11-12 12:37 WIB"
   },
   "sLIFshxu88A": {
     "org_slug": "indies",
     "ch_slug": "lonawyn",
     "ch_name": "lonawyn",
     "status": "live",
-    "generated_at": "2026-11-12 12:21 WIB"
+    "generated_at": "2026-11-12 12:37 WIB"
   },
   "J4EyKrR24DQ": {
     "org_slug": "indies",
     "ch_slug": "ellyra-yoora-ch",
     "ch_name": "Ellyra Yoora ch.",
     "status": "live",
-    "generated_at": "2026-11-12 12:21 WIB"
+    "generated_at": "2026-11-12 12:37 WIB"
+  },
+  "_SX1QMEUv1c": {
+    "org_slug": "indies",
+    "ch_slug": "vanta-arissa-ch",
+    "ch_name": "Vanta Arissa Ch.",
+    "status": "live",
+    "generated_at": "2026-11-12 12:37 WIB"
   }
 }
