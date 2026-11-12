@@ -5093,7 +5093,7 @@
     "ch_slug": "phinia-ch",
     "ch_name": "Phinia ch.",
     "status": "live",
-    "generated_at": "2026-11-12 22:50 WIB"
+    "generated_at": "2026-11-12 23:06 WIB"
   },
   "ockMPgZWCaw": {
     "org_slug": "indies",
@@ -5211,36 +5211,36 @@
     "org_slug": "indies",
     "ch_slug": "onic-kokoro-ch",
     "ch_name": "ONIC KOKORO Ch. こころ",
-    "status": "live",
-    "generated_at": "2026-11-12 22:50 WIB"
+    "status": "vod",
+    "generated_at": "2026-11-12 23:06 WIB"
   },
   "4oQVebYZeOI": {
     "org_slug": "indies",
     "ch_slug": "arpina-helios-nihil-action",
     "ch_name": "Arpina Helios〘 Nihil Action 〙",
     "status": "live",
-    "generated_at": "2026-11-12 22:50 WIB"
+    "generated_at": "2026-11-12 23:06 WIB"
   },
   "Xra3q9alWuQ": {
     "org_slug": "indies",
     "ch_slug": "selena-amaris",
     "ch_name": "Selena AmariS",
-    "status": "live",
-    "generated_at": "2026-11-12 22:50 WIB"
+    "status": "vod",
+    "generated_at": "2026-11-12 23:06 WIB"
   },
   "VVZT2WH4FhQ": {
     "org_slug": "indies",
     "ch_slug": "kurohiko",
     "ch_name": "Kurohiko",
     "status": "live",
-    "generated_at": "2026-11-12 22:50 WIB"
+    "generated_at": "2026-11-12 23:06 WIB"
   },
   "syRBzbEitk0": {
     "org_slug": "indies",
     "ch_slug": "senka",
     "ch_name": "Senka",
     "status": "live",
-    "generated_at": "2026-11-12 22:50 WIB"
+    "generated_at": "2026-11-12 23:06 WIB"
   },
   "gNwecCtNgwI": {
     "org_slug": "indies",
@@ -5254,48 +5254,55 @@
     "ch_slug": "key-oriesa-ch",
     "ch_name": "Key Oriesa Ch.",
     "status": "live",
-    "generated_at": "2026-11-12 22:50 WIB"
+    "generated_at": "2026-11-12 23:06 WIB"
   },
   "Yp5yk3yV3T4": {
     "org_slug": "indies",
     "ch_slug": "justmiu-ch",
     "ch_name": "JustMiU ch.",
     "status": "live",
-    "generated_at": "2026-11-12 22:50 WIB"
+    "generated_at": "2026-11-12 23:06 WIB"
   },
   "iQXhXWgdsP8": {
     "org_slug": "indies",
     "ch_slug": "cappie-bara-ch",
     "ch_name": "Cappie Bara Ch.",
     "status": "live",
-    "generated_at": "2026-11-12 22:50 WIB"
+    "generated_at": "2026-11-12 23:06 WIB"
   },
   "bbcK4u7pqa4": {
     "org_slug": "indies",
     "ch_slug": "ellyra-yoora-ch",
     "ch_name": "Ellyra Yoora ch.",
     "status": "live",
-    "generated_at": "2026-11-12 22:50 WIB"
+    "generated_at": "2026-11-12 23:06 WIB"
   },
   "mGoEUvF8aNU": {
     "org_slug": "indies",
     "ch_slug": "starla-adiratna",
     "ch_name": "Starla Adiratna",
     "status": "live",
-    "generated_at": "2026-11-12 22:50 WIB"
+    "generated_at": "2026-11-12 23:06 WIB"
   },
   "cUUh3Yy1Xik": {
     "org_slug": "indies",
     "ch_slug": "julie-chan-ch-wesper-id",
     "ch_name": "Julie Chan Ch. Wesper-ID",
     "status": "live",
-    "generated_at": "2026-11-12 22:50 WIB"
+    "generated_at": "2026-11-12 23:06 WIB"
   },
   "s7JYvSjMQeU": {
     "org_slug": "indies",
     "ch_slug": "myrcella-enamourada-ch",
     "ch_name": "Myrcella Enamourada Ch.",
     "status": "live",
-    "generated_at": "2026-11-12 22:50 WIB"
+    "generated_at": "2026-11-12 23:06 WIB"
+  },
+  "aw0F-6JlUm4": {
+    "org_slug": "indies",
+    "ch_slug": "dombaemon-ch",
+    "ch_name": "Dombaemon Ch.",
+    "status": "live",
+    "generated_at": "2026-11-12 23:06 WIB"
   }
 }
