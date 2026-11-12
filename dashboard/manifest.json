@@ -5093,7 +5093,7 @@
     "ch_slug": "phinia-ch",
     "ch_name": "Phinia ch.",
     "status": "live",
-    "generated_at": "2026-11-12 20:45 WIB"
+    "generated_at": "2026-11-12 21:00 WIB"
   },
   "ockMPgZWCaw": {
     "org_slug": "indies",
@@ -5163,7 +5163,7 @@
     "ch_slug": "phinia-ch",
     "ch_name": "Phinia ch.",
     "status": "live",
-    "generated_at": "2026-11-12 20:45 WIB"
+    "generated_at": "2026-11-12 21:00 WIB"
   },
   "rBB0GiwdwCk": {
     "org_slug": "indies",
@@ -5204,49 +5204,63 @@
     "org_slug": "indies",
     "ch_slug": "yukita-yokku-mabaru",
     "ch_name": "Yukita Yokku Mabaru",
-    "status": "live",
-    "generated_at": "2026-11-12 20:45 WIB"
+    "status": "vod",
+    "generated_at": "2026-11-12 21:00 WIB"
   },
   "wP_DvF71UXY": {
     "org_slug": "indies",
     "ch_slug": "onic-kokoro-ch",
     "ch_name": "ONIC KOKORO Ch. こころ",
     "status": "live",
-    "generated_at": "2026-11-12 20:45 WIB"
+    "generated_at": "2026-11-12 21:00 WIB"
   },
   "4oQVebYZeOI": {
     "org_slug": "indies",
     "ch_slug": "arpina-helios-nihil-action",
     "ch_name": "Arpina Helios〘 Nihil Action 〙",
     "status": "live",
-    "generated_at": "2026-11-12 20:45 WIB"
+    "generated_at": "2026-11-12 21:00 WIB"
   },
   "Xra3q9alWuQ": {
     "org_slug": "indies",
     "ch_slug": "selena-amaris",
     "ch_name": "Selena AmariS",
     "status": "live",
-    "generated_at": "2026-11-12 20:45 WIB"
+    "generated_at": "2026-11-12 21:00 WIB"
   },
   "VVZT2WH4FhQ": {
     "org_slug": "indies",
     "ch_slug": "kurohiko",
     "ch_name": "Kurohiko",
     "status": "live",
-    "generated_at": "2026-11-12 20:45 WIB"
+    "generated_at": "2026-11-12 21:00 WIB"
   },
   "syRBzbEitk0": {
     "org_slug": "indies",
     "ch_slug": "senka",
     "ch_name": "Senka",
     "status": "live",
-    "generated_at": "2026-11-12 20:45 WIB"
+    "generated_at": "2026-11-12 21:00 WIB"
   },
   "gNwecCtNgwI": {
     "org_slug": "indies",
     "ch_slug": "eiko-yukashi",
     "ch_name": "Eiko Yukashi",
     "status": "live",
-    "generated_at": "2026-11-12 20:45 WIB"
+    "generated_at": "2026-11-12 21:00 WIB"
+  },
+  "-R6V6kq7YQI": {
+    "org_slug": "indies",
+    "ch_slug": "key-oriesa-ch",
+    "ch_name": "Key Oriesa Ch.",
+    "status": "live",
+    "generated_at": "2026-11-12 21:00 WIB"
+  },
+  "Yp5yk3yV3T4": {
+    "org_slug": "indies",
+    "ch_slug": "justmiu-ch",
+    "ch_name": "JustMiU ch.",
+    "status": "live",
+    "generated_at": "2026-11-12 21:00 WIB"
   }
 }
