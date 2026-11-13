@@ -5093,7 +5093,7 @@
     "ch_slug": "phinia-ch",
     "ch_name": "Phinia ch.",
     "status": "live",
-    "generated_at": "2026-11-13 19:19 WIB"
+    "generated_at": "2026-11-13 19:34 WIB"
   },
   "ockMPgZWCaw": {
     "org_slug": "indies",
@@ -5296,14 +5296,14 @@
     "ch_slug": "myrcella-enamourada-ch",
     "ch_name": "Myrcella Enamourada Ch.",
     "status": "live",
-    "generated_at": "2026-11-13 19:19 WIB"
+    "generated_at": "2026-11-13 19:34 WIB"
   },
   "aw0F-6JlUm4": {
     "org_slug": "indies",
     "ch_slug": "dombaemon-ch",
     "ch_name": "Dombaemon Ch.",
     "status": "live",
-    "generated_at": "2026-11-13 19:19 WIB"
+    "generated_at": "2026-11-13 19:34 WIB"
   },
   "5QKs9l-8rhw": {
     "org_slug": "indies",
@@ -5324,7 +5324,7 @@
     "ch_slug": "noemi-hestia",
     "ch_name": "Noemi Hestia",
     "status": "live",
-    "generated_at": "2026-11-13 19:19 WIB"
+    "generated_at": "2026-11-13 19:34 WIB"
   },
   "RJRmw31OfYQ": {
     "org_slug": "indies",
@@ -5366,7 +5366,7 @@
     "ch_slug": "bianca-hantu",
     "ch_name": "Bianca Hantu",
     "status": "live",
-    "generated_at": "2026-11-13 19:19 WIB"
+    "generated_at": "2026-11-13 19:34 WIB"
   },
   "VEZw5fTt1LY": {
     "org_slug": "indies",
@@ -5387,34 +5387,41 @@
     "ch_slug": "walherich",
     "ch_name": "Walherich",
     "status": "live",
-    "generated_at": "2026-11-13 19:19 WIB"
+    "generated_at": "2026-11-13 19:34 WIB"
   },
   "ckdSxFFW2GM": {
     "org_slug": "indies",
     "ch_slug": "noemi-hestia",
     "ch_name": "Noemi Hestia",
     "status": "live",
-    "generated_at": "2026-11-13 19:19 WIB"
+    "generated_at": "2026-11-13 19:34 WIB"
   },
   "gfGwgkyqqbQ": {
     "org_slug": "indies",
     "ch_slug": "onic-kokoro-ch",
     "ch_name": "ONIC KOKORO Ch. こころ",
     "status": "live",
-    "generated_at": "2026-11-13 19:19 WIB"
+    "generated_at": "2026-11-13 19:34 WIB"
   },
   "qBdJ_ZUAlP4": {
     "org_slug": "indies",
     "ch_slug": "yukita-yokku-mabaru",
     "ch_name": "Yukita Yokku Mabaru",
     "status": "live",
-    "generated_at": "2026-11-13 19:19 WIB"
+    "generated_at": "2026-11-13 19:34 WIB"
   },
   "0T6IwcM9Lrc": {
     "org_slug": "indies",
     "ch_slug": "kurohiko",
     "ch_name": "Kurohiko",
     "status": "live",
-    "generated_at": "2026-11-13 19:19 WIB"
+    "generated_at": "2026-11-13 19:34 WIB"
+  },
+  "XVS5gu8YptA": {
+    "org_slug": "indies",
+    "ch_slug": "eliza-hemlock-ch",
+    "ch_name": "Eliza Hemlock Ch.",
+    "status": "live",
+    "generated_at": "2026-11-13 19:34 WIB"
   }
 }
