@@ -5093,7 +5093,7 @@
     "ch_slug": "phinia-ch",
     "ch_name": "Phinia ch.",
     "status": "live",
-    "generated_at": "2026-11-13 12:56 WIB"
+    "generated_at": "2026-11-13 13:11 WIB"
   },
   "ockMPgZWCaw": {
     "org_slug": "indies",
@@ -5296,21 +5296,21 @@
     "ch_slug": "myrcella-enamourada-ch",
     "ch_name": "Myrcella Enamourada Ch.",
     "status": "live",
-    "generated_at": "2026-11-13 12:56 WIB"
+    "generated_at": "2026-11-13 13:11 WIB"
   },
   "aw0F-6JlUm4": {
     "org_slug": "indies",
     "ch_slug": "dombaemon-ch",
     "ch_name": "Dombaemon Ch.",
     "status": "live",
-    "generated_at": "2026-11-13 12:56 WIB"
+    "generated_at": "2026-11-13 13:11 WIB"
   },
   "5QKs9l-8rhw": {
     "org_slug": "indies",
     "ch_slug": "rieru-shindou-ch-davidbeatt",
     "ch_name": "Rieru Shindou Ch.〖 Davidbeatt 】",
     "status": "live",
-    "generated_at": "2026-11-13 12:56 WIB"
+    "generated_at": "2026-11-13 13:11 WIB"
   },
   "Nv2KCHJYVDI": {
     "org_slug": "indies",
@@ -5324,14 +5324,14 @@
     "ch_slug": "noemi-hestia",
     "ch_name": "Noemi Hestia",
     "status": "live",
-    "generated_at": "2026-11-13 12:56 WIB"
+    "generated_at": "2026-11-13 13:11 WIB"
   },
   "RJRmw31OfYQ": {
     "org_slug": "indies",
     "ch_slug": "vanta-arissa-ch",
     "ch_name": "Vanta Arissa Ch.",
-    "status": "live",
-    "generated_at": "2026-11-13 12:56 WIB"
+    "status": "vod",
+    "generated_at": "2026-11-13 13:11 WIB"
   },
   "a2Ajh7e9FYA": {
     "org_slug": "indies",
@@ -5339,5 +5339,12 @@
     "ch_name": "lonawyn",
     "status": "vod",
     "generated_at": "2026-11-13 12:56 WIB"
+  },
+  "qmwFEOWJ7PU": {
+    "org_slug": "indies",
+    "ch_slug": "kumis-aster-nihil-action",
+    "ch_name": "Kumis Aster 〘 Nihil Action 〙",
+    "status": "live",
+    "generated_at": "2026-11-13 13:11 WIB"
   }
 }
