@@ -5093,7 +5093,7 @@
     "ch_slug": "phinia-ch",
     "ch_name": "Phinia ch.",
     "status": "live",
-    "generated_at": "2026-11-13 18:29 WIB"
+    "generated_at": "2026-11-13 18:44 WIB"
   },
   "ockMPgZWCaw": {
     "org_slug": "indies",
@@ -5296,14 +5296,14 @@
     "ch_slug": "myrcella-enamourada-ch",
     "ch_name": "Myrcella Enamourada Ch.",
     "status": "live",
-    "generated_at": "2026-11-13 18:29 WIB"
+    "generated_at": "2026-11-13 18:44 WIB"
   },
   "aw0F-6JlUm4": {
     "org_slug": "indies",
     "ch_slug": "dombaemon-ch",
     "ch_name": "Dombaemon Ch.",
     "status": "live",
-    "generated_at": "2026-11-13 18:29 WIB"
+    "generated_at": "2026-11-13 18:44 WIB"
   },
   "5QKs9l-8rhw": {
     "org_slug": "indies",
@@ -5324,7 +5324,7 @@
     "ch_slug": "noemi-hestia",
     "ch_name": "Noemi Hestia",
     "status": "live",
-    "generated_at": "2026-11-13 18:29 WIB"
+    "generated_at": "2026-11-13 18:44 WIB"
   },
   "RJRmw31OfYQ": {
     "org_slug": "indies",
@@ -5351,8 +5351,8 @@
     "org_slug": "indies",
     "ch_slug": "senka",
     "ch_name": "Senka",
-    "status": "live",
-    "generated_at": "2026-11-13 18:29 WIB"
+    "status": "vod",
+    "generated_at": "2026-11-13 18:44 WIB"
   },
   "9akVYyoGlc0": {
     "org_slug": "indies",
@@ -5366,14 +5366,14 @@
     "ch_slug": "bianca-hantu",
     "ch_name": "Bianca Hantu",
     "status": "live",
-    "generated_at": "2026-11-13 18:29 WIB"
+    "generated_at": "2026-11-13 18:44 WIB"
   },
   "VEZw5fTt1LY": {
     "org_slug": "indies",
     "ch_slug": "deidey",
     "ch_name": "Deidey",
     "status": "live",
-    "generated_at": "2026-11-13 18:29 WIB"
+    "generated_at": "2026-11-13 18:44 WIB"
   },
   "Owax8XpOkws": {
     "org_slug": "indies",
@@ -5381,5 +5381,12 @@
     "ch_name": "Jelly si Curut Bodas Ch.",
     "status": "vod",
     "generated_at": "2026-11-13 18:29 WIB"
+  },
+  "3a12XsAOIbk": {
+    "org_slug": "indies",
+    "ch_slug": "walherich",
+    "ch_name": "Walherich",
+    "status": "live",
+    "generated_at": "2026-11-13 18:44 WIB"
   }
 }
